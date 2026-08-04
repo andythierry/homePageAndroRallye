@@ -1,0 +1,1065 @@
+--------- beginning of system
+08-04 14:33:14.178  4452  5241 I ActivityManager: Force stopping com.magnus.launcher appid=10275 user=0: from pid 9265
+08-04 14:33:14.179  4452  5241 I ActivityManager: Killing 8908:com.magnus.launcher/u0a275 (adj 0): stop com.magnus.launcher
+08-04 14:33:14.181  4452  5241 W ActivityTaskManager: Force removing ActivityRecord{a5994b0 u0 com.magnus.launcher/.MainActivity t99 f}: app died, no saved state
+08-04 14:33:14.182  4452  5241 W WindowManager: transition skip!! if process killed, surface is dispose and transaction is force stopped
+--------- beginning of main
+08-04 14:33:14.183  4452  5241 V WindowManager: Changing focus from Window{b51ee7f u0 com.magnus.launcher/com.magnus.launcher.MainActivity} to null displayId=0 Callers=com.android.server.wm.RootWindowContainer.updateFocusedWindowLocked:26 com.android.server.wm.WindowManagerService.updateFocusedWindowLocked:10 com.android.server.wm.AppWindowToken.commitVisibility:285 com.android.server.wm.AppWindowToken.onRemovedFromDisplay:41 com.android.server.wm.DisplayContent.removeAppToken:65 com.android.server.wm.ActivityRecord.removeWindowContainer:72 
+08-04 14:33:14.188  4452  5241 D PowerManagerService: [api] release WakeLock SCREEN_BRIGHT_WAKE_LOCK        'WindowManager' ON_AFTER_RELEASE ACQ=-17s237ms (uid=1000 pid=4452 pkg=android ws=WorkSource{10275})
+08-04 14:33:14.189  4452  5241 I EdgeLightingManager: hideForWakeLock packageName=android
+08-04 14:33:14.189  4452  5241 I EdgeLightingManager: isCallingUserSupported : callingUserId=0, mUserId=0, isDualAppId=false
+08-04 14:33:14.189  4452  5241 I EdgeLightingClientManager: isAvailableEdgeLighting: condition=2 mCondition=3 mIsConnected=false0
+08-04 14:33:14.190  4452  5241 I EdgeLightingManager: hideForWakeLockInternal : return false by isAcceptableApplication.
+08-04 14:33:14.190  4452  5241 D PowerManagerService: [api] applyWakeLockFlagsOnReleaseLocked : userActivityNoUpdateLocked is called : SCREEN_BRIGHT_WAKE_LOCK        'WindowManager' ON_AFTER_RELEASE (uid=1000 pid=4452 pkg=android ws=WorkSource{10275})
+08-04 14:33:14.197  4452  5241 V WindowManager: Setting visibility of Window{b51ee7f u0 com.magnus.launcher/com.magnus.launcher.MainActivity}: false, caller=com.android.server.wm.WindowContainer.sendAppVisibilityToClients:18 com.android.server.wm.AppWindowToken.setClientHidden:61 com.android.server.wm.AppWindowToken.onAnimationFinished:104 com.android.server.wm.AppWindowToken.commitVisibility:320 com.android.server.wm.AppWindowToken.onRemovedFromDisplay:41 
+08-04 14:33:14.199  4452  5241 D TspStateManagerInternal: updateDefaultValue customSetting=null
+08-04 14:33:14.199  4452  5241 D InputTransport: Input channel destroyed: 'b51ee7f', fd=424
+08-04 14:33:14.200  4452  5241 I WindowManager: Destroying surface Surface(name=com.magnus.launcher/com.magnus.launcher.MainActivity$_8908)/@0x117cf56 called by com.android.server.wm.WindowStateAnimator.destroySurface:8 com.android.server.wm.WindowStateAnimator.destroySurfaceLocked:133 com.android.server.wm.WindowState.removeImmediately:131 com.android.server.wm.WindowState.removeIfPossible:607 com.android.server.wm.WindowState.removeIfPossible:4 com.android.server.wm.WindowToken.removeAllWindowsIfPossible:45 com.android.server.wm.AppWindowToken.removeIfPossible:3 com.android.server.wm.AppWindowToken.onRemovedFromDisplay:307 
+08-04 14:33:14.201  4090  5774 I Layer   : id=880 removeFromCurrentState com.magnus.launcher/com.magnus.launcher.MainActivity$_8908#0 (43)
+08-04 14:33:14.204  4452  5239 D InputDispatcher: Focus left window (8908): b51ee7f in display 0 0
+08-04 14:33:14.206  4090  5774 I Layer   : id=879 removeFromCurrentState b51ee7f com.magnus.launcher/com.magnus.launcher.MainActivity#0 (43)
+08-04 14:33:14.207  4090  5774 I SurfaceFlinger: id=879 Removed b51ee7f com.magnus.launcher/com.magnus.launcher.MainActivity#0 (43)
+08-04 14:33:14.207  4452  5241 D InputDispatcher: Focused application released (0)
+08-04 14:33:14.209  4452  5241 D ActivityTaskManager: updateMinimizedState: unknown notifyReason=2
+08-04 14:33:14.212  4090  5774 I Layer   : id=873 removeFromCurrentState AppWindowToken{d6bf2ae token=Token{3921f29 ActivityRecord{a5994b0 u0 com.magnus.launcher/.MainActivity t99}}}#0 (43)
+08-04 14:33:14.212  4090  5774 I Layer   : id=872 removeFromCurrentState Task=99#0 (43)
+08-04 14:33:14.214  4090  4090 I SurfaceFlinger: Display 0 HWC layers:
+08-04 14:33:14.214  4090  4090 I SurfaceFlinger:     type    |    handle    | flag |  format   |   source crop (l,t,r,b)    |         frame       | name 
+08-04 14:33:14.214  4090  4090 I SurfaceFlinger: ------------+--------------+------+-----------+----------------------------+---------------------+------
+08-04 14:33:14.214  4090  4090 I SurfaceFlinger:      DEVICE | 0x7bc2a85800 | 0000 | RGBA_8888 |   0.0    0.0   67.0  342.0 |    0  501   89  957 | com.samsung.android.app.cocktailbars[...]arservice.CocktailBarService$_7974#0
+08-04 14:33:14.214  4090  4090 I SurfaceFlinger:      DEVICE | 0x7bc2a84bc0 | 0000 | RGBA_8888 |   0.0    0.0 1080.0  126.0 |    0 2792 1440 2960 | NavigationBar0$_4946#0
+08-04 14:33:14.214  4090  4090 I SurfaceFlinger: 
+08-04 14:33:14.215  4452  5241 D CustomFrequencyManagerService: acquireDVFSLockLocked : type : DVFS_MIN_LIMIT  frequency : 1703000  uid : 1000  pid : 4452  pkgName : AMS_ACT_RESUME@CPU_MIN@71
+08-04 14:33:14.217  4452  5241 D ActivityManagerPerformance: AMP_acquire() ACT_RESUME
+08-04 14:33:14.218  4452  5241 V WindowManager: Prepare app transition: transit=TRANSIT_ACTIVITY_OPEN mNextAppTransition=TRANSIT_UNSET alwaysKeepCurrent=false displayId=0 Callers=com.android.server.wm.DisplayContent.prepareAppTransition:2 com.android.server.wm.DisplayContent.prepareAppTransition:1 com.android.server.wm.ActivityStack.resumeTopActivityInnerLocked:814 com.android.server.wm.ActivityStack.resumeTopActivityUncheckedLocked:31 com.android.server.wm.ActivityRecord.makeActiveIfNeeded:21 
+08-04 14:33:14.218  4452  5241 V WindowManager: Setting visibility of Window{323dc26 u0 io.tiste.RallyCall/io.tiste.RallyCall.MainActivity}: true, caller=com.android.server.wm.WindowContainer.sendAppVisibilityToClients:18 com.android.server.wm.AppWindowToken.setClientHidden:61 com.android.server.wm.AppWindowToken.setVisibility:266 com.android.server.wm.ActivityRecord.setVisibility:31 com.android.server.wm.ActivityStack.resumeTopActivityInnerLocked:874 
+08-04 14:33:14.218  4090  5774 I SurfaceFlinger: id=873 Removed AppWindowToken{d6bf2ae token=Token{3921f29 ActivityRecord{a5994b0 u0 com.magnus.launcher/.MainActivity t99}}}#0 (43)
+08-04 14:33:14.218  4090  5774 I SurfaceFlinger: id=872 Removed Task=99#0 (43)
+08-04 14:33:14.219  4090  4090 I Layer   : id=872[1] Destroyed Task=99#0
+08-04 14:33:14.219  4452  5241 V WindowManager: rotationForOrientation(orient=1, last=0); user=0 
+08-04 14:33:14.219  4090  4090 I Layer   : id=873[1] Destroyed AppWindowToken{d6bf2ae token=Token{3921f29 ActivityRecord{a5994b0 u0 com.magnus.launcher/.MainActivity t99}}}#0
+08-04 14:33:14.219  4452  5241 V WindowOrientationListener: getProposedRotation: -1
+08-04 14:33:14.219  4090  4090 I Layer   : id=879[1] Destroyed b51ee7f com.magnus.launcher/com.magnus.launcher.MainActivity#0
+08-04 14:33:14.219  4452  5241 V WindowManager: Computed rotation=0 for display id=0 based on lastOrientation=1 and oldRotation=0, caller=com.android.server.wm.DisplayContent.updateOrientationFromAppTokens:29 com.android.server.wm.DisplayContent.updateOrientationFromAppTokens:7 com.android.server.wm.RootActivityContainer.ensureVisibilityAndConfig:38 com.android.server.wm.ActivityStack.resumeTopActivityInnerLocked:947 com.android.server.wm.ActivityStack.resumeTopActivityUncheckedLocked:31 com.android.server.wm.ActivityRecord.makeActiveIfNeeded:21 
+08-04 14:33:14.219  4452  5241 D TspStateManagerInternal: updateDefaultValue customSetting=null
+08-04 14:33:14.220  4452  5241 D MARsPolicyManager: onPackageResumedFG pkgName = io.tiste.RallyCall, userId = 0
+08-04 14:33:14.222  4452  5241 W WindowManager: Execute app transition: mNextAppTransition=TRANSIT_ACTIVITY_OPEN, displayId: 0 Callers=com.android.server.wm.RootActivityContainer.executeAppTransitionForAllDisplay:20 com.android.server.wm.ActivityStackSupervisor.reportResumedActivityLocked:51 com.android.server.wm.ActivityRecord.completeResumeLocked:104 com.android.server.wm.ActivityStack.resumeTopActivityInnerLocked:1161 com.android.server.wm.ActivityStack.resumeTopActivityUncheckedLocked:31 
+08-04 14:33:14.230  4452  5241 I ActivityTaskManager: START u0 {act=android.intent.action.MAIN cat=[android.intent.category.HOME] flg=0x10000100 cmp=com.magnus.launcher/.MainActivity} from uid 0
+08-04 14:33:14.232  4452  5241 D CustomFrequencyManagerService: acquireDVFSLockLocked : type : DVFS_MIN_LIMIT  frequency : 2314000  uid : 1000  pid : 4452  pkgName : AMS_APP_HOME@CPU_MIN@60
+08-04 14:33:14.234  4452  5241 D ActivityManagerPerformance: AMP_acquire() HOME
+08-04 14:33:14.234  4452  5241 D ActivityTaskManager: MultiTaskingTaskLaunchParamsModifier:task=null display-from-option=0 display-id=0 display-windowing-mode=1
+08-04 14:33:14.234  4452  5241 D ActivityTaskManager: MultiTaskingTaskLaunchParamsModifier:task=null display-from-option=0 display-id=0 display-windowing-mode=1 activity-options-fullscreen=Rect(0, 0 - 0, 0) non-freeform-display maximized-bounds
+08-04 14:33:14.234  4452  5241 D ActivityTaskManager: MultiTaskingTaskLaunchParamsModifier:tid=100 display-from-option=0 display-id=0 display-windowing-mode=1 activity-options-fullscreen=Rect(0, 0 - 0, 0) non-freeform-display maximized-bounds
+08-04 14:33:14.235  4090  4132 I SurfaceFlinger: id=882 createSurf (0x0),-1 flag=80004, Task=100#0
+08-04 14:33:14.235  4452  5241 D ActivityTaskManager: updateMinimizedState: unknown notifyReason=2
+08-04 14:33:14.236  4090  5774 I SurfaceFlinger: id=883 createSurf (0x0),-1 flag=80004, AppWindowToken{c22005c token=Token{6b23ecf ActivityRecord{609732e u0 com.magnus.launcher/.MainActivity t100}}}#0
+08-04 14:33:14.236  4452  5241 V WindowManager: Prepare app transition: transit=TRANSIT_TASK_OPEN mNextAppTransition=TRANSIT_ACTIVITY_OPEN alwaysKeepCurrent=false displayId=0 Callers=com.android.server.wm.DisplayContent.prepareAppTransition:2 com.android.server.wm.DisplayContent.prepareAppTransition:1 com.android.server.wm.ActivityStack.startActivityLocked:220 com.android.server.wm.ActivityStarter.startActivityUnchecked:1397 com.android.server.wm.ActivityStarter.startActivity:12 
+08-04 14:33:14.238  4452  5239 V WindowManager: Relayout Window{323dc26 u0 io.tiste.RallyCall/io.tiste.RallyCall.MainActivity}: viewVisibility=4 req=1080x2220
+08-04 14:33:14.238  4452  4452 D SamsungAlarmManager: Remove alarm for next reason : android.intent.action.PACKAGE_RESTARTED : package: com.magnus.launcher
+08-04 14:33:14.240  4452  5239 V WindowManager: Relayout 31379: mAttrs={(0,0)(fillxfill) sim={adjust=resize forwardNavigation} layoutInDisplayCutoutMode=always ty=BASE_APPLICATION wanim=0x1030305
+08-04 14:33:14.240  4452  5239 V WindowManager:   fl=81810180
+08-04 14:33:14.240  4452  5239 V WindowManager:   pfl=20000
+08-04 14:33:14.240  4452  5239 V WindowManager:   vsysui=1700 naviIconColor=0}, display=0
+08-04 14:33:14.240  5246  5246 D RegisteredServicesCache: invalidateCache
+08-04 14:33:14.241 31379 31379 I ViewRootImpl@b01ace1[MainActivity]: Relayout returned: old=(0,0,1080,2220) new=(0,0,1080,2220) req=(1080,2220)4 dur=4 res=0x1 s={false 0} ch=false
+08-04 14:33:14.241 31379 31379 I ViewRootImpl@b01ace1[MainActivity]: stopped(false) old=true
+08-04 14:33:14.241  4905  4905 E PhoneInterfaceManager: [PhoneIntfMgr] getCarrierPackageNamesForIntent: No UICC
+08-04 14:33:14.241  4905  4905 D CarrierSvcBindHelper: No carrier app for: 0
+08-04 14:33:14.241  4452  4568 D PhoneWindow: forceLight changed to true [Splash Screen com.magnus.launcher] from com.android.internal.policy.PhoneWindow.updateForceLightNavigationBar:4274 com.android.internal.policy.DecorView.updateColorViews:1547 com.android.internal.policy.PhoneWindow.dispatchWindowAttributesChanged:3252 android.view.Window.setFlags:1153 com.android.internal.policy.PhoneWindow.generateLayout:2474 
+08-04 14:33:14.241  4452  4585 D LauncherAppsService: onReceive: Intent { act=android.intent.action.PACKAGE_RESTARTED dat=package:com.magnus.launcher flg=0x10 (has extras) }
+08-04 14:33:14.242  4452  4586 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_RESTARTED dat=package:com.magnus.launcher flg=0x10 (has extras) } to android/com.kddi.android.CpaNotiReceiver
+08-04 14:33:14.242  4452  4567 I WindowManager: Focus moving from Window{b51ee7f u0 com.magnus.launcher/com.magnus.launcher.MainActivity} to null displayId=0
+08-04 14:33:14.242  4452  4567 I WindowManager: Losing focus: Window{b51ee7f u0 com.magnus.launcher/com.magnus.launcher.MainActivity}
+08-04 14:33:14.243  4452  4567 E WindowManager: RemoteException occurs on reporting focusChanged, w=Window{b51ee7f u0 com.magnus.launcher/com.magnus.launcher.MainActivity}
+08-04 14:33:14.243  4452  4567 E WindowManager: android.os.DeadObjectException
+08-04 14:33:14.243  4452  4567 E WindowManager: 	at android.os.BinderProxy.transactNative(Native Method)
+08-04 14:33:14.243  4452  4567 E WindowManager: 	at android.os.BinderProxy.transact(BinderProxy.java:575)
+08-04 14:33:14.243  4452  4567 E WindowManager: 	at android.view.IWindow$Stub$Proxy.windowFocusChanged(IWindow.java:829)
+08-04 14:33:14.243  4452  4567 E WindowManager: 	at com.android.server.wm.WindowState.reportFocusChangedSerialized(Unknown Source:2)
+08-04 14:33:14.243  4452  4567 E WindowManager: 	at com.android.server.wm.WindowManagerService$H.handleMessage(Unknown Source:1754)
+08-04 14:33:14.243  4452  4567 E WindowManager: 	at android.os.Handler.dispatchMessage(Handler.java:107)
+08-04 14:33:14.243  4452  4567 E WindowManager: 	at android.os.Looper.loop(Looper.java:237)
+08-04 14:33:14.243  4452  4567 E WindowManager: 	at android.os.HandlerThread.run(HandlerThread.java:67)
+08-04 14:33:14.243  4452  4567 E WindowManager: 	at com.android.server.ServiceThread.run(Unknown Source:12)
+08-04 14:33:14.243  4452  4568 D InputTransport: Input channel constructed: '93e7092', fd=360
+08-04 14:33:14.243  4452  4568 D InputTransport: Input channel constructed: '93e7092', fd=424
+08-04 14:33:14.243  4090  5774 I SurfaceFlinger: id=884 createSurf (0x0),-1 flag=80004, 93e7092 Splash Screen com.magnus.launcher#0
+08-04 14:33:14.244  4452  4568 I ViewRootImpl@f3bfef4[launcher]: setView = com.android.internal.policy.DecorView@8ce9a63 TM=true MM=false
+08-04 14:33:14.244 31379 31379 I ViewRootImpl@b01ace1[MainActivity]: stopped(false) old=false
+08-04 14:33:14.245 31379 31379 W unknown:BridgelessReact: ReactHost{0}.onHostResume(activity)
+08-04 14:33:14.245 31379 31379 W unknown:BridgelessReact: ReactContext.onHostResume()
+08-04 14:33:14.246  4136  6866 I CameraService: UidPolicy: No processes running for a uid=10275 disabled=0
+08-04 14:33:14.247  4452  6436 D SensorService: Calling batch handle==2 flags=0 rate=2000000 timeout== 0
+08-04 14:33:14.247  4072  4072 I nanohub : mergeDirectReportRequest - enable = 0 activate = 0 direct.rate = 0 normal.rate = 2000000
+08-04 14:33:14.247  4072  4072 I nanohub : mergeDirectReportRequest - activate = 0 normal.rate = 2000000
+08-04 14:33:14.247  4072  4072 I Sensors : batch(2) - gyro_sensor try to batching with 2000000
+08-04 14:33:14.248  4072  4072 I Sensors : GyroSensor old sensor_state 16897, new sensor_state : 16899 en : 1
+08-04 14:33:14.250  4452  4567 D GamePkgDataHelper: getSosPolicy(). io.tiste.RallyCall
+08-04 14:33:14.250 31379 31379 D SensorManager: registerListener :: 2, LSM6DSL Gyroscope Sensor, 0, 0,  listener = expo.modules.sensors.SensorSubscription@616dfb7
+08-04 14:33:14.251  4452  4567 D GameManagerService: identifyGamePackage. io.tiste.RallyCall, mCurrentUserId: 0, callerUserId: 0
+08-04 14:33:14.251  4452  4567 D GameManagerService: GameService deos not exist
+08-04 14:33:14.251  4452  4567 D GameManagerService: noteResumeComponent(), received resumed-component: io.tiste.RallyCall
+08-04 14:33:14.251  4452  6391 D SensorService: Calling batch handle==1 flags=0 rate=2000000 timeout== 0
+08-04 14:33:14.251  4072  4072 I nanohub : mergeDirectReportRequest - enable = 0 activate = 1 direct.rate = 0 normal.rate = 2000000
+08-04 14:33:14.251  4072  4072 I nanohub : mergeDirectReportRequest - activate = 1 normal.rate = 2000000
+08-04 14:33:14.251  4072  4072 I Sensors : batch(0) - accelerometer_sensor try to batching with 2000000
+08-04 14:33:14.252  4452  6436 D GamePkgDataHelper: getSosPolicy(). io.tiste.RallyCall
+08-04 14:33:14.253  4946  5146 D LocationControllerImpl: onReceive() = android.location.HIGH_POWER_REQUEST_CHANGE
+08-04 14:33:14.254  5246  5246 E ApduServiceInfo: Not adding <aid-group> with empty or invalid AIDs
+08-04 14:33:14.254  4452  4568 V WindowManager: Relayout Window{93e7092 u0 Splash Screen com.magnus.launcher}: viewVisibility=0 req=1080x2220
+08-04 14:33:14.254  5246  5246 D RegisteredOtherServicesCache: invalidate
+08-04 14:33:14.255  5166  9136 I FusedLocation: stationary throttling disengaged [CONTEXT service_id=6 ]
+08-04 14:33:14.256  4090  5774 I SurfaceFlinger: id=885 createSurf (1080x2220),1 flag=404, Splash Screen com.magnus.launcher#0
+08-04 14:33:14.256  4452  5241 D SamsungAlarmManager: Cancel Alarm calling from uid:10082 pid :5166 / op:PendingIntent{b94388c: PendingIntentRecord{3b52f6 com.google.android.gms broadcastIntent}}
+08-04 14:33:14.256  4452  5241 I SamsungAlarmManager: setLocked to kernel - T:2 / 20260804T143430, SetElapsed=19063224, nowELAPSED=18986907
+08-04 14:33:14.256  4452  5241 I SamsungAlarmManager: setLocked to kernel - T:3 / 20260804T143328, SetElapsed=19001222, nowELAPSED=18986907
+08-04 14:33:14.256  4946  5146 D LocationControllerImpl: onReceive() = android.location.HIGH_POWER_REQUEST_CHANGE
+08-04 14:33:14.256  4452  4568 D WindowManager: makeSurface duration=1 name=Splash Screen com.magnus.launcher
+08-04 14:33:14.257  5246  5246 D RegisteredNfcFServicesCache: Service unchanged, not updating
+08-04 14:33:14.258  4452  4568 V WindowManager: Relayout 4452: mAttrs={(0,0)(fillxfill) sim={adjust=pan} layoutInDisplayCutoutMode=always ty=APPLICATION_STARTING wanim=0x1030305
+08-04 14:33:14.258  4452  4568 V WindowManager:   fl=81830518
+08-04 14:33:14.258  4452  4568 V WindowManager:   pfl=10020011
+08-04 14:33:14.258  4452  4568 V WindowManager:   vsysui=10 naviIconColor=0}, display=0
+08-04 14:33:14.258  4452  4568 I ViewRootImpl@f3bfef4[launcher]: Relayout returned: old=(0,0,1080,2220) new=(0,0,1080,2220) req=(1080,2220)0 dur=4 res=0x7 s={true 479736762368} ch=true
+08-04 14:33:14.258 31379 31379 D SensorManager: registerListener :: 1, LSM6DSL Acceleration Sensor, 0, 0,  listener = expo.modules.sensors.SensorSubscription@e713324
+08-04 14:33:14.258  4452  4568 I ViewRootImpl@f3bfef4[launcher]: [DrawPending] drawPending(1) 1 android.view.ViewRootImpl.reportNextDraw:9952 android.view.ViewRootImpl.performTraversals:3329 android.view.ViewRootImpl.doTraversal:2222 
+08-04 14:33:14.259  4055  4055 I Zygote  : Process 8908 exited due to signal 9 (Killed)
+08-04 14:33:14.259  4452  4567 W ActivityManager: setHasOverlayUi called on unknown pid: 8908
+08-04 14:33:14.259  4452  4964 D SensorService: Calling batch handle==1936484718 flags=0 rate=10000000 timeout== 0
+08-04 14:33:14.259  4090  4132 I SurfaceFlinger: id=880 Removed com.magnus.launcher/com.magnus.launcher.MainActivity$_8908#0 (44)
+08-04 14:33:14.260  4452  4565 D CodecSolution: isMaxAspectPackageEx: com.magnus.launcher : true(2)
+08-04 14:33:14.260  4452  4964 I SensorService: LinearAccelerationSensor2 setDelay = 10000000
+08-04 14:33:14.260  4452  4964 D SensorService: GravitySensor2 setDelay  ns =10000000 handle = 1936484718  mindelay = 10000000
+08-04 14:33:14.261  4072  4072 I nanohub : mergeDirectReportRequest - activate = 0 normal.rate = 10000000
+08-04 14:33:14.261  4072  4072 I Sensors : batch(14) - rotation_vector_sensor try to batching with 10000000
+08-04 14:33:14.261  4452  4829 D PkgPredictorService: io.tiste.RallyCall go to foreground!
+08-04 14:33:14.261  4452  4829 E PkgPredictorService-Collector: record changed bt=1  wifi=1 screen=0
+08-04 14:33:14.261  4452  4829 D PkgPredictorService: previous pkgs: io.tiste.RallyCall,com.magnus.launcher,io.tiste.RallyCall running pkg: io.tiste.RallyCall, uid: 0 is system: false
+08-04 14:33:14.261  4452  6391 D InputTransport: Input channel destroyed: 'ClientS', fd=425
+08-04 14:33:14.261  4452  4829 D PkgPredictorService-Collector: save record...
+08-04 14:33:14.261  4452  4829 D PkgPredictorService-Collector:  (hour:14 day:3 previous:[io.tiste.RallyCall, com.magnus.launcher, io.tiste.RallyCall] activityName:unknown running:io.tiste.RallyCall userId:0 screenOrientation:0 wifi:1 bt:1 predictTime:1 apkVersion:1.8.7 consumeTime:-1 preloaded:false>)
+08-04 14:33:14.261  4452  4829 D PkgPredictorService-NapPreloadController: User using: io.tiste.RallyCall
+08-04 14:33:14.261  4452  4829 I PkgPredictorService-NapClassifier: RF predict version:0
+08-04 14:33:14.261  4452  4829 D PkgPredictorService-NapClassifier: Predict result: 47.0,45.0,3.0, - [0_&_com.magnus.launcher, 0_&_io.tiste.RallyCall, 0_&_com.android.vending]
+08-04 14:33:14.262  4452  4829 D PkgPredictorService-NapPreloadController: preloadWithUid pkg: [com.magnus.launcher] Uid: [0]
+08-04 14:33:14.262 10005 10005 D InputTransport: Input channel destroyed: 'ClientS', fd=67
+08-04 14:33:14.262  4072  4072 I Sensors : RotationVector old sensor_state 16899, new sensor_state : 147971 en : 1
+08-04 14:33:14.263  4452  4589 I libprocessgroup: Successfully killed process cgroup uid 10275 pid 8908 in 83ms
+08-04 14:33:14.265 31379 31379 D SensorManager: registerListener :: 1936484718, Linear Acceleration Sensor, 0, 0,  listener = expo.modules.sensors.SensorSubscription@59fee8d
+08-04 14:33:14.266  4452  6431 D SensorService: Calling batch handle==1 flags=0 rate=20000000 timeout== 0
+08-04 14:33:14.268  4452  4568 E DecorView: mWindow.mActivityCurrentConfig is null
+08-04 14:33:14.270  5166  7354 D SensorManager: registerListener :: 1, LSM6DSL Acceleration Sensor, 20000, 0,  listener = com.google.android.location.fused.StepDetector@6d9a85f
+08-04 14:33:14.270  4452  4964 D SensorService: Calling batch handle==17 flags=0 rate=10000000 timeout== 0
+08-04 14:33:14.270  4946  4946 D QSContainerImpl: getDisplayHeight portrait? true  displayHeight= 2220
+08-04 14:33:14.270  4090  4090 I Layer   : id=880[1] Destroyed com.magnus.launcher/com.magnus.launcher.MainActivity$_8908#0
+08-04 14:33:14.270 31379 31379 D SensorManager: registerListener :: 17, Samsung Rotation Vector, 0, 0,  listener = expo.modules.sensors.SensorSubscription@dd5b842
+08-04 14:33:14.270  5166  9273 I FusedOrientationManager: Registering orientation client. [CONTEXT service_id=6 ]
+08-04 14:33:14.271  5166  5166 D BoundBrokerSvc: onRebind: Intent { act=com.google.android.gms.auth.aang.events.services.START dat=chimera-action: cmp=com.google.android.gms/.chimera.PersistentApiService }
+08-04 14:33:14.272  4452  6436 D SensorService: Calling batch handle==1936159350 flags=0 rate=10000000 timeout== 0
+08-04 14:33:14.272  4452  6436 D SensorService: GravitySensor2 setDelay  ns =10000000 handle = 1936159350  mindelay = 10000000
+08-04 14:33:14.272 31379 31379 D SensorManager: registerListener :: 1936159350, Gravity Sensor, 0, 0,  listener = expo.modules.sensors.SensorSubscription@72fc053
+08-04 14:33:14.272  4452  4568 I ViewRootImpl@f3bfef4[launcher]: [DrawPending] pendingDrawFinished(0) 1 android.view.ViewRootImpl.performDraw:4136 android.view.ViewRootImpl.performTraversals:3345 android.view.ViewRootImpl.doTraversal:2222 
+08-04 14:33:14.272  4452  4568 I ViewRootImpl@f3bfef4[launcher]: [DrawPending] reportDrawFinished()
+08-04 14:33:14.272  4452  4568 D WindowManager: finishDrawingWindow: Window{93e7092 u0 Splash Screen com.magnus.launcher} mDrawState=DRAW_PENDING
+08-04 14:33:14.274  4452  4568 V WindowManager: performShow on Window{93e7092 u0 Splash Screen com.magnus.launcher}: mDrawState=READY_TO_SHOW readyForDisplay=false starting=true during animation: policyVis=true parentHidden=false tok.hiddenRequested=true tok.hidden=true animating=false tok animating=false Callers=com.android.server.wm.WindowState.performShowLocked:226 com.android.server.wm.WindowStateAnimator.commitFinishDrawingLocked:109 com.android.server.wm.DisplayContent.lambda$new$8$DisplayContent:206 com.android.server.wm.-$$Lambda$DisplayContent$qxt4izS31fb0LF2uo_OF9DMa7gc.accept:4 
+08-04 14:33:14.277  4452  7385 D LocationManagerService: request dcae253 gps Request[ACCURACY_FINE gps requested=+500ms fastest=0] from com.google.android.gms(10082 foreground [whitelisted])
+08-04 14:33:14.277  4452  7385 D LocationManagerService: provider request: gps ProviderRequest[ON interval=+500ms]
+08-04 14:33:14.277  4452  7385 I GnssLocationProvider: WakeLock acquired by sendMessage(SET_REQUEST, 0, com.android.server.location.GnssLocationProvider$GpsRequest@f89d790)
+08-04 14:33:14.278  5140  5188 W IncomingHandler_FLP: GnssStatusListener is registered from com.google.android.gms , so not monitoring
+08-04 14:33:14.278  4946  4946 D IndicatorGardener: PhoneStatusBarView is done to update (IndicatorGardenModel) lp:63, lc:781, cc:318, rc:790, rp:63, h:63, ctm:false, ctms:0, cbms:0
+08-04 14:33:14.278  4452  4807 D GnssLocationProvider: setRequest ProviderRequest[ON interval=+500ms]
+08-04 14:33:14.279  5140  5188 E RequestManager_FLP: [LocationManager] Location request  dcae253(Listener) gps interval=500 from com.google.android.gms.persistent (10082 foreground)
+08-04 14:33:14.279  4452  4807 D GnssLocationProvider: mStarted =  false, mDisableGpsForPowerManager = false, isEnabled = true
+08-04 14:33:14.280  4452  4807 D GnssLocationProvider: startNavigating
+08-04 14:33:14.280  4452  4807 D GnssLocationProvider_ex: Data status WIFI connected
+08-04 14:33:14.280  4452  4807 D GnssLocationProvider: setting position_mode to standalone
+08-04 14:33:14.280  4173  4173 D Gnss@1.1: setPositionMode_1_1: lowPowerMode(F)
+08-04 14:33:14.280  4173  4173 I Gnss@1.0: gps_set_position_mode: lowPowerMode(F)
+08-04 14:33:14.280  4173  4173 D libgps  : proxy__gps_set_position_mode_hook(lowPowerMode(F))
+08-04 14:33:14.280  4173  4173 D libgps  : GpsiHook: API: gpsSetPositionMode(GpsiHookStateIdle: e,c,g,l)
+08-04 14:33:14.280  4173  4173 D libgps  : proxy__gps_set_position_mode(lowPowerMode(F))
+08-04 14:33:14.280  4173  4173 D libgps  : proxy__gps_set_position_mode(0, 0, 1000, 0, 0)
+08-04 14:33:14.280  4169  4169 D gpsd    : WakeLock(Acquire,GPSD)
+08-04 14:33:14.281  4169  4169 D gpsd    : WakeLock(Release,GPSD)
+08-04 14:33:14.281  4169  4169 D gpsd    : WakeLock(Acquire,GPSD)
+08-04 14:33:14.281  4169  4169 D gpsd    : WakeLock(Release,GPSD)
+08-04 14:33:14.281  4173  4173 I Gnss@1.0: start: IGnss impl: start request
+08-04 14:33:14.281  4173  4173 D libgps  : GpsiHook: API: gpsStart(GpsiHookStateIdle: e,c,g)
+08-04 14:33:14.281  4173  4173 D libgps  : GpsiHookStateIdle             : EXIT
+08-04 14:33:14.281  4173  4173 D libgps  : GpsiHookStateGps              : ENTRY
+08-04 14:33:14.281  4173  4173 D libgps  : [proxy__gps_start][line = 1320]: called.
+08-04 14:33:14.281  4173  4173 D libgps  : GpsiHook: API: gpsStatusCb(GpsiHookStateGps: e,c,g)
+08-04 14:33:14.281  4452  4807 V GnssLocationProvider: reportStatus status: 3
+08-04 14:33:14.282  4173  4173 D libgps  : GpsiHook: API: gpsStatusCb(GpsiHookStateGps: e,c,g)
+08-04 14:33:14.282  4452  4807 V GnssLocationProvider: reportStatus status: 1
+08-04 14:33:14.282  4452  6436 V WindowManager: Relayout Window{323dc26 u0 io.tiste.RallyCall/io.tiste.RallyCall.MainActivity}: viewVisibility=0 req=1080x2220
+08-04 14:33:14.282  4169  4169 D gpsd    : WakeLock(Acquire,GPSD)
+08-04 14:33:14.283  4452  6436 V WindowManager: performShow on Window{93e7092 u0 Splash Screen com.magnus.launcher}: mDrawState=READY_TO_SHOW readyForDisplay=false starting=true during animation: policyVis=true parentHidden=false tok.hiddenRequested=true tok.hidden=true animating=false tok animating=false Callers=com.android.server.wm.WindowState.performShowLocked:226 com.android.server.wm.WindowStateAnimator.commitFinishDrawingLocked:109 com.android.server.wm.DisplayContent.lambda$new$8$DisplayContent:206 com.android.server.wm.-$$Lambda$DisplayContent$qxt4izS31fb0LF2uo_OF9DMa7gc.accept:4 
+08-04 14:33:14.283  4452  4807 I GnssLocationProvider: WakeLock released by handleMessage(SET_REQUEST, 0, com.android.server.location.GnssLocationProvider$GpsRequest@f89d790)
+08-04 14:33:14.284  4173  5187 D libgps  : OnGpsExtensionMessage: message_id(11), data(0x7544672044), size(4)
+08-04 14:33:14.284  4173  5187 D libgps  : [OnGpsExtensionMessage] Received: MSG_SET_LOG_LEVEL(2)
+08-04 14:33:14.284  4173  5187 D libgps  : OnGpsExtensionMessage: message_id(6), data(0x0), size(0)
+08-04 14:33:14.284  4072  4240 E Sensors : Sensor : Meta event
+08-04 14:33:14.284  4090  5774 I SurfaceFlinger: id=886 createSurf (1080x2220),1 flag=404, io.tiste.RallyCall/io.tiste.RallyCall.MainActivity$_31379#0
+08-04 14:33:14.284  5140  5188 D GnssEngineMonitor_FLP: updateRequirementsFromGlp, Engineinterval=500 / OperationMode=-1
+08-04 14:33:14.284  5140  5188 W GpsSessionManager_FLP: No need to update the interval to GpsSession
+08-04 14:33:14.285  5140  5188 D GnssStatusListener_FLP: GNSS Engine started
+08-04 14:33:14.285  4452  6436 D WindowManager: makeSurface duration=1 name=io.tiste.RallyCall/io.tiste.RallyCall.MainActivity$_31379
+08-04 14:33:14.285  5140  5188 D GnssEngineMonitor_FLP: updateGnssEngineStatus, true / isFromAp=true
+08-04 14:33:14.286  4452  6436 V WindowManager: Changing focus from null to Window{323dc26 u0 io.tiste.RallyCall/io.tiste.RallyCall.MainActivity} displayId=0 Callers=com.android.server.wm.RootWindowContainer.updateFocusedWindowLocked:26 com.android.server.wm.WindowManagerService.updateFocusedWindowLocked:10 com.android.server.wm.WindowManagerService.relayoutWindow:1209 com.android.server.wm.Session.relayout:68 android.view.IWindowSession$Stub.onTransact:716 com.android.server.wm.Session.onTransact:0 
+08-04 14:33:14.286  4452  6436 D StatusBarManagerService: notifyRequestedSystemKey recent=false home=false
+08-04 14:33:14.286  4452  4565 D WindowManager: setSystemUiVisibility: displayId=0, vis=0x9708, fullVis=0x0, dockVis=0x0, win=Window{323dc26 u0 io.tiste.RallyCall/io.tiste.RallyCall.MainActivity}
+08-04 14:33:14.286  5140  5188 V AppState_FLP: Success to save #1 snapshot in appStateMap, time=18986936 / appList=com.google.android.gms.persistent[gps,500,100]]
+08-04 14:33:14.286  5140  5188 V RequestManager_FLP: noteStartGps, uid=10082
+08-04 14:33:14.287  4452  4567 I WindowManager: Focus moving from null to Window{323dc26 u0 io.tiste.RallyCall/io.tiste.RallyCall.MainActivity} displayId=0
+08-04 14:33:14.287  4452  4567 I WindowManager: Gaining focus: Window{323dc26 u0 io.tiste.RallyCall/io.tiste.RallyCall.MainActivity}
+08-04 14:33:14.287  4452  6436 V WindowManager: Relayout 31379: mAttrs={(0,0)(fillxfill) sim={adjust=resize forwardNavigation} layoutInDisplayCutoutMode=always ty=BASE_APPLICATION wanim=0x1030305
+08-04 14:33:14.287  4452  6436 V WindowManager:   fl=81810180
+08-04 14:33:14.287  4452  6436 V WindowManager:   pfl=20000
+08-04 14:33:14.287  4452  6436 V WindowManager:   vsysui=1700 naviIconColor=0}, display=0
+08-04 14:33:14.288  5140  5188 D GpsSession_FLP: New GPS Session started, GlpInterval=500 / OperationMode=-1
+08-04 14:33:14.288 31379 31379 I ViewRootImpl@b01ace1[MainActivity]: Relayout returned: old=(0,0,1080,2220) new=(0,0,1080,2220) req=(1080,2220)0 dur=7 res=0x7 s={true 482209013760} ch=true
+08-04 14:33:14.290 31379  2189 D mali_winsys: EGLint new_window_surface(egl_winsys_display *, void *, EGLSurface, EGLConfig, egl_winsys_surface **, EGLBoolean) returns 0x3000
+08-04 14:33:14.290 31379 31379 I ViewRootImpl@b01ace1[MainActivity]: [DrawPending] drawPending(1) 1 android.view.ViewRootImpl.reportNextDraw:9952 android.view.ViewRootImpl.performTraversals:3329 android.view.ViewRootImpl.doTraversal:2222 
+08-04 14:33:14.290 31379 31379 I ViewRootImpl@b01ace1[MainActivity]: [DrawPending] performDraw() Waiting asnyc report
+08-04 14:33:14.291  4452  5239 D SemContextService: lock : registerCallback
+08-04 14:33:14.291  4452  7385 D LocationManagerService: request ddcdcbc passive Request[POWER_NONE passive fastest=0] from com.google.android.gms(10082 foreground [whitelisted])
+08-04 14:33:14.291  4452  5239 W CAE     : registerCallback(ContextAwareService.java:155) - [regi 01] Mutex is locked for SENSOR_STATUS_CHECK_RUNNER
+08-04 14:33:14.292  4452  7385 D LocationManagerService: provider request: passive ProviderRequest[ON interval=0]
+08-04 14:33:14.292  4452  5239 V CAE     : start(ContextProvider.java:128)
+08-04 14:33:14.292  4452  5239 V CAE     : clear(SensorStatusCheckRunner.java:192)
+08-04 14:33:14.293  4452  5239 V CAE     : enable(SensorStatusCheckRunner.java:167)
+08-04 14:33:14.293  4452  5239 I CAE     : sendCmdToSensorHub(SensorHubCommManager.java:158) - -79, 59, 0, 0,
+08-04 14:33:14.293  4452  4730 D SensorService: setSContextDataLocked ints length 2 , byte length 4
+08-04 14:33:14.293  4072  4526 D Sensors : poll_inject_sensor_data
+08-04 14:33:14.294  4072  4526 D Sensors : b1 3b 00 00  
+08-04 14:33:14.294  4072  4526 E Sensors : inject_scontext_data: New ssp_data_injection_fd(28)
+08-04 14:33:14.295  4072  4526 D Sensors : SContext Data Injection return 4
+08-04 14:33:14.296  4452  6436 D SensorService: Calling batch handle==8 flags=0 rate=100000000 timeout== 0
+08-04 14:33:14.296  4072  4526 I nanohub : mergeDirectReportRequest - activate = 0 normal.rate = 100000000
+08-04 14:33:14.296  4072  4526 I Sensors : batch(3) - pressure_sensor try to batching with 100000000
+08-04 14:33:14.297  4072  4526 I Sensors : PressureSensor old sensor_state 147971, new sensor_state : 148003 en : 1
+08-04 14:33:14.297  4452  5239 D CAE     : getFaultDetectionResult(SensorStatusCheckRunner.java:206) - true
+08-04 14:33:14.298  4452  5239 I CAE     : notifyCmdProcessResultObserver(ContextProvider.java:627) - CheckResult = 0, Cause = Success
+08-04 14:33:14.300  4946  4946 D LightBarController: onNavigationVisibilityChanged : vis = 9708, nbModeChanged = false navigationBarMode = 4, navbarColorManagedByIme = false
+08-04 14:33:14.300  4946  4946 V NavBarStoreImpl: handleEvent [EventType] GET_BOOL_TINT_CONTROLLER_ENABLED [Module] LightBarController
+08-04 14:33:14.300  4946  4946 V NavBarStoreImpl: --[Band]COLOR_PACK_GET_TINT_SAMPLING_ENABLED
+08-04 14:33:14.300  4452  6431 D WindowManager: adjustSystemUiVisibilityLw: displayId=0, vis=0x9708, resetVis=0x0, clearVis=0x0
+08-04 14:33:14.300  4946  4946 V NavBarStoreImpl: ----apply(SET_TINT_SAMPLING_ENABLED)
+08-04 14:33:14.300  4946  4946 V NavBarStoreImpl: getResult(GET_BOOL_TINT_CONTROLLER_ENABLED)=false
+08-04 14:33:14.300  4452  6431 D InputManager-JNI: setSystemUiVisibility dexmode: false changed: true displayid: 0 visibility: 0x9708 DD: 0x9708 OD: 0x0
+08-04 14:33:14.300  4452  5239 D CAE     : doCommendProcess(ContextAwareService.java:452) - complete notify the operation result.
+08-04 14:33:14.300  4452  5239 I CAE     : displayUsedCountForService(ContextAwareService.java:544) - totalCnt = 1, serviceCount = 1, subCollectionCount = 0
+08-04 14:33:14.300  7974  7974 I TrayStateController: onSystemUiVisibilityChange : 38664 0
+08-04 14:33:14.300  5166  7354 D SensorManager: registerListener :: 8, LPS22H Barometer Sensor, 100000, 0,  listener = com.google.android.location.fused.PressureProvider@cc93470
+08-04 14:33:14.300  4452  5239 D CAE     : showListenerList(ContextAwareService.java:377) - ===== Context Aware Service List =====
+08-04 14:33:14.301  4452  5239 I CAE     : showListenerList(ContextAwareService.java:386) - Listener : com.samsung.android.contextaware.manager.ContextAwareService$Listener@8b2d6be, Service : AUTO_ROTATION(1)
+08-04 14:33:14.301  4452  5239 I CAE     : showListenerList(ContextAwareService.java:386) - Listener : com.samsung.android.contextaware.manager.ContextAwareService$Listener@7a1249a, Service : SLOCATION_AR_DISTANCE_RUNNER(1)
+08-04 14:33:14.301  4452  5239 I CAE     : showListenerList(ContextAwareService.java:386) - Listener : com.samsung.android.contextaware.manager.ContextAwareService$Listener@b5abce8, Service : ANY_MOTION_DETECTOR_RUNNER(1)
+08-04 14:33:14.301  4452  5239 I CAE     : showListenerList(ContextAwareService.java:386) - Listener : com.samsung.android.contextaware.manager.ContextAwareService$Listener@e1248cb, Service : SENSOR_STATUS_CHECK_RUNNER(1)
+08-04 14:33:14.301  4452  5239 W CAE     : registerCallback(ContextAwareService.java:191) - [regi 02] Mutex is unlocked for SENSOR_STATUS_CHECK_RUNNER
+08-04 14:33:14.301  4452  5239 E SemContext.CaeProvider: setAttribute() : attribute is null!
+08-04 14:33:14.301  4452  5239 W Binder  : Outgoing transactions from this process must be FLAG_ONEWAY
+08-04 14:33:14.301  4452  5239 W Binder  : java.lang.Throwable
+08-04 14:33:14.301  4452  5239 W Binder  : 	at android.os.BinderProxy.transact(BinderProxy.java:494)
+08-04 14:33:14.301  4452  5239 W Binder  : 	at com.samsung.android.hardware.context.ISemContextCallback$Stub$Proxy.getListenerInfo(ISemContextCallback.java:162)
+08-04 14:33:14.301  4452  5239 W Binder  : 	at com.samsung.android.hardware.context.SemContextService$ListenerManager.notifyListeners(SemContextService.java:1293)
+08-04 14:33:14.301  4452  5239 W Binder  : 	at com.samsung.android.hardware.context.SemContextService.registerCallback(SemContextService.java:214)
+08-04 14:33:14.301  4452  5239 W Binder  : 	at com.samsung.android.hardware.context.ISemContextService$Stub.onTransact(ISemContextService.java:156)
+08-04 14:33:14.301  4452  5239 W Binder  : 	at android.os.Binder.execTransactInternal(Binder.java:1056)
+08-04 14:33:14.301  4452  5239 W Binder  : 	at android.os.Binder.execTransact(Binder.java:1029)
+08-04 14:33:14.301  4452  5239 D SemContextService: 	.registerCallback : 5, client=b.b.a.a.a.b.m@ec04f2
+08-04 14:33:14.301  4452  5239 D SemContextConnectionList: client packageName : b.b.a.a.a.b.m@ec04f2
+08-04 14:33:14.301  4452  5239 D SemContextService: unlock : registerCallback
+08-04 14:33:14.302  5140  5188 D SemContextManager:   .registerListener : listener = b.b.a.a.a.b.m@ec04f2, service=Sensor Status Check
+08-04 14:33:14.302  5140  5188 V GpsSessionManager_FLP: Register sensorHubListener to check statusCheck, true
+08-04 14:33:14.302  5140  5188 D BadGnssDetector_FLP: startMonitor is called
+08-04 14:33:14.302  5140  5188 D GnssEngineMonitor_FLP: setNavigatingFromGlp, startNavigating with interval 1000, operationMode=0
+08-04 14:33:14.302  5140  5188 W GnssEngineMonitor_FLP: Invalid operation mode is set to current session
+08-04 14:33:14.302  5140  5188 V GoogleActivityManager_FLP: handleRequest is called
+08-04 14:33:14.303  5166  7354 W inertial-anchor: Triggering reinit due to mag declination change
+08-04 14:33:14.303  5166  7354 W Looper  : Looper already prepared for this thread with a different value for the LOOPER_PREPARE_ALLOW_NON_CALLBACKS option.
+08-04 14:33:14.304  4452  6431 D SensorService: Calling batch handle==1 flags=0 rate=180000000 timeout== 0
+08-04 14:33:14.304  5140  5188 E RequestManager_FLP: [LocationManager] Location request  ddcdcbc(Listener) passive interval=0 from com.google.android.gms.persistent (10082 foreground)
+08-04 14:33:14.305  5140  5188 W IncomingHandler_FLP: GnssStatusListener is registered from com.google.android.gms , so not monitoring
+08-04 14:33:14.307 31379 31379 I ViewRootImpl@b01ace1[MainActivity]: [DrawPending] pendingDrawFinished(0) 1 android.view.ViewRootImpl.lambda$performDraw$1$ViewRootImpl:4058 android.view.-$$Lambda$ViewRootImpl$7A_3tkr_Kw4TZAeIUGVlOoTcZhg.run:4 android.os.Handler.handleCallback:883 
+08-04 14:33:14.307 31379 31379 I ViewRootImpl@b01ace1[MainActivity]: [DrawPending] reportDrawFinished()
+08-04 14:33:14.308  5166  7525 W Settings: Setting airplane_mode_on has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+08-04 14:33:14.308  4452  6436 D WindowManager: finishDrawingWindow: Window{323dc26 u0 io.tiste.RallyCall/io.tiste.RallyCall.MainActivity} mDrawState=DRAW_PENDING
+08-04 14:33:14.309 31379 31379 W unknown:BridgelessReact: ReactHost{0}.onUserLeaveHint(activity)
+08-04 14:33:14.309  4452  4568 V WindowManager: performShow on Window{93e7092 u0 Splash Screen com.magnus.launcher}: mDrawState=READY_TO_SHOW readyForDisplay=false starting=true during animation: policyVis=true parentHidden=false tok.hiddenRequested=true tok.hidden=true animating=false tok animating=false Callers=com.android.server.wm.WindowState.performShowLocked:226 com.android.server.wm.WindowStateAnimator.commitFinishDrawingLocked:109 com.android.server.wm.DisplayContent.lambda$new$8$DisplayContent:206 com.android.server.wm.-$$Lambda$DisplayContent$qxt4izS31fb0LF2uo_OF9DMa7gc.accept:4 
+08-04 14:33:14.309  4452  6431 D SensorService: Calling batch handle==7 flags=0 rate=200000000 timeout== 0
+08-04 14:33:14.309  4072  4240 E Sensors : Sensor : Meta event
+08-04 14:33:14.310  4072  4526 I nanohub : mergeDirectReportRequest - enable = 0 activate = 0 direct.rate = 0 normal.rate = 200000000
+08-04 14:33:14.310  4072  4526 I nanohub : mergeDirectReportRequest - activate = 0 normal.rate = 200000000
+08-04 14:33:14.310  4072  4526 I Sensors : batch(9) - uncal_geomagnetic_sensor try to batching with 200000000
+08-04 14:33:14.310 31379 31379 W unknown:BridgelessReact: ReactHost{0}.onHostPause(activity)
+08-04 14:33:14.310  4072  4526 I Sensors : UncalMagneticSensor old sensor_state 148003, new sensor_state : 148007 en : 1
+08-04 14:33:14.310 31379 31379 W unknown:BridgelessReact: ReactContext.onHostPause()
+08-04 14:33:14.311  4452  4568 V WindowManager: performShow on Window{93e7092 u0 Splash Screen com.magnus.launcher}: mDrawState=READY_TO_SHOW readyForDisplay=false starting=true during animation: policyVis=true parentHidden=false tok.hiddenRequested=true tok.hidden=true animating=false tok animating=false Callers=com.android.server.wm.WindowState.performShowLocked:226 com.android.server.wm.WindowStateAnimator.commitFinishDrawingLocked:109 com.android.server.wm.DisplayContent.lambda$new$8$DisplayContent:206 com.android.server.wm.-$$Lambda$DisplayContent$qxt4izS31fb0LF2uo_OF9DMa7gc.accept:4 
+08-04 14:33:14.311  4452  4568 D PkgPredictorService: pkg:io.tiste.RallyCall activity:io.tiste.RallyCall.MainActivity thisTime:81
+08-04 14:33:14.311  4452  4568 D PkgPredictorService-Collector: update activity launch time: MainActivity : 81
+08-04 14:33:14.311  4452  4568 V WindowManager: performShow on Window{323dc26 u0 io.tiste.RallyCall/io.tiste.RallyCall.MainActivity}: mDrawState=READY_TO_SHOW readyForDisplay=false starting=false during animation: policyVis=true parentHidden=false tok.hiddenRequested=false tok.hidden=true animating=true tok animating=true Callers=com.android.server.wm.WindowState.performShowLocked:226 com.android.server.wm.WindowStateAnimator.commitFinishDrawingLocked:109 com.android.server.wm.DisplayContent.lambda$new$8$DisplayContent:206 com.android.server.wm.-$$Lambda$DisplayContent$qxt4izS31fb0LF2uo_OF9DMa7gc.accept:4 
+08-04 14:33:14.312  4452  4568 D PowerManagerService: [api] acquire WakeLock SCREEN_BRIGHT_WAKE_LOCK        'WindowManager' ON_AFTER_RELEASE (uid=1000 pid=4452 pkg=android ws=WorkSource{10243})
+08-04 14:33:14.312  4452  5239 D SensorService: removeConnection, index : 0, size : 1
+08-04 14:33:14.312  4452  5239 D SensorService: # removeConnection, index : 0, size : 0
+08-04 14:33:14.312  4452  5239 D SensorService: Calling activate off 2
+08-04 14:33:14.313  4072  4072 I Sensors : GyroSensor old sensor_state 148007, new sensor_state : 148005 en : 0
+08-04 14:33:14.314  4452  4797 I WifiScanController: scan requested by com.google.android.gms (it's NLP package. check moving state)
+08-04 14:33:14.315  4452  4797 D SemContextService: lock : requestToUpdate
+08-04 14:33:14.315  4452  4797 W CAE     : setCAProperty(ContextAwareService.java:597) - [setProperty 01] Mutex is locked for ANY_MOTION_DETECTOR_RUNNER
+08-04 14:33:14.315  4452  4797 I CAE     : sendCmdToSensorHub(SensorHubCommManager.java:158) - -72, 58, 1, 0,
+08-04 14:33:14.316  4072  4072 I nanohub : mergeDirectReportRequest - enable = 0 activate = 1 direct.rate = 0 normal.rate = 20000000
+08-04 14:33:14.316  4072  4072 I nanohub : mergeDirectReportRequest - activate = 1 normal.rate = 20000000
+08-04 14:33:14.316  4072  4072 I Sensors : batch(9) - uncal_geomagnetic_sensor try to batching with 20000000
+08-04 14:33:14.316 31379 31379 D SensorManager: unregisterListener ::   listener = expo.modules.sensors.SensorSubscription@616dfb7
+08-04 14:33:14.316  4452  5239 D SensorService: removeConnection, index : 0, size : 4
+08-04 14:33:14.316  4452  5239 D SensorService: # removeConnection, index : 0, size : 3
+08-04 14:33:14.316  4452  5239 D SensorService: Calling activate off 1
+08-04 14:33:14.319  4072  4072 I nanohub : mergeDirectReportRequest - enable = 0 activate = 1 direct.rate = 0 normal.rate = 10000000
+08-04 14:33:14.319  4072  4072 I nanohub : mergeDirectReportRequest - activate = 1 normal.rate = 10000000
+08-04 14:33:14.319  4072  4072 I Sensors : batch(0) - accelerometer_sensor try to batching with 10000000
+08-04 14:33:14.320  4452  4568 V WindowManager: performShow on Window{323dc26 u0 io.tiste.RallyCall/io.tiste.RallyCall.MainActivity}: mDrawState=READY_TO_SHOW readyForDisplay=false starting=false during animation: policyVis=true parentHidden=false tok.hiddenRequested=false tok.hidden=true animating=true tok animating=true Callers=com.android.server.wm.WindowState.performShowLocked:226 com.android.server.wm.DisplayContent.lambda$new$0$DisplayContent:17 com.android.server.wm.-$$Lambda$DisplayContent$0yxrqH9eGY2qTjH1u_BvaVrXCSA.accept:4 com.android.server.wm.WindowContainer$ForAllWindowsConsumerWrapper.apply:2 
+08-04 14:33:14.322 31379 31379 D SensorManager: unregisterListener ::   listener = expo.modules.sensors.SensorSubscription@e713324
+08-04 14:33:14.322  4452  4568 V WindowManager: performShow on Window{93e7092 u0 Splash Screen com.magnus.launcher}: mDrawState=READY_TO_SHOW readyForDisplay=false starting=true during animation: policyVis=true parentHidden=false tok.hiddenRequested=true tok.hidden=true animating=false tok animating=false Callers=com.android.server.wm.WindowState.performShowLocked:226 com.android.server.wm.WindowStateAnimator.commitFinishDrawingLocked:109 com.android.server.wm.DisplayContent.lambda$new$8$DisplayContent:206 com.android.server.wm.-$$Lambda$DisplayContent$qxt4izS31fb0LF2uo_OF9DMa7gc.accept:4 
+08-04 14:33:14.322  4452  4568 V WindowManager: performShow on Window{323dc26 u0 io.tiste.RallyCall/io.tiste.RallyCall.MainActivity}: mDrawState=READY_TO_SHOW readyForDisplay=false starting=false during animation: policyVis=true parentHidden=false tok.hiddenRequested=false tok.hidden=true animating=true tok animating=true Callers=com.android.server.wm.WindowState.performShowLocked:226 com.android.server.wm.WindowStateAnimator.commitFinishDrawingLocked:109 com.android.server.wm.DisplayContent.lambda$new$8$DisplayContent:206 com.android.server.wm.-$$Lambda$DisplayContent$qxt4izS31fb0LF2uo_OF9DMa7gc.accept:4 
+08-04 14:33:14.324  4452  4730 D SensorService: setSContextDataLocked ints length 2 , byte length 4
+08-04 14:33:14.324  4072  4526 D Sensors : poll_inject_sensor_data
+08-04 14:33:14.324  4072  4526 D Sensors : b8 3a 01 00  
+08-04 14:33:14.324  4072  4526 E Sensors : inject_scontext_data: New ssp_data_injection_fd(28)
+08-04 14:33:14.328  4072  4526 D Sensors : SContext Data Injection return 4
+08-04 14:33:14.328  4452  6391 W AppOps  : Noting op not finished: uid 10082 pkg com.google.android.gms code 79 time=1785839575813 duration=0
+08-04 14:33:14.328  4452  6391 W AppOps  : Noting op not finished: uid 5013 pkg com.sec.location.nsflp2 code 79 time=1785839575813 duration=0
+08-04 14:33:14.328  5166  8836 I AlarmManager: set [name: SystemMemoryMap-activityrecognition type: 2 triggerAtMillis: 9223372036854775806 windowMillis: -1 intervalMillis: 0]
+08-04 14:33:14.329  4452  6431 D SensorService: Calling batch handle==4 flags=0 rate=180000000 timeout== 0
+08-04 14:33:14.329  4452  4797 I CAE     : setCAProperty(ContextAwareService.java:602) - result : true
+08-04 14:33:14.329  4072  4526 I nanohub : mergeDirectReportRequest - enable = 0 activate = 0 direct.rate = 0 normal.rate = 180000000
+08-04 14:33:14.329  4452  7385 D SamsungAlarmManager: setInexact Intent (T:2/F:0/AC:false) 19380526T031000 - CU:10082/CP:5166
+08-04 14:33:14.330  4452  7385 I SamsungAlarmManager: setLocked to kernel - T:2 / 20260804T143430, SetElapsed=19063224, nowELAPSED=18986981
+08-04 14:33:14.330  4452  4797 W CAE     : setCAProperty(ContextAwareService.java:603) - [setProperty 02] Mutex is unlocked for ANY_MOTION_DETECTOR_RUNNER
+08-04 14:33:14.330  4072  4526 I nanohub : mergeDirectReportRequest - activate = 0 normal.rate = 180000000
+08-04 14:33:14.330  4452  7385 I SamsungAlarmManager: setLocked to kernel - T:3 / 20260804T143328, SetElapsed=19001222, nowELAPSED=18986981
+08-04 14:33:14.330  4072  4526 I Sensors : batch(12) - uncal_gyro_sensor try to batching with 180000000
+08-04 14:33:14.330  4452  4797 D SemContextService:     .requestToUpdate() : service = Any Motion Detector
+08-04 14:33:14.330  4452  4797 D SemContextService: unlock : requestToUpdate
+08-04 14:33:14.330  4452  4797 D SemContextManager:   .requestToUpdate : listener = android.hardware.scontext.SContextManager$SContextListenerDelegate@66346dc, service=Any Motion Detector
+08-04 14:33:14.331  5166  8836 I SystemMemoryMap: (REDACTED) [activityrecognition] serialization complete (extras/values=%.2f/%.2fkb)
+08-04 14:33:14.332  4072  4526 I Sensors : UncalGyroSensor old sensor_state 148005, new sensor_state : 180773 en : 1
+08-04 14:33:14.334  4452  6436 D SensorService: removeConnection, index : 0, size : 1
+08-04 14:33:14.334  4072  4526 I nanohub : mergeDirectReportRequest - enable = 0 activate = 1 direct.rate = 0 normal.rate = 10000000
+08-04 14:33:14.334  4072  4526 I nanohub : mergeDirectReportRequest - activate = 1 normal.rate = 10000000
+08-04 14:33:14.334  4452  6436 D SensorService: # removeConnection, index : 0, size : 0
+08-04 14:33:14.334  4072  4526 I Sensors : batch(12) - uncal_gyro_sensor try to batching with 10000000
+08-04 14:33:14.334  4452  6436 D SensorService: Calling activate off 1936484718
+08-04 14:33:14.335  4072  4240 E Sensors : Sensor : Meta event
+08-04 14:33:14.336  5140  5188 V GpsSession_FLP: State[ACTIVITY_CONTEXT] is changed to STATIONARY
+08-04 14:33:14.336  4072  4526 I nanohub : mergeDirectReportRequest - enable = 0 activate = 1 direct.rate = 0 normal.rate = 10000000
+08-04 14:33:14.336  4072  4526 I nanohub : mergeDirectReportRequest - activate = 1 normal.rate = 10000000
+08-04 14:33:14.336  4072  4526 I Sensors : batch(0) - accelerometer_sensor try to batching with 10000000
+08-04 14:33:14.336  5140  5188 V GoogleActivityManager_FLP: received new state : 3
+08-04 14:33:14.336  5140  5188 V GoogleActivityManager_FLP: handleChangeInterval is called
+08-04 14:33:14.336  4452  6431 W AppOps  : Noting op not finished: uid 10082 pkg com.google.android.gms code 79 time=1785839594226 duration=-1
+08-04 14:33:14.337  4452  4568 V WindowManager: performShow on Window{323dc26 u0 io.tiste.RallyCall/io.tiste.RallyCall.MainActivity}: mDrawState=READY_TO_SHOW readyForDisplay=false starting=false during animation: policyVis=true parentHidden=false tok.hiddenRequested=false tok.hidden=true animating=true tok animating=true Callers=com.android.server.wm.WindowState.performShowLocked:226 com.android.server.wm.DisplayContent.lambda$new$0$DisplayContent:17 com.android.server.wm.-$$Lambda$DisplayContent$0yxrqH9eGY2qTjH1u_BvaVrXCSA.accept:4 com.android.server.wm.WindowContainer$ForAllWindowsConsumerWrapper.apply:2 
+08-04 14:33:14.341  4072  4526 I nanohub : mergeDirectReportRequest - activate = 1 normal.rate = 10000000
+08-04 14:33:14.342  4072  4526 I Sensors : batch(14) - rotation_vector_sensor try to batching with 10000000
+08-04 14:33:14.344  4452  6391 D SensorService: Calling batch handle==6 flags=0 rate=200000000 timeout== 0
+08-04 14:33:14.344 31379 31379 D SensorManager: unregisterListener ::   listener = expo.modules.sensors.SensorSubscription@59fee8d
+08-04 14:33:14.344  4072  4072 I nanohub : mergeDirectReportRequest - enable = 0 activate = 0 direct.rate = 0 normal.rate = 200000000
+08-04 14:33:14.344  4072  4072 I nanohub : mergeDirectReportRequest - activate = 0 normal.rate = 200000000
+08-04 14:33:14.344  4072  4072 I Sensors : batch(1) - geomagnetic_sensor try to batching with 200000000
+08-04 14:33:14.345  4072  4526 I Sensors : GeoMagneticSensor old sensor_state 180773, new sensor_state : 180789 en : 1
+08-04 14:33:14.348  4452  7385 W AppOps  : Noting op not finished: uid 10082 pkg com.google.android.gms code 79 time=1785839594336 duration=0
+08-04 14:33:14.350  4452  4724 D SensorHubManager: onGetSensorHubDataLocked: library(16) = 1, 1, 59, 0, 0, 0, -100, 64, 0, 0, -100, 64, 0, 0, -100, 64
+08-04 14:33:14.350  4072  4526 I nanohub : mergeDirectReportRequest - enable = 0 activate = 1 direct.rate = 0 normal.rate = 20000000
+08-04 14:33:14.350  4072  4526 I nanohub : mergeDirectReportRequest - activate = 1 normal.rate = 20000000
+08-04 14:33:14.350  4452  4724 D SensorHubManager:  create new SensorEvent : 128
+08-04 14:33:14.351  4072  4526 I Sensors : batch(1) - geomagnetic_sensor try to batching with 20000000
+08-04 14:33:14.351  4452  4725 D CAE     : onGetSensorHubData(SensorHubParserProvider.java:91) - onGetSensorHubData Event [event buffer len :16], AP_WAKEUP
+08-04 14:33:14.351  4452  4724 D SensorHubManager: onGetSensorHubDataLocked: library(4) = 1, 1, 58, 0
+08-04 14:33:14.351  4452  4725 I CAE     : parse(SensorHubParserProvider.java:192) - buffer size = 16
+08-04 14:33:14.351  4452  4725 I CAE     : parse(SensorHubParserProvider.java:203) - 1, 1, 59, 0, 0, 0, -100, 64, 0, 0, -100, 64, 0, 0, -100, 64,
+08-04 14:33:14.351  4452  4725 D CAE     : display(ContextProvider.java:375) - ================= SENSOR_STATUS_CHECK_RUNNER =================
+08-04 14:33:14.351  4452  4725 I CAE     : display(ContextProvider.java:391) - Status=[0], XAxis=[40000], YAxis=[40000], ZAxis=[40000]
+08-04 14:33:14.351  4452  4725 D CAE     : onGetSensorHubData(SensorHubParserProvider.java:91) - onGetSensorHubData Event [event buffer len :4], AP_WAKEUP
+08-04 14:33:14.351  4452  4725 I CAE     : parse(SensorHubParserProvider.java:192) - buffer size = 4
+08-04 14:33:14.351  4452  4725 I CAE     : parse(SensorHubParserProvider.java:203) - 1, 1, 58, 0,
+08-04 14:33:14.351  4452  4733 D SemContext.CaeProvider: Store status of sensor data
+08-04 14:33:14.351  4452  4725 D CAE     : display(ContextProvider.java:375) - ================= ANY_MOTION_DETECTOR_RUNNER =================
+08-04 14:33:14.351  4452  4725 I CAE     : display(ContextProvider.java:391) - Action=[0]
+08-04 14:33:14.352  4452  4733 D SemContextService: Service.updateContext() : service = Any Motion Detector
+08-04 14:33:14.352  4452  4854 D SemContextManager: onSemContextChanged() : event = Any Motion Detector
+08-04 14:33:14.352  4452  4964 D SamsungAlarmManager: setInexact Intent (T:3/F:0/AC:false) 20360801T143314 - CU:10082/CP:5166
+08-04 14:33:14.352  4452  4854 D SContextManager: onSContextChanged() : event = Any Motion Detector
+08-04 14:33:14.352  4452  4964 I SamsungAlarmManager: setLocked to kernel - T:2 / 20260804T143430, SetElapsed=19063224, nowELAPSED=18987003
+08-04 14:33:14.352  4452  4964 I SamsungAlarmManager: setLocked to kernel - T:3 / 20260804T143328, SetElapsed=19001222, nowELAPSED=18987003
+08-04 14:33:14.356  4452  6391 W AppOps  : Noting op not finished: uid 10082 pkg com.google.android.gms code 79 time=1785839594348 duration=0
+08-04 14:33:14.357  4452  6431 D SensorService: removeConnection, index : 0, size : 1
+08-04 14:33:14.357  4452  6431 D SensorService: # removeConnection, index : 0, size : 0
+08-04 14:33:14.357  4452  6431 D SensorService: Calling activate off 17
+08-04 14:33:14.357  4072  4526 I nanohub : mergeDirectReportRequest - activate = 1 normal.rate = 10000000
+08-04 14:33:14.357  4072  4526 I Sensors : batch(14) - rotation_vector_sensor try to batching with 10000000
+08-04 14:33:14.359  4452  6436 W AppOps  : Noting op not finished: uid 10082 pkg com.google.android.gms code 79 time=1785839594356 duration=0
+08-04 14:33:14.360 31379 31379 D SensorManager: unregisterListener ::   listener = expo.modules.sensors.SensorSubscription@dd5b842
+08-04 14:33:14.361  4452  7385 D SensorService: removeConnection, index : 0, size : 1
+08-04 14:33:14.361  4452  7385 D SensorService: # removeConnection, index : 0, size : 0
+08-04 14:33:14.361  4452  7385 D SensorService: Calling activate off 1936159350
+08-04 14:33:14.361  4072  4526 I Sensors : RotationVector old sensor_state 180789, new sensor_state : 49717 en : 0
+08-04 14:33:14.363  4452  4483 W AppOps  : Noting op not finished: uid 10082 pkg com.google.android.gms code 79 time=1785839594359 duration=0
+08-04 14:33:14.365  4452  6436 D SamsungAlarmManager: Cancel Alarm calling from uid:10082 pid :5166 / op:PendingIntent{3ca44c0: PendingIntentRecord{a91f5f9 com.google.android.gms startService}}
+08-04 14:33:14.365  4452  6436 I SamsungAlarmManager: setLocked to kernel - T:2 / 20260804T143430, SetElapsed=19063224, nowELAPSED=18987016
+08-04 14:33:14.366  4452  6436 I SamsungAlarmManager: setLocked to kernel - T:3 / 20260804T143328, SetElapsed=19001222, nowELAPSED=18987017
+08-04 14:33:14.366 31379 31379 D SensorManager: unregisterListener ::   listener = expo.modules.sensors.SensorSubscription@72fc053
+08-04 14:33:14.367  4905  4916 W m.android.phon: Reducing the number of considered missed Gc histogram windows from 133 to 100
+08-04 14:33:14.367  5166  9278 I SystemMemoryMap: (REDACTED) [activityrecognition] serialization complete (extras/values=%.2f/%.2fkb)
+08-04 14:33:14.368  4452  5239 W AppOps  : Noting op not finished: uid 10082 pkg com.google.android.gms code 79 time=1785839594363 duration=0
+08-04 14:33:14.369  4452  6431 V WindowManager: Prepare app transition: transit=TRANSIT_TASK_OPEN mNextAppTransition=TRANSIT_TASK_OPEN alwaysKeepCurrent=false displayId=0 Callers=com.android.server.wm.DisplayContent.prepareAppTransition:2 com.android.server.wm.DisplayContent.prepareAppTransition:1 com.android.server.wm.ActivityStack.resumeTopActivityInnerLocked:770 com.android.server.wm.ActivityStack.resumeTopActivityUncheckedLocked:31 com.android.server.wm.RootActivityContainer.resumeFocusedStacksTopActivities:25 
+08-04 14:33:14.369  4452  6431 V WindowManager: rotationForOrientation(orient=-1, last=0); user=0 
+08-04 14:33:14.369  4452  6431 V WindowOrientationListener: getProposedRotation: -1
+08-04 14:33:14.369  4452  6431 V WindowManager: Computed rotation=0 for display id=0 based on lastOrientation=-1 and oldRotation=0, caller=com.android.server.wm.DisplayContent.updateOrientationFromAppTokens:29 com.android.server.wm.DisplayContent.updateOrientationFromAppTokens:7 com.android.server.wm.DisplayContent.onDescendantOrientationChanged:6 com.android.server.wm.WindowContainer.onDescendantOrientationChanged:8 com.android.server.wm.WindowContainer.onDescendantOrientationChanged:8 com.android.server.wm.WindowContainer.onDescendantOrientationChanged:8 
+08-04 14:33:14.369  4452  6431 D TspStateManagerInternal: updateDefaultValue customSetting=null
+08-04 14:33:14.370  4452  6431 V WindowManager: performShow on Window{93e7092 u0 Splash Screen com.magnus.launcher}: mDrawState=READY_TO_SHOW readyForDisplay=false starting=true during animation: policyVis=true parentHidden=false tok.hiddenRequested=false tok.hidden=true animating=true tok animating=true Callers=com.android.server.wm.WindowState.performShowLocked:226 com.android.server.wm.WindowStateAnimator.commitFinishDrawingLocked:109 com.android.server.wm.DisplayContent.lambda$new$8$DisplayContent:206 com.android.server.wm.-$$Lambda$DisplayContent$qxt4izS31fb0LF2uo_OF9DMa7gc.accept:4 
+08-04 14:33:14.373  4452  4567 D GameManagerService: notePauseComponent(), received paused-component: io.tiste.RallyCall
+08-04 14:33:14.374 31379 31379 I ViewRootImpl@b01ace1[MainActivity]: MSG_WINDOW_FOCUS_CHANGED 1 1
+08-04 14:33:14.374 31379 31379 D InputMethodManager: prepareNavigationBarInfo() DecorView@fb8a91e[MainActivity]
+08-04 14:33:14.374 31379 31379 D InputMethodManager: getNavigationBarColor() 0
+08-04 14:33:14.374  4452  4567 I ApplicationPolicy: isApplicationExternalStorageWhitelisted:com.magnus.launcher user:0
+08-04 14:33:14.374  4452  4567 D ApplicationPolicy: isApplicationExternalStorageWhitelisted: DO is not enabled on user 0. Allowed.
+08-04 14:33:14.375  4452  4567 D ActivityManager: package  com.magnus.launcher, user - 0 is SDcard whitelisted
+08-04 14:33:14.375  4452  4567 I ApplicationPolicy: isApplicationExternalStorageBlacklisted:com.magnus.launcher user:0
+08-04 14:33:14.375  4452  4567 D ApplicationPolicy: isApplicationExternalStorageBlacklisted: DO is not enabled on user 0. Allowed.
+08-04 14:33:14.375  4452  4567 I ApplicationPolicy: isApplicationExternalStorageBlacklisted:com.magnus.launcher user:0
+08-04 14:33:14.375  4452  4567 D ApplicationPolicy: isApplicationExternalStorageBlacklisted: DO is not enabled on user 0. Allowed.
+08-04 14:33:14.376 31379 31379 D InputMethodManager: prepareNavigationBarInfo() DecorView@fb8a91e[MainActivity]
+08-04 14:33:14.377 31379 31379 D InputMethodManager: getNavigationBarColor() 0
+08-04 14:33:14.377 31379 31379 V InputMethodManager: Starting input: tba=io.tiste.RallyCall ic=null mNaviBarColor 0 mIsGetNaviBarColorSuccess true , NavVisible : true , NavTrans : false
+08-04 14:33:14.377 31379 31379 D InputMethodManager: startInputInner - Id : 0
+08-04 14:33:14.377 31379 31379 I InputMethodManager: startInputInner - mService.startInputOrWindowGainedFocus
+08-04 14:33:14.378  4452  6431 D InputMethodManagerService: mSecureKeypadEnabled = false
+08-04 14:33:14.378  4452  6431 V InputMethodManagerService: startInputOrWindowGainedFocusInternalLocked: reason=WINDOW_FOCUS_GAIN client=android.os.BinderProxy@17cd45a inputContext=null missingMethods= attribute=android.view.inputmethod.EditorInfo@4f2f8b5 startInputFlags=FIRST_WINDOW_FOCUS_GAIN|INITIAL_CONNECTION softInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE|IS_FORWARD_NAVIGATION windowFlags=#81810180 unverifiedTargetSdkVersion=35
+08-04 14:33:14.378  4452  6431 V InputMethodManagerService: IME PreRendering MASTER flag: false, LowRam: false
+08-04 14:33:14.378  4452  6431 V InputMethodManagerService: Unspecified window will hide input
+08-04 14:33:14.378  4452  6431 V InputMethodManagerService: hideCurrentInputLocked : shouldHideSoftInput is false
+08-04 14:33:14.378  4452  6431 D InputMethodManagerService: DESKTOP MODE! : 2
+08-04 14:33:14.378  4452  6431 D InputMethodManagerService: NOT IN KNOX DESKTOP MODE!
+08-04 14:33:14.378  4452  6431 V InputMethodManagerService: getDisplayIdOfInputMethodWindowToBeAdded : 0
+08-04 14:33:14.378  4452  6431 V InputMethodManagerService: switching to client: client=android.os.BinderProxy@17cd45a keyguard=false
+08-04 14:33:14.378  4452  6431 V InputMethodManagerService: Enabling: SessionState{uid 10243 pid 31379 method e62644d session 2e194b2 channel ClientState{c0c3e14 uid=10243 pid=31379 displayId=0} (server)}
+08-04 14:33:14.378  4452  6431 D InputMethodManagerService: checkDisplayOfStartInputAndUpdateKeyboard display Id 0last 0
+08-04 14:33:14.378  4452  6431 D InputTransport: Input channel constructed: 'ClientS', fd=429
+08-04 14:33:14.378  4452  6431 D InputTransport: Input channel destroyed: 'ClientS', fd=429
+08-04 14:33:14.380  8970  8970 E Zygote  : isWhitelistProcess - Process is Whitelisted
+08-04 14:33:14.380  4452  4588 I ActivityManager: Start proc 8970:com.magnus.launcher/u0a275 for activity {com.magnus.launcher/com.magnus.launcher.MainActivity}
+08-04 14:33:14.380  8970  8970 E Zygote  : accessInfo : 1
+08-04 14:33:14.380  8970  8970 I Zygote  : seccomp disabled by setenforce 0
+08-04 14:33:14.381 10005 10005 I HONEYBOARD: HoneyBoardService onFinishInput 
+08-04 14:33:14.382 10005 10005 I HONEYBOARD: a IC have been unbinded,  InputConnectionWrapper{idHash=#f01014e mMissingMethods=}
+08-04 14:33:14.383 10005 10005 I HONEYBOARD: HoneyBoardService [PF_CL][onFinishInput]  934000 ns 
+08-04 14:33:14.383 10005 10005 D InputMethodService: checkDisplayOfStartInputAndUpdateKeyboard display Id 0last 0
+08-04 14:33:14.383 10005 10005 I HONEYBOARD: HoneyBoardService [IMI] onStartInput - caller pid : 31379 , caller uid : 10243 
+08-04 14:33:14.383  8970  8970 I magnus.launche: Late-enabling -Xcheck:jni
+08-04 14:33:14.383 10005 10005 I HONEYBOARD: i updateConfigs 
+08-04 14:33:14.384  4452  4483 W AppOps  : Noting op not finished: uid 10082 pkg com.google.android.gms code 79 time=1785839594328 duration=0
+08-04 14:33:14.384  4452  4483 W AppOps  : Noting op not finished: uid 5013 pkg com.sec.location.nsflp2 code 79 time=1785839594328 duration=0
+08-04 14:33:14.390 10005 10005 I HONEYBOARD: i isEnabledNightMode : false 
+08-04 14:33:14.390  4452  4985 D MdnieScenarioControlService:  packageName : com.magnus.launcher    className : com.magnus.launcher.MainActivity
+08-04 14:33:14.391  4452  4985 V MdnieScenarioControlService: setUIMode from UI function(3)
+08-04 14:33:14.392  5166  9275 I AlarmManager: set [name: SystemMemoryMap-activityrecognition type: 2 triggerAtMillis: 9223372036854775806 windowMillis: -1 intervalMillis: 0]
+08-04 14:33:14.392 10005 10005 I HONEYBOARD: a IC have been binded, InputConnectionWrapper{idHash=#227826f mMissingMethods=} 
+08-04 14:33:14.393 10005 10005 I HONEYBOARD: h [EditorInputType]setPrivateImeOptionsToTable privateImeOptions ( null )
+08-04 14:33:14.393 10005 10005 I HONEYBOARD: b incognitoMode : false 
+08-04 14:33:14.393 10005 10005 I HONEYBOARD: a needOff = true , isJpnConvertState : false, isForceOff = true 
+08-04 14:33:14.395  4452  4483 W AppOps  : Noting op not finished: uid 10082 pkg com.google.android.gms code 79 time=1785839594368 duration=0
+08-04 14:33:14.395  4452  5239 D SamsungAlarmManager: setInexact Intent (T:2/F:0/AC:false) 19380526T031000 - CU:10082/CP:5166
+08-04 14:33:14.395  4452  5239 I SamsungAlarmManager: setLocked to kernel - T:2 / 20260804T143430, SetElapsed=19063224, nowELAPSED=18987046
+08-04 14:33:14.396 10005 10005 I HONEYBOARD: h getDefaultInputRange : UNKNOWN 
+08-04 14:33:14.396 10005 10005 I HONEYBOARD: a currentState : 0 
+08-04 14:33:14.396  4452  5239 I SamsungAlarmManager: setLocked to kernel - T:3 / 20260804T143328, SetElapsed=19001222, nowELAPSED=18987047
+08-04 14:33:14.398 10005 10005 I HONEYBOARD: a [UpdatePolicy] [post] a: 0 cl: 1441799 kit: [0/2] vt: 0 ir: 1 
+08-04 14:33:14.399 10005 10005 I HONEYBOARD: HoneyBoardService [PF_OP][onStartInput]  16158577 ns 
+08-04 14:33:14.400  5166  9275 I SystemMemoryMap: (REDACTED) [activityrecognition] serialization complete (extras/values=%.2f/%.2fkb)
+08-04 14:33:14.408  8970  8970 E magnus.launche: Unknown bits set in runtime_flags: 0x8000
+08-04 14:33:14.410  4452  6391 W AppOps  : Noting op not finished: uid 10082 pkg com.google.android.gms code 79 time=1785839594395 duration=0
+08-04 14:33:14.415  4452  6391 W AppOps  : Noting op not finished: uid 10082 pkg com.google.android.gms code 79 time=1785839594410 duration=0
+08-04 14:33:14.418  4452  6431 W AppOps  : Noting op not finished: uid 10082 pkg com.google.android.gms code 79 time=1785839594415 duration=0
+08-04 14:33:14.421  4452  4483 W AppOps  : Noting op not finished: uid 10082 pkg com.google.android.gms code 79 time=1785839594418 duration=0
+08-04 14:33:14.422  8970  8970 D ActivityThread: setConscryptValidator
+08-04 14:33:14.422  8970  8970 D ActivityThread: setConscryptValidator - put
+08-04 14:33:14.424  4452  4483 I ActivityManager: DSS OFF for com.magnus.launcher
+08-04 14:33:14.426  4452  4483 V WindowManager: rotationForOrientation(orient=-1, last=0); user=0 
+08-04 14:33:14.426  4452  4483 V WindowOrientationListener: getProposedRotation: -1
+08-04 14:33:14.426  4452  4483 V WindowManager: Computed rotation=0 for display id=0 based on lastOrientation=-1 and oldRotation=0, caller=com.android.server.wm.DisplayContent.updateOrientationFromAppTokens:29 com.android.server.wm.DisplayContent.updateOrientationFromAppTokens:7 com.android.server.wm.RootActivityContainer.ensureVisibilityAndConfig:38 com.android.server.wm.ActivityStackSupervisor.realStartActivityLocked:209 com.android.server.wm.RootActivityContainer.attachApplication:94 com.android.server.wm.ActivityTaskManagerService$LocalService.attachApplication:9 
+08-04 14:33:14.426  4452  4483 D TspStateManagerInternal: updateDefaultValue customSetting=null
+08-04 14:33:14.427  4452  4483 V WindowManager: performShow on Window{93e7092 u0 Splash Screen com.magnus.launcher}: mDrawState=READY_TO_SHOW readyForDisplay=false starting=true during animation: policyVis=true parentHidden=false tok.hiddenRequested=false tok.hidden=true animating=true tok animating=true Callers=com.android.server.wm.WindowState.performShowLocked:226 com.android.server.wm.WindowStateAnimator.commitFinishDrawingLocked:109 com.android.server.wm.DisplayContent.lambda$new$8$DisplayContent:206 com.android.server.wm.-$$Lambda$DisplayContent$qxt4izS31fb0LF2uo_OF9DMa7gc.accept:4 
+08-04 14:33:14.427  4452  4483 D TspStateManagerInternal: updateDefaultValue customSetting=null
+08-04 14:33:14.428  4452  4885 D GameManagerService: onLooperPrepared(), msg: { when=0 what=10010 obj=com.magnus.launcher target=com.samsung.android.game.GameManagerService$FgCheckThread$1 }
+08-04 14:33:14.428  4452  4483 D GamePkgDataHelper: notifyAppCreate(), pkgName: com.magnus.launcher, sendRet: true
+08-04 14:33:14.428  4452  4885 D GameManagerService: handleMessage(), received MSG_APP_CREATE of pkgName: com.magnus.launcher
+08-04 14:33:14.428  4452  4483 D InputDispatcher: Focused application set to (0): c22005c
+08-04 14:33:14.428  4452  4483 V WindowManager: Changing focus from Window{323dc26 u0 io.tiste.RallyCall/io.tiste.RallyCall.MainActivity} to null displayId=0 Callers=com.android.server.wm.RootWindowContainer.updateFocusedWindowLocked:26 com.android.server.wm.WindowManagerService.updateFocusedWindowLocked:10 com.android.server.wm.ActivityDisplay.setFocusedApp:140 com.android.server.wm.ActivityTaskManagerService.setResumedActivityUncheckLocked:169 com.android.server.wm.ActivityStack.onActivityStateChanged:61 com.android.server.wm.TaskRecord.onActivityStateChanged:6 
+08-04 14:33:14.429  4452  4483 D TspStateManagerInternal: updateDefaultValue customSetting=null
+08-04 14:33:14.429  4452  4483 D MARsPolicyManager: onPackageResumedFG pkgName = com.magnus.launcher, userId = 0
+08-04 14:33:14.430  4452  4483 W WindowManager: Execute app transition: mNextAppTransition=TRANSIT_TASK_OPEN, displayId: 0 Callers=com.android.server.wm.RootActivityContainer.executeAppTransitionForAllDisplay:20 com.android.server.wm.ActivityStackSupervisor.reportResumedActivityLocked:51 com.android.server.wm.ActivityRecord.completeResumeLocked:104 com.android.server.wm.ActivityStack.minimalResumeActivityLocked:8 com.android.server.wm.ActivityStackSupervisor.realStartActivityLocked:895 
+08-04 14:33:14.430  4452  4797 D WifiScanController: time diff: 315541
+08-04 14:33:14.430  4452  4797 I WifiScanController: Ignore scan request, use cached scan result
+08-04 14:33:14.430  4452  4797 E WifiScanningService: Use Cached ScanResult. useCachedScan : true0
+08-04 14:33:14.431  4452  4568 V WindowManager: performShow on Window{93e7092 u0 Splash Screen com.magnus.launcher}: mDrawState=READY_TO_SHOW readyForDisplay=false starting=true during animation: policyVis=true parentHidden=false tok.hiddenRequested=false tok.hidden=true animating=true tok animating=true Callers=com.android.server.wm.WindowState.performShowLocked:226 com.android.server.wm.WindowStateAnimator.commitFinishDrawingLocked:109 com.android.server.wm.DisplayContent.lambda$new$8$DisplayContent:206 com.android.server.wm.-$$Lambda$DisplayContent$qxt4izS31fb0LF2uo_OF9DMa7gc.accept:4 
+08-04 14:33:14.431  4452  4797 D SamsungAlarmManager: setInexact Listener (T:2/F:8/AC:false) 20260804T143329 - CU:1000/CP:4452
+08-04 14:33:14.431  4452  4797 I SamsungAlarmManager: setLocked to kernel - T:2 / 20260804T143329, SetElapsed=19002081, nowELAPSED=18987082
+08-04 14:33:14.431  4452  4797 I SamsungAlarmManager: setLocked to kernel - T:3 / 20260804T143328, SetElapsed=19001222, nowELAPSED=18987082
+08-04 14:33:14.432  4452  4797 D SensorService: setSContextDataLocked ints length 2 , byte length 4
+08-04 14:33:14.432  4452  4568 V WindowManager: Setting visibility of Window{323dc26 u0 io.tiste.RallyCall/io.tiste.RallyCall.MainActivity}: false, caller=com.android.server.wm.WindowContainer.sendAppVisibilityToClients:18 com.android.server.wm.AppWindowToken.setClientHidden:61 com.android.server.wm.AppWindowToken.onAnimationFinished:104 com.android.server.wm.AppWindowToken.commitVisibility:320 com.android.server.wm.AppTransitionController.handleClosingApps:49 
+08-04 14:33:14.432  4072  4526 D Sensors : poll_inject_sensor_data
+08-04 14:33:14.432  4072  4526 D Sensors : c1 47 00 04  
+08-04 14:33:14.432  4072  4526 E Sensors : inject_scontext_data: New ssp_data_injection_fd(28)
+08-04 14:33:14.432  4452  4568 W WindowManager: requestTraversal called while in layout. Callers=com.android.server.wm.WindowManagerService.requestTraversal:8 com.android.server.wm.WindowState.onExitAnimationDone:114 com.android.server.wm.-$$Lambda$01bPtngJg5AqEoOWfW3rWfV7MH4.accept:2 
+08-04 14:33:14.433  4452  4568 I WindowManager: Reparenting to leash, surface=Surface(name=AppWindowToken{c22005c token=Token{6b23ecf ActivityRecord{609732e u0 com.magnus.launcher/.MainActivity t100}}})/@0x37cfdee
+08-04 14:33:14.433  4090  5771 I SurfaceFlinger: id=887 createSurf (0x0),-1 flag=80004, Surface(name=AppWindowToken{c22005c token=Token{6b23ecf ActivityRecord{609732e u0 com.magnus.launcher/.MainActivity t100}}})/@0x37cfdee - animation-leash#0
+08-04 14:33:14.434  4072  4526 D Sensors : SContext Data Injection return 4
+08-04 14:33:14.434  4452  4568 D WindowManager: makeSurface duration=1 leash=Surface(name=Surface(name=AppWindowToken{c22005c token=Token{6b23ecf ActivityRecord{609732e u0 com.magnus.launcher/.MainActivity t100}}})/@0x37cfdee - animation-leash)/@0x6147925
+08-04 14:33:14.434  4090  5771 I SurfaceFlinger: id=888 createSurf (0x0),-1 flag=80004, Surface(name=AppWindowToken{c22005c token=Token{6b23ecf ActivityRecord{609732e u0 com.magnus.launcher/.MainActivity t100}}})/@0x37cfdee - animation-bounds#0
+08-04 14:33:14.435  4452  4568 D TspStateManagerInternal: updateDefaultValue customSetting=null
+08-04 14:33:14.436  4946  4946 D DebugUiOffloadThread: submit
+08-04 14:33:14.436  4946  4946 D DebugUiOffloadThread: submit
+08-04 14:33:14.436  4452  4565 D WindowManager: setSystemUiVisibility: displayId=0, vis=0x8018, fullVis=0x0, dockVis=0x0, win=Window{93e7092 u0 Splash Screen com.magnus.launcher}
+08-04 14:33:14.438  4452  4568 D PowerManagerService: [api] release WakeLock SCREEN_BRIGHT_WAKE_LOCK        'WindowManager' ON_AFTER_RELEASE ACQ=-126ms (uid=1000 pid=4452 pkg=android ws=WorkSource{10243})
+08-04 14:33:14.438  4452  4568 I EdgeLightingManager: hideForWakeLock packageName=android
+08-04 14:33:14.438  4452  4568 I EdgeLightingManager: isCallingUserSupported : callingUserId=0, mUserId=0, isDualAppId=false
+08-04 14:33:14.438  4452  4568 I EdgeLightingClientManager: isAvailableEdgeLighting: condition=2 mCondition=3 mIsConnected=false0
+08-04 14:33:14.438  4452  4568 I EdgeLightingManager: hideForWakeLockInternal : return false by isAcceptableApplication.
+08-04 14:33:14.438  4452  4568 D PowerManagerService: [api] applyWakeLockFlagsOnReleaseLocked : userActivityNoUpdateLocked is called : SCREEN_BRIGHT_WAKE_LOCK        'WindowManager' ON_AFTER_RELEASE (uid=1000 pid=4452 pkg=android ws=WorkSource{10243})
+08-04 14:33:14.439  4452  4568 I ViewRootImpl@f3bfef4[launcher]: MSG_RESIZED: frame=(0,0,1080,2220) ci=(0,0,0,126) vi=(0,0,0,126) or=1
+08-04 14:33:14.440  4946  4946 D LightBarController: onNavigationVisibilityChanged : vis = 8018, nbModeChanged = false navigationBarMode = 4, navbarColorManagedByIme = false
+08-04 14:33:14.440  4946  4946 V NavBarStoreImpl: handleEvent [EventType] GET_BOOL_TINT_CONTROLLER_ENABLED [Module] LightBarController
+08-04 14:33:14.440  4946  4946 V NavBarStoreImpl: --[Band]COLOR_PACK_GET_TINT_SAMPLING_ENABLED
+08-04 14:33:14.440  4946  4946 V NavBarStoreImpl: ----apply(SET_TINT_SAMPLING_ENABLED)
+08-04 14:33:14.440  4946  4946 V NavBarStoreImpl: getResult(GET_BOOL_TINT_CONTROLLER_ENABLED)=false
+08-04 14:33:14.442  4452  4483 D WindowManager: adjustSystemUiVisibilityLw: displayId=0, vis=0x8018, resetVis=0x0, clearVis=0x0
+08-04 14:33:14.442  4452  4483 D InputManager-JNI: setSystemUiVisibility dexmode: false changed: true displayid: 0 visibility: 0x8018 DD: 0x8018 OD: 0x0
+08-04 14:33:14.442  4452  4567 I WindowManager: Focus moving from Window{323dc26 u0 io.tiste.RallyCall/io.tiste.RallyCall.MainActivity} to null displayId=0
+08-04 14:33:14.442  4452  4567 I WindowManager: Losing focus: Window{323dc26 u0 io.tiste.RallyCall/io.tiste.RallyCall.MainActivity}
+08-04 14:33:14.443  9239 10148 D MobileWips: MWIPS wifi state changed 12
+08-04 14:33:14.444  7974  7974 I TrayStateController: onSystemUiVisibilityChange : 32792 0
+08-04 14:33:14.446  4452  4565 D CodecSolution: isMaxAspectPackageEx: com.magnus.launcher : true(2)
+08-04 14:33:14.446  4452  5239 W AppOps  : Noting op not finished: uid 10082 pkg com.google.android.gms code 79 time=1785839594421 duration=0
+08-04 14:33:14.447  4452  4567 D GamePkgDataHelper: getSosPolicy(). com.magnus.launcher
+08-04 14:33:14.448  4452  4829 D PkgPredictorService: com.magnus.launcher go to foreground!
+08-04 14:33:14.448  4452  4829 E PkgPredictorService-Collector: record changed bt=1  wifi=1 screen=0
+08-04 14:33:14.448  4452  4829 D PkgPredictorService: previous pkgs: com.magnus.launcher,io.tiste.RallyCall,com.magnus.launcher running pkg: com.magnus.launcher, uid: 0 is system: false
+08-04 14:33:14.448  4452  4829 D PkgPredictorService-Collector: save record...
+08-04 14:33:14.448  4452  4829 D PkgPredictorService-Collector:  (hour:14 day:3 previous:[com.magnus.launcher, io.tiste.RallyCall, com.magnus.launcher] activityName:unknown running:com.magnus.launcher userId:0 screenOrientation:0 wifi:1 bt:1 predictTime:0 apkVersion:1.0.0 consumeTime:-1 preloaded:false>)
+08-04 14:33:14.448  4452  4829 D PkgPredictorService-NapPreloadController: User using: com.magnus.launcher
+08-04 14:33:14.448  4452  4829 I PkgPredictorService-NapClassifier: RF predict version:0
+08-04 14:33:14.448  4452  4829 D PkgPredictorService-NapClassifier: Predict result: 47.0,45.0,3.0, - [0_&_com.magnus.launcher, 0_&_io.tiste.RallyCall, 0_&_com.android.vending]
+08-04 14:33:14.448  4090  5771 E BufferQueueProducer: [io.tiste.RallyCall/io.tiste.RallyCall.MainActivity$_31379#0] disconnect: not connected (req=1)
+08-04 14:33:14.448 31379  2189 W libEGL  : EGLNativeWindowType 0x6d26ff5390 disconnect failed
+08-04 14:33:14.449  4452  4829 D PkgPredictorService-NapPreloadController: preloadWithUid pkg: [com.magnus.launcher] Uid: [0]
+08-04 14:33:14.449  4452  4567 D GameManagerService: identifyGamePackage. com.magnus.launcher, mCurrentUserId: 0, callerUserId: 0
+08-04 14:33:14.449  4452  4567 D GameManagerService: GameService deos not exist
+08-04 14:33:14.449  4452  4567 D GameManagerService: noteResumeComponent(), received resumed-component: com.magnus.launcher
+08-04 14:33:14.449  4452  4885 D GameManagerService: onLooperPrepared(), msg: { when=0 what=10000 obj=ComponentInfo{com.magnus.launcher/com.magnus.launcher.MainActivity} target=com.samsung.android.game.GameManagerService$FgCheckThread$1 }
+08-04 14:33:14.449  4452  4885 D GameManagerService: sendPauseConditionally() - mPrevNotiPackage: (unknown)
+08-04 14:33:14.449  4452  4885 D GameManagerService: notifyResumePause(). of pkg: com.magnus.launcher, type: 4, isMinimized: false, isTunableApp: false
+08-04 14:33:14.449  4452  4885 D GameManagerService:   notifyResumePause(). unexpected mPrevNotiType: -1
+08-04 14:33:14.449  4452  4885 D GameManagerService:NetworkLimit: callRelease
+08-04 14:33:14.449  4452  6436 V WindowManager: Relayout Window{323dc26 u0 io.tiste.RallyCall/io.tiste.RallyCall.MainActivity}: viewVisibility=8 req=1080x2220
+08-04 14:33:14.450  4452  4452 D WifiConnectivityMonitor: com.samsung.android.server.wifi.WCM_SCAN_STARTED
+08-04 14:33:14.450  4452  6391 D GamePkgDataHelper: getSosPolicy(). com.magnus.launcher
+08-04 14:33:14.453  4452  6436 V WindowManager: Relayout 31379: mAttrs={(0,0)(fillxfill) sim={adjust=resize forwardNavigation} layoutInDisplayCutoutMode=always ty=BASE_APPLICATION wanim=0x1030305
+08-04 14:33:14.453  4452  6436 V WindowManager:   fl=81810180
+08-04 14:33:14.453  4452  6436 V WindowManager:   pfl=20000
+08-04 14:33:14.453  4452  6436 V WindowManager:   vsysui=1700 naviIconColor=0}, display=0
+08-04 14:33:14.454 31379 31379 I ViewRootImpl@b01ace1[MainActivity]: Relayout returned: old=(0,0,1080,2220) new=(0,0,1080,2220) req=(1080,2220)8 dur=5 res=0x5 s={false 0} ch=true
+08-04 14:33:14.456 31379 31379 I ViewRootImpl@b01ace1[MainActivity]: MSG_WINDOW_FOCUS_CHANGED 0 1
+08-04 14:33:14.456 31379 31379 D InputMethodManager: prepareNavigationBarInfo() DecorView@fb8a91e[MainActivity]
+08-04 14:33:14.457 31379 31379 D InputMethodManager: getNavigationBarColor() 0
+08-04 14:33:14.460  4452  4585 I ActivityTaskManager: Displayed com.magnus.launcher/.MainActivity: +81ms
+08-04 14:33:14.462  4090  4090 I SurfaceFlinger: Display 0 HWC layers:
+08-04 14:33:14.462  4090  4090 I SurfaceFlinger:     type    |    handle    | flag |  format   |   source crop (l,t,r,b)    |         frame       | name 
+08-04 14:33:14.462  4090  4090 I SurfaceFlinger: ------------+--------------+------+-----------+----------------------------+---------------------+------
+08-04 14:33:14.462  4090  4090 I SurfaceFlinger:      DEVICE | 0x7bc2a83960 | 0002 | RGBA_8888 |   0.0    0.0 1080.0 1847.0 |    0  496 1440 2960 | Splash Screen com.magnus.launcher#0
+08-04 14:33:14.462  4090  4090 I SurfaceFlinger:      DEVICE | 0x7bc2a85800 | 0000 | RGBA_8888 |   0.0    0.0   67.0  342.0 |    0  501   89  957 | com.samsung.android.app.cocktailbars[...]arservice.CocktailBarService$_7974#0
+08-04 14:33:14.462  4090  4090 I SurfaceFlinger:      DEVICE | 0x7bc2a84bc0 | 0000 | RGBA_8888 |   0.0    0.0 1080.0  126.0 |    0 2792 1440 2960 | NavigationBar0$_4946#0
+08-04 14:33:14.462  4090  4090 I SurfaceFlinger: 
+08-04 14:33:14.577  4452  4985 D MdnieScenarioControlService:  packageName : com.magnus.launcher    className : com.magnus.launcher.MainActivity
+08-04 14:33:14.577  4452  4985 V MdnieScenarioControlService: setUIMode from UI function(3)
+08-04 14:33:14.716  8970  9315 D libEGL  : loaded /vendor/lib64/egl/libGLES_mali.so
+08-04 14:33:14.757  8970  8970 D AppCompatDelegate: Checking for metadata for AppLocalesMetadataHolderService : Service not found
+08-04 14:33:14.764  4452  6436 I GenerationRegistry: mBackingStore.isClosed() : false
+08-04 14:33:14.780  4452  4781 V NetworkPolicy: getFirewallRuleWifi UID:10275 policy:0
+08-04 14:33:14.784  4169  4169 D gpsd    : CALL_SENTRY(main()): GlEngine::OnStart took 500 ms (from 18986935 to 18987435) (logOverhead=0,0,0,0,0,0,0), start: 14:33:14.284
+08-04 14:33:14.785  4169  4169 D gpsd    : OnTimerEvent: gnss_request_location_cb(F)
+08-04 14:33:14.785  4169  4169 D gpsd    : gnss_request_location_cb(F,F)
+08-04 14:33:14.785  4169  4169 D gpsd    : CALL_SENTRY(main()): marshal_gps_start took 503 ms (from 18986933 to 18987436) (logOverhead=0,0,0,0,0,0,0), start: 14:33:14.282
+08-04 14:33:14.785  4169  4169 D gpsd    : CALL_SENTRY(main()): ProcessEvent took 503 ms (from 18986933 to 18987436) (logOverhead=0,0,0,0,0,0,0), start: 14:33:14.282
+08-04 14:33:14.785  4173  5187 D libgps  : proxy__agps_ril_request_setid_cb:  s_pAGpsRilCallbacks(0x7544063080)
+08-04 14:33:14.788  4905  5604 I TelephonyProvider: D/TelephonyProvider: query: match = 7
+08-04 14:33:14.788  4905  5604 I TelephonyProvider: D/TelephonyProvider: called from phone or system uid, skip check
+08-04 14:33:14.790  8970  8970 D PhoneWindow: forceLight changed to true [] from com.android.internal.policy.PhoneWindow.updateForceLightNavigationBar:4274 com.android.internal.policy.DecorView.updateColorViews:1547 com.android.internal.policy.PhoneWindow.dispatchWindowAttributesChanged:3252 android.view.Window.setFlags:1153 com.android.internal.policy.PhoneWindow.generateLayout:2474 
+08-04 14:33:14.791  8970  8970 I MultiWindowDecorSupport: [INFO] isPopOver = false
+08-04 14:33:14.791  8970  8970 I MultiWindowDecorSupport: updateCaptionType >> DecorView@566a24[], isFloating: false, isApplication: true, hasWindowDecorCaption: false, hasWindowControllerCallback: true
+08-04 14:33:14.791  8970  8970 D MultiWindowDecorSupport: setCaptionType = 0, DecorView = DecorView@566a24[]
+08-04 14:33:14.798  4173  5187 I libgps  : [proxy__gnss_request_location] ignored (0, 0) -> (0, 0)
+08-04 14:33:14.814  8970  8970 W magnus.launche: Accessing hidden method Landroid/view/View;->computeFitSystemWindows(Landroid/graphics/Rect;Landroid/graphics/Rect;)Z (greylist, reflection, allowed)
+08-04 14:33:14.814  8970  8970 W magnus.launche: Accessing hidden method Landroid/view/ViewGroup;->makeOptionalFitsSystemWindows()V (greylist, reflection, allowed)
+08-04 14:33:14.821  4452  4568 I WindowManager: Reparenting to original parent: Surface(name=Task=100)/@0xe2b7d7f, destroyLeash=true, surface=Surface(name=AppWindowToken{c22005c token=Token{6b23ecf ActivityRecord{609732e u0 com.magnus.launcher/.MainActivity t100}}})/@0x37cfdee
+08-04 14:33:14.822  4090  5774 I Layer   : id=887 removeFromCurrentState Surface(name=AppWindowToken{c22005c token=Token{6b23ecf ActivityRecord{609732e u0 com.magnus.launcher/.MainActivity t100}}})/@0x37cfdee - animation-leash#0 (46)
+08-04 14:33:14.822  4090  5774 I Layer   : id=888 removeFromCurrentState Surface(name=AppWindowToken{c22005c token=Token{6b23ecf ActivityRecord{609732e u0 com.magnus.launcher/.MainActivity t100}}})/@0x37cfdee - animation-bounds#0 (46)
+08-04 14:33:14.823  4090  5774 I SurfaceFlinger: id=887 Removed Surface(name=AppWindowToken{c22005c token=Token{6b23ecf ActivityRecord{609732e u0 com.magnus.launcher/.MainActivity t100}}})/@0x37cfdee - animation-leash#0 (46)
+08-04 14:33:14.823  4090  5774 I SurfaceFlinger: id=888 Removed Surface(name=AppWindowToken{c22005c token=Token{6b23ecf ActivityRecord{609732e u0 com.magnus.launcher/.MainActivity t100}}})/@0x37cfdee - animation-bounds#0 (46)
+08-04 14:33:14.837  4090  4090 I Layer   : id=888[1] Destroyed Surface(name=AppWindowToken{c22005c token=Token{6b23ecf ActivityRecord{609732e u0 com.magnus.launcher/.MainActivity t100}}})/@0x37cfdee - animation-bounds#0
+08-04 14:33:14.837  4090  4090 I Layer   : id=887[1] Destroyed Surface(name=AppWindowToken{c22005c token=Token{6b23ecf ActivityRecord{609732e u0 com.magnus.launcher/.MainActivity t100}}})/@0x37cfdee - animation-leash#0
+08-04 14:33:14.853  8970  8970 D MQTTClient: Connecting to MQTT...
+08-04 14:33:14.887  8970  9316 D TcpOptimizer: TcpOptimizer-ON
+08-04 14:33:15.032  4452  4452 D CustomFrequencyManagerService: FrequencyrequestList.getNextCStateDisableRequest, index: 1
+08-04 14:33:15.034  4452  4452 D CustomFrequencyManagerService: releaseDVFSLockLocked : Getting Lock type frm List : DVFS_MIN_LIMIT  frequency : 2314000  uid : 1000  pid : 4452  tag : AMS_APP_HOME@CPU_MIN@60
+08-04 14:33:15.218  4452  5486 D CustomFrequencyManagerService: releaseDVFSLockLocked : Getting Lock type frm List : DVFS_MIN_LIMIT  frequency : 1703000  uid : 1000  pid : 4452  tag : AMS_ACT_RESUME@CPU_MIN@71
+08-04 14:33:15.218  4452  5486 D ActivityManagerPerformance: AMP_release() ACT_RESUME
+08-04 14:33:15.291  5166  5166 D BoundBrokerSvc: onRebind: Intent { act=com.google.android.gms.libs.gmscorelogger.service.START dat=chimera-action: cmp=com.google.android.gms/.chimera.PersistentDirectBootAwareApiService }
+08-04 14:33:15.327  8970  8970 E MQTTClient: Error: Impossible de se connecter au serveur
+08-04 14:33:15.433  4169  4169 D gpsd    : $PGLOR,0,RID,47531,108,20,22,460790*06
+08-04 14:33:15.440  4452  8683 D SensorService: Calling batch handle==1 flags=0 rate=20000000 timeout== 0
+08-04 14:33:15.445  4452  8683 D SensorService: Calling batch handle==6 flags=0 rate=20000000 timeout== 0
+08-04 14:33:15.447  4173  5187 D libgps  : OnGpsExtensionMessage: message_id(1), data(0x7544672044), size(4304)
+08-04 14:33:15.447  4173  5187 D libgps  : proxy__gnss_sv_status_cb: called. num_svs(0)
+08-04 14:33:15.448  4452  4620 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@59ba57c)
+08-04 14:33:15.449  4452  8683 D SensorService: Calling batch handle==4 flags=0 rate=20000000 timeout== 0
+08-04 14:33:15.453  4452  8683 D SensorService: Calling batch handle==8 flags=0 rate=250000000 timeout== 0
+08-04 14:33:15.458  4452  8683 D SensorService: Calling batch handle==2037412402 flags=0 rate=1000000000 timeout== 0
+08-04 14:33:15.458  4452  8683 D SensorService: GraviOrientationSensor2 setDelay  ns = 1000000000 handle = 2037412402  mindelay = 1000000000
+08-04 14:33:15.458  4072  4526 D Sensors : M requested delay = 1000000000, modified delay = 200000000
+08-04 14:33:15.458  4072  4526 I nanohub : mergeDirectReportRequest - activate = 0 normal.rate = 200000000
+08-04 14:33:15.458  4072  4526 I Sensors : batch(14) - rotation_vector_sensor try to batching with 200000000
+08-04 14:33:15.459  4072  4526 I Sensors : RotationVector old sensor_state 49717, new sensor_state : 180789 en : 1
+08-04 14:33:15.460  4452  5239 E WindowManager: App trying to use insecure INPUT_FEATURE_NO_INPUT_CHANNEL flag. Ignoring
+08-04 14:33:15.461  4452  5239 D InputTransport: Input channel constructed: '923388b', fd=247
+08-04 14:33:15.461  4452  5239 D InputTransport: Input channel constructed: '923388b', fd=429
+08-04 14:33:15.462  4090  5774 I SurfaceFlinger: id=889 createSurf (0x0),-1 flag=80004, 923388b com.magnus.launcher/com.magnus.launcher.MainActivity#0
+08-04 14:33:15.463  5140  5188 D TunnelRecoveryDetector_FLP: Time Gap (216830) grow larger than 2000ms
+08-04 14:33:15.463  4452  5239 D InputTransport: Input channel destroyed: '923388b', fd=429
+08-04 14:33:15.463  4452  4807 D GnssLocationProvider_ex: SV Count : 0 / 0      (PRN, Constellation, SNR, Used)
+08-04 14:33:15.464  4452  4807 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@59ba57c)
+08-04 14:33:15.465  8970  8970 I ViewRootImpl@2fbbf28[MainActivity]: setView = com.android.internal.policy.DecorView@566a24 TM=true MM=false
+08-04 14:33:15.466  5140  5188 V GnssStatusListener_FLP: updateSatelliteStatus, top4=0, top6=0, visibleSv=0, usedSv=0, usedL5Sv=0
+08-04 14:33:15.470  4072  4240 E Sensors : Sensor : Meta event
+08-04 14:33:15.495  4072  4240 E Sensors : Sensor : Meta event
+08-04 14:33:15.497  4452  6436 V WindowManager: Relayout Window{923388b u0 com.magnus.launcher/com.magnus.launcher.MainActivity}: viewVisibility=0 req=1080x2220
+08-04 14:33:15.500  4090  5774 I SurfaceFlinger: id=890 createSurf (1080x2220),1 flag=404, com.magnus.launcher/com.magnus.launcher.MainActivity$_8970#0
+08-04 14:33:15.501  4452  6436 D WindowManager: makeSurface duration=2 name=com.magnus.launcher/com.magnus.launcher.MainActivity$_8970
+08-04 14:33:15.502  4452  6436 V WindowManager: Changing focus from null to Window{923388b u0 com.magnus.launcher/com.magnus.launcher.MainActivity} displayId=0 Callers=com.android.server.wm.RootWindowContainer.updateFocusedWindowLocked:26 com.android.server.wm.WindowManagerService.updateFocusedWindowLocked:10 com.android.server.wm.WindowManagerService.relayoutWindow:1209 com.android.server.wm.Session.relayout:68 android.view.IWindowSession$Stub.onTransact:716 com.android.server.wm.Session.onTransact:0 
+08-04 14:33:15.502  4452  6436 D StatusBarManagerService: notifyRequestedSystemKey recent=false home=false
+08-04 14:33:15.506  4452  6436 V WindowManager: Relayout 8970: mAttrs={(0,0)(fillxfill) sim={adjust=pan forwardNavigation} ty=BASE_APPLICATION wanim=0x1030305
+08-04 14:33:15.506  4452  6436 V WindowManager:   fl=81810580
+08-04 14:33:15.506  4452  6436 V WindowManager:   pfl=10020000
+08-04 14:33:15.506  4452  6436 V WindowManager:   vsysui=10 naviIconColor=0}, display=0
+08-04 14:33:15.507  4452  4567 I WindowManager: Focus moving from null to Window{923388b u0 com.magnus.launcher/com.magnus.launcher.MainActivity} displayId=0
+08-04 14:33:15.507  4452  4567 I WindowManager: Gaining focus: Window{923388b u0 com.magnus.launcher/com.magnus.launcher.MainActivity}
+08-04 14:33:15.508  8970  8970 I ViewRootImpl@2fbbf28[MainActivity]: Relayout returned: old=(0,0,1080,2220) new=(0,0,1080,2220) req=(1080,2220)0 dur=12 res=0x7 s={true 479811670016} ch=true
+08-04 14:33:15.520  4072  4240 E Sensors : Sensor : Meta event
+08-04 14:33:15.523  8970  8970 I ViewRootImpl@2fbbf28[MainActivity]: [DrawPending] drawPending(1) 1 android.view.ViewRootImpl.reportNextDraw:9952 android.view.ViewRootImpl.performTraversals:3329 android.view.ViewRootImpl.doTraversal:2222 
+08-04 14:33:15.523  8970  8970 I ViewRootImpl@2fbbf28[MainActivity]: [DrawPending] performDraw() Waiting asnyc report
+08-04 14:33:15.535  8970  9313 D mali_winsys: EGLint new_window_surface(egl_winsys_display *, void *, EGLSurface, EGLConfig, egl_winsys_surface **, EGLBoolean) returns 0x3000
+08-04 14:33:15.543  3872  3872 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@3.0::IMapper/default in either framework or device manifest.
+08-04 14:33:15.544  8970  9313 W Gralloc3: mapper 3.x is not supported
+08-04 14:33:15.545  4072  4240 E Sensors : Sensor : Meta event
+08-04 14:33:15.550  4946  4946 I UiThreadMonitor: setAwake 6313 3000 7
+08-04 14:33:15.609  8970  9313 E cutils-trace: Error opening trace file: No such file or directory (2)
+08-04 14:33:15.612  8970  8970 I ViewRootImpl@2fbbf28[MainActivity]: [DrawPending] pendingDrawFinished(0) 1 android.view.ViewRootImpl.lambda$performDraw$1$ViewRootImpl:4058 android.view.-$$Lambda$ViewRootImpl$7A_3tkr_Kw4TZAeIUGVlOoTcZhg.run:4 android.os.Handler.handleCallback:883 
+08-04 14:33:15.612  8970  8970 I ViewRootImpl@2fbbf28[MainActivity]: [DrawPending] reportDrawFinished()
+08-04 14:33:15.614  4452  6436 D WindowManager: finishDrawingWindow: Window{923388b u0 com.magnus.launcher/com.magnus.launcher.MainActivity} mDrawState=DRAW_PENDING
+08-04 14:33:15.618  8970  8970 I ViewRootImpl@2fbbf28[MainActivity]: MSG_WINDOW_FOCUS_CHANGED 1 1
+08-04 14:33:15.619  8970  8970 D InputMethodManager: prepareNavigationBarInfo() DecorView@566a24[MainActivity]
+08-04 14:33:15.619  8970  8970 D InputMethodManager: getNavigationBarColor() -855310
+08-04 14:33:15.621  4452  4568 D PkgPredictorService: pkg:com.magnus.launcher activity:com.magnus.launcher.MainActivity thisTime:-1
+08-04 14:33:15.621  4452  4568 D PkgPredictorService-Collector: update activity launch time: MainActivity : -1
+08-04 14:33:15.625  4452  4568 I ViewRootImpl@f3bfef4[launcher]: dispatchDetachedFromWindow
+08-04 14:33:15.627  4452  4568 D InputTransport: Input channel destroyed: '93e7092', fd=360
+08-04 14:33:15.628  4452  4568 I WindowManager: Reparenting to leash, surface=Surface(name=93e7092 Splash Screen com.magnus.launcher)/@0x6503626
+08-04 14:33:15.628  4090  4629 I SurfaceFlinger: id=891 createSurf (0x0),-1 flag=80004, Surface(name=93e7092 Splash Screen com.magnus.launcher)/@0x6503626 - animation-leash#0
+08-04 14:33:15.629  8970  8970 D InputMethodManager: prepareNavigationBarInfo() DecorView@566a24[MainActivity]
+08-04 14:33:15.629  8970  8970 D InputMethodManager: getNavigationBarColor() -855310
+08-04 14:33:15.629  4452  4568 D WindowManager: makeSurface duration=1 leash=Surface(name=Surface(name=93e7092 Splash Screen com.magnus.launcher)/@0x6503626 - animation-leash)/@0x80ad267
+08-04 14:33:15.629  8970  8970 V InputMethodManager: Starting input: tba=com.magnus.launcher ic=null mNaviBarColor -855310 mIsGetNaviBarColorSuccess true , NavVisible : true , NavTrans : false
+08-04 14:33:15.630  8970  8970 D InputMethodManager: startInputInner - Id : 0
+08-04 14:33:15.630  8970  8970 I InputMethodManager: startInputInner - mService.startInputOrWindowGainedFocus
+08-04 14:33:15.631  4452  5239 D InputMethodManagerService: mSecureKeypadEnabled = false
+08-04 14:33:15.632  4452  5239 V InputMethodManagerService: startInputOrWindowGainedFocusInternalLocked: reason=WINDOW_FOCUS_GAIN client=android.os.BinderProxy@4c20b4e inputContext=null missingMethods= attribute=android.view.inputmethod.EditorInfo@b612814 startInputFlags=FIRST_WINDOW_FOCUS_GAIN|INITIAL_CONNECTION softInputMode=STATE_UNSPECIFIED|ADJUST_PAN|IS_FORWARD_NAVIGATION windowFlags=#81810580 unverifiedTargetSdkVersion=34
+08-04 14:33:15.635  4452  4568 D PowerManagerService: [api] acquire WakeLock SCREEN_BRIGHT_WAKE_LOCK        'WindowManager' ON_AFTER_RELEASE (uid=1000 pid=4452 pkg=android ws=WorkSource{10275})
+08-04 14:33:15.636  4452  4568 D InputTransport: Input channel destroyed: '93e7092', fd=424
+08-04 14:33:15.637  4452  5239 V InputMethodManagerService: IME PreRendering MASTER flag: false, LowRam: false
+08-04 14:33:15.637  4452  5239 V InputMethodManagerService: Unspecified window will hide input
+08-04 14:33:15.637  4452  5239 V InputMethodManagerService: hideCurrentInputLocked : shouldHideSoftInput is false
+08-04 14:33:15.637  4452  5239 D InputMethodManagerService: DESKTOP MODE! : 2
+08-04 14:33:15.637  4452  5239 D InputMethodManagerService: NOT IN KNOX DESKTOP MODE!
+08-04 14:33:15.637  4452  5239 V InputMethodManagerService: getDisplayIdOfInputMethodWindowToBeAdded : 0
+08-04 14:33:15.638  4452  5239 V InputMethodManagerService: unbindCurrentInputLocked: client=android.os.BinderProxy@17cd45a
+08-04 14:33:15.638  4452  5239 D InputMethodManagerService: IME window vis: 0 active: 0 inv: 0 displayId: 0
+08-04 14:33:15.638  4452  5239 D SamsungIMMSHWKeyboard: isConnectedDexOnPC false
+08-04 14:33:15.639 31379 31379 D InputTransport: Input channel destroyed: 'ClientS', fd=85
+08-04 14:33:15.640  4452  6436 D InputDispatcher: Focus entered window (8970): 923388b in display 0 0
+08-04 14:33:15.643  4452  5239 D InputMethodManagerService: isImeSwitcherDisabledPackage : false
+08-04 14:33:15.644  4452  5239 V InputMethodManagerService: switching to client: client=android.os.BinderProxy@4c20b4e keyguard=false
+08-04 14:33:15.644  4452  5239 V InputMethodManagerService: Creating new session for client ClientState{60c58bd uid=10275 pid=8970 displayId=0}
+08-04 14:33:15.644  4452  5239 D InputTransport: Input channel constructed: 'ClientS', fd=360
+08-04 14:33:15.644  4452  5239 D InputTransport: Input channel constructed: 'ClientS', fd=424
+08-04 14:33:15.645  4452  5239 D InputTransport: Input channel destroyed: 'ClientS', fd=424
+08-04 14:33:15.647  4452  4483 V InputMethodManagerService: Disabling: SessionState{uid 10243 pid 31379 method e62644d session 2e194b2 channel ClientState{c0c3e14 uid=10243 pid=31379 displayId=0} (server)}
+08-04 14:33:15.647  4452  4483 V InputMethodManagerService: Enabling: SessionState{uid 10275 pid 8970 method e62644d session de82e03 channel ClientState{60c58bd uid=10275 pid=8970 displayId=0} (server)}
+08-04 14:33:15.648  4452  4483 D InputMethodManagerService: checkDisplayOfStartInputAndUpdateKeyboard display Id 0last 0
+08-04 14:33:15.648  4452  4483 D InputTransport: Input channel constructed: 'ClientS', fd=424
+08-04 14:33:15.648  4452  4483 D InputTransport: Input channel destroyed: 'ClientS', fd=424
+08-04 14:33:15.648  8970  8970 I ViewRootImpl@2fbbf28[MainActivity]: MSG_RESIZED: frame=(0,0,1080,2220) ci=(0,0,0,126) vi=(0,0,0,126) or=1
+08-04 14:33:15.650  8970  8970 D InputMethodManager: prepareNavigationBarInfo() DecorView@566a24[MainActivity]
+08-04 14:33:15.650  8970  8970 D InputMethodManager: getNavigationBarColor() -855310
+08-04 14:33:15.650  8970  8970 V InputMethodManager: Starting input: tba=com.magnus.launcher ic=null mNaviBarColor -855310 mIsGetNaviBarColorSuccess true , NavVisible : true , NavTrans : false
+08-04 14:33:15.650  8970  8970 D InputMethodManager: startInputInner - Id : 0
+08-04 14:33:15.651 10005 10005 I HONEYBOARD: HoneyBoardService onFinishInput 
+08-04 14:33:15.652 10005 10005 I HONEYBOARD: a IC have been unbinded,  InputConnectionWrapper{idHash=#227826f mMissingMethods=}
+08-04 14:33:15.652 10005 10005 I HONEYBOARD: HoneyBoardService [PF_CL][onFinishInput]  792577 ns 
+08-04 14:33:15.652 10005 10005 D InputMethodService: checkDisplayOfStartInputAndUpdateKeyboard display Id 0last 0
+08-04 14:33:15.652 10005 10005 I HONEYBOARD: HoneyBoardService [IMI] onStartInput - caller pid : 8970 , caller uid : 10275 
+08-04 14:33:15.653 10005 10005 I HONEYBOARD: i updateConfigs 
+08-04 14:33:15.653 10005 10005 I HONEYBOARD: i isEnabledNightMode : false 
+08-04 14:33:15.654 10005 10005 I HONEYBOARD: a IC have been binded, InputConnectionWrapper{idHash=#56a8b7c mMissingMethods=} 
+08-04 14:33:15.654 10005 10005 I HONEYBOARD: h [EditorInputType]setPrivateImeOptionsToTable privateImeOptions ( null )
+08-04 14:33:15.654 10005 10005 I HONEYBOARD: b incognitoMode : false 
+08-04 14:33:15.654 10005 10005 I HONEYBOARD: a needOff = true , isJpnConvertState : false, isForceOff = true 
+08-04 14:33:15.658 10005 10005 I HONEYBOARD: h getDefaultInputRange : UNKNOWN 
+08-04 14:33:15.659 10005 10005 I HONEYBOARD: a currentState : 0 
+08-04 14:33:15.660 10005 10005 I HONEYBOARD: a [UpdatePolicy] [post] a: 0 cl: 1441799 kit: [0/2] vt: 0 ir: 1 
+08-04 14:33:15.662 10005 10005 I HONEYBOARD: HoneyBoardService [PF_OP][onStartInput]  9619385 ns 
+08-04 14:33:15.667 31379 31379 I ViewRootImpl@b01ace1[MainActivity]: stopped(true) old=false
+08-04 14:33:15.681 31379  2194 I ReactNativeJNI: Memory warning (pressure level: TRIM_MEMORY_UI_HIDDEN) received by JS VM, ignoring because it's non-severe
+08-04 14:33:15.684  4452  6436 E WindowManager: win=Window{323dc26 u0 io.tiste.RallyCall/io.tiste.RallyCall.MainActivity} destroySurfaces: appStopped=true win.mWindowRemovalAllowed=false win.mRemoveOnExit=false win.mViewVisibility=8 caller=com.android.server.wm.AppWindowToken.destroySurfaces:24 com.android.server.wm.AppWindowToken.destroySurfaces:1 com.android.server.wm.AppWindowToken.notifyAppStopped:30 com.android.server.wm.ActivityRecord.activityStoppedLocked:99 com.android.server.wm.ActivityTaskManagerService.activityStopped:59 android.app.IActivityTaskManager$Stub.onTransact:2280 android.os.Binder.execTransactInternal:1056 
+08-04 14:33:15.684  4452  6436 I WindowManager: Destroying surface Surface(name=io.tiste.RallyCall/io.tiste.RallyCall.MainActivity$_31379)/@0x7aac3b9 called by com.android.server.wm.WindowStateAnimator.destroySurface:8 com.android.server.wm.WindowStateAnimator.destroySurfaceLocked:133 com.android.server.wm.WindowState.destroySurfaceUnchecked:2 com.android.server.wm.WindowState.destroySurface:136 com.android.server.wm.AppWindowToken.destroySurfaces:24 com.android.server.wm.AppWindowToken.destroySurfaces:1 com.android.server.wm.AppWindowToken.notifyAppStopped:30 com.android.server.wm.ActivityRecord.activityStoppedLocked:99 
+08-04 14:33:15.685  4090  4629 I Layer   : id=886 removeFromCurrentState io.tiste.RallyCall/io.tiste.RallyCall.MainActivity$_31379#0 (47)
+08-04 14:33:15.686  4090  4629 I SurfaceFlinger: id=886 Removed io.tiste.RallyCall/io.tiste.RallyCall.MainActivity$_31379#0 (47)
+08-04 14:33:15.692  4452  4568 I WindowManager: Reparenting to original parent: Surface(name=AppWindowToken{c22005c token=Token{6b23ecf ActivityRecord{609732e u0 com.magnus.launcher/.MainActivity t100}}})/@0x37cfdee, destroyLeash=true, surface=Surface(name=93e7092 Splash Screen com.magnus.launcher)/@0x6503626
+08-04 14:33:15.693  4090  4090 I SurfaceFlinger: Display 0 HWC layers:
+08-04 14:33:15.693  4090  4090 I SurfaceFlinger:     type    |    handle    | flag |  format   |   source crop (l,t,r,b)    |         frame       | name 
+08-04 14:33:15.693  4090  4090 I SurfaceFlinger: ------------+--------------+------+-----------+----------------------------+---------------------+------
+08-04 14:33:15.693  4090  4090 I SurfaceFlinger:      DEVICE | 0x7bbec820a0 | 0002 | RGBA_8888 |   0.0    0.0 1080.0 2220.0 |    0    0 1440 2960 | com.magnus.launcher/com.magnus.launcher.MainActivity$_8970#0
+08-04 14:33:15.693  4090  4090 I SurfaceFlinger:      DEVICE | 0x7bc2a83960 | 0002 | RGBA_8888 |   0.0    0.0 1080.0 2220.0 |    0    0 1440 2960 | Splash Screen com.magnus.launcher#0
+08-04 14:33:15.693  4090  4090 I SurfaceFlinger:      DEVICE | 0x7bc2a85800 | 0000 | RGBA_8888 |   0.0    0.0   67.0  342.0 |    0  501   89  957 | com.samsung.android.app.cocktailbars[...]arservice.CocktailBarService$_7974#0
+08-04 14:33:15.693  4090  4090 I SurfaceFlinger:      CLIENT | 0x7bc2a84bc0 | 0000 | RGBA_8888 |   0.0    0.0 1080.0  126.0 |    0 2792 1440 2960 | NavigationBar0$_4946#0
+08-04 14:33:15.693  4090  4090 I SurfaceFlinger: 
+08-04 14:33:15.693  4452  4568 E WindowManager: win=Window{93e7092 u0 Splash Screen com.magnus.launcher EXITING} destroySurfaces: appStopped=false win.mWindowRemovalAllowed=true win.mRemoveOnExit=true win.mViewVisibility=0 caller=com.android.server.wm.AppWindowToken.destroySurfaces:24 com.android.server.wm.AppWindowToken.destroySurfaces:1 com.android.server.wm.WindowState.onExitAnimationDone:233 com.android.server.wm.WindowStateAnimator.onAnimationFinished:92 com.android.server.wm.WindowState.onAnimationFinished:5 com.android.server.wm.-$$Lambda$yVRF8YoeNdTa8GR1wDStVsHu8xM.run:2 com.android.server.wm.SurfaceAnimator.lambda$getFinishedCallback$0$SurfaceAnimator:17 
+08-04 14:33:15.694  4452  4568 I WindowManager: Destroying surface Surface(name=Splash Screen com.magnus.launcher)/@0x42ae275 called by com.android.server.wm.WindowStateAnimator.destroySurface:8 com.android.server.wm.WindowStateAnimator.destroySurfaceLocked:133 com.android.server.wm.WindowState.destroySurfaceUnchecked:2 com.android.server.wm.WindowState.destroySurface:136 com.android.server.wm.AppWindowToken.destroySurfaces:24 com.android.server.wm.AppWindowToken.destroySurfaces:1 com.android.server.wm.WindowState.onExitAnimationDone:233 com.android.server.wm.WindowStateAnimator.onAnimationFinished:92 
+08-04 14:33:15.694  4090  4090 I Layer   : id=886[1] Destroyed io.tiste.RallyCall/io.tiste.RallyCall.MainActivity$_31379#0
+08-04 14:33:15.696  4090  5774 I Layer   : id=885 removeFromCurrentState Splash Screen com.magnus.launcher#0 (46)
+08-04 14:33:15.700  4090  5774 I Layer   : id=884 removeFromCurrentState 93e7092 Splash Screen com.magnus.launcher#0 (46)
+08-04 14:33:15.700  4090  5774 I Layer   : id=891 removeFromCurrentState Surface(name=93e7092 Splash Screen com.magnus.launcher)/@0x6503626 - animation-leash#0 (46)
+08-04 14:33:15.703  4090  5774 I SurfaceFlinger: id=884 Removed 93e7092 Splash Screen com.magnus.launcher#0 (46)
+08-04 14:33:15.703  4090  5774 I SurfaceFlinger: id=891 Removed Surface(name=93e7092 Splash Screen com.magnus.launcher)/@0x6503626 - animation-leash#0 (46)
+08-04 14:33:15.703  4090  5774 I SurfaceFlinger: id=885 Removed Splash Screen com.magnus.launcher#0 (46)
+08-04 14:33:15.706  4090  4090 I Layer   : id=891[1] Destroyed Surface(name=93e7092 Splash Screen com.magnus.launcher)/@0x6503626 - animation-leash#0
+08-04 14:33:15.706  4090  4090 I Layer   : id=884[1] Destroyed 93e7092 Splash Screen com.magnus.launcher#0
+08-04 14:33:15.708  4946  5146 D LocationControllerImpl: onReceive() = android.location.HIGH_POWER_REQUEST_CHANGE
+08-04 14:33:15.710  4452  5239 D SensorService: removeConnection, index : 0, size : 4
+08-04 14:33:15.710  4452  5239 D SensorService: # removeConnection, index : 0, size : 3
+08-04 14:33:15.710  4452  5239 D SensorService: Calling activate off 1
+08-04 14:33:15.710  4072  4072 I nanohub : mergeDirectReportRequest - enable = 0 activate = 1 direct.rate = 0 normal.rate = 10000000
+08-04 14:33:15.710  4072  4072 I nanohub : mergeDirectReportRequest - activate = 1 normal.rate = 10000000
+08-04 14:33:15.710  4072  4072 I Sensors : batch(0) - accelerometer_sensor try to batching with 10000000
+08-04 14:33:15.710  5166  9273 I FusedLocation: (REDACTED) stationary throttling engaged @%s
+08-04 14:33:15.711  4452  4565 D CodecSolution: isMaxAspectPackageEx: com.magnus.launcher : true(2)
+08-04 14:33:15.714  4946  5146 D LocationControllerImpl: onReceive() = android.location.HIGH_POWER_REQUEST_CHANGE
+08-04 14:33:15.718  5166  7354 D SensorManager: unregisterListener ::   listener = com.google.android.location.fused.StepDetector@6d9a85f
+08-04 14:33:15.719  4090  4090 I Layer   : id=885[1] Destroyed Splash Screen com.magnus.launcher#0
+08-04 14:33:15.722  4946  4946 D QSContainerImpl: getDisplayHeight portrait? true  displayHeight= 2220
+08-04 14:33:15.723  4090  4090 I SurfaceFlinger: Display 0 HWC layers:
+08-04 14:33:15.723  4090  4090 I SurfaceFlinger:     type    |    handle    | flag |  format   |   source crop (l,t,r,b)    |         frame       | name 
+08-04 14:33:15.723  4090  4090 I SurfaceFlinger: ------------+--------------+------+-----------+----------------------------+---------------------+------
+08-04 14:33:15.723  4090  4090 I SurfaceFlinger:      DEVICE | 0x7bbec820a0 | 0002 | RGBA_8888 |   0.0    0.0 1080.0 2220.0 |    0    0 1440 2960 | com.magnus.launcher/com.magnus.launcher.MainActivity$_8970#0
+08-04 14:33:15.723  4090  4090 I SurfaceFlinger:      DEVICE | 0x7bc2a85800 | 0000 | RGBA_8888 |   0.0    0.0   67.0  342.0 |    0  501   89  957 | com.samsung.android.app.cocktailbars[...]arservice.CocktailBarService$_7974#0
+08-04 14:33:15.723  4090  4090 I SurfaceFlinger:      DEVICE | 0x7bc2a84bc0 | 0000 | RGBA_8888 |   0.0    0.0 1080.0  126.0 |    0 2792 1440 2960 | NavigationBar0$_4946#0
+08-04 14:33:15.723  4090  4090 I SurfaceFlinger: 
+08-04 14:33:15.732  4452  6391 I LocationManagerService: remove dcae253
+08-04 14:33:15.732  4452  4483 D SamsungAlarmManager: setExact Intent (T:2/F:5/AC:false) 20260804T144257 - CU:10082/CP:5166
+08-04 14:33:15.732  4452  4483 I SamsungAlarmManager: setLocked to kernel - T:2 / 20260804T143329, SetElapsed=19002081, nowELAPSED=18988383
+08-04 14:33:15.732  4452  4483 I SamsungAlarmManager: setLocked to kernel - T:3 / 20260804T143328, SetElapsed=19001222, nowELAPSED=18988383
+08-04 14:33:15.733  4452  6391 D LocationManagerService: provider request: gps ProviderRequest[OFF]
+08-04 14:33:15.733  5140  5188 W ListenerMonitor_FLP: No package information for listenerId, dcae253
+08-04 14:33:15.733  4452  6391 I GnssLocationProvider: WakeLock acquired by sendMessage(SET_REQUEST, 0, com.android.server.location.GnssLocationProvider$GpsRequest@85430f1)
+08-04 14:33:15.733  5140  5188 E RequestManager_FLP: [LocationManager] Location remove dcae253 from com.google.android.gms.persistent
+08-04 14:33:15.734  5140  5188 V RequestManager_FLP: Remove in requestInfoList, dcae253 / ListSize[gps]=0
+08-04 14:33:15.734  4452  4807 D GnssLocationProvider: setRequest ProviderRequest[OFF]
+08-04 14:33:15.735  4452  4807 D GnssLocationProvider: mStarted =  true, mDisableGpsForPowerManager = false, isEnabled = true
+08-04 14:33:15.735  4452  4807 D GnssLocationProvider: stopNavigating, mStarted=true
+08-04 14:33:15.735  4173  4173 D libgps  : GpsiHook: API: gpsStop(GpsiHookStateGps: e,c,g)
+08-04 14:33:15.736  4173  4173 D libgps  : [proxy__gps_stop][line = 1365]: called.
+08-04 14:33:15.736  4173  4173 D libgps  : GpsiHook: API: gpsStatusCb(GpsiHookStateGps: e,c,g)
+08-04 14:33:15.736  5166  9338 I FusedOrientationManager: Unregistering orientation client. [CONTEXT service_id=6 ]
+08-04 14:33:15.737  4452  4807 V GnssLocationProvider: reportStatus status: 2
+08-04 14:33:15.737  4173  4173 D libgps  : GpsiHook::deliverStatus() GPS_STATUS_SESSION_END
+08-04 14:33:15.737  4173  4173 D libgps  : GpsiHook: API: gpsStatusCb(GpsiHookStateGps: E,c,g)
+08-04 14:33:15.737  4452  4807 V GnssLocationProvider: reportStatus status: 4
+08-04 14:33:15.739  4173  4173 D libgps  : GpsiHookStateGps              : EXIT
+08-04 14:33:15.739  4173  4173 D libgps  : GpsiHookStateIdle             : ENTRY
+08-04 14:33:15.740  4452  4807 D SamsungAlarmManager: Cancel Alarm calling from uid:1000 pid :4452 / op:PendingIntent{7db9f79: PendingIntentRecord{3aff4be android broadcastIntent}}
+08-04 14:33:15.740  4452  4807 D SamsungAlarmManager: Cancel Alarm calling from uid:1000 pid :4452 / op:PendingIntent{771491f: PendingIntentRecord{c7dc46c android broadcastIntent}}
+08-04 14:33:15.743  4452  4807 I GnssLocationProvider: WakeLock released by handleMessage(SET_REQUEST, 0, com.android.server.location.GnssLocationProvider$GpsRequest@85430f1)
+08-04 14:33:15.744  5140  5188 W ListenerMonitor_FLP: No package information for listenerId, 3ef7051
+08-04 14:33:15.744  5140  5188 W IncomingHandler_FLP: GnssStatusListener is unregistered 3ef7051 , so not monitoring
+08-04 14:33:15.745  4452  5182 V GnssStatusCallback: onStopped
+08-04 14:33:15.747  5140  5188 D GnssStatusListener_FLP: GNSS Engine stopped
+08-04 14:33:15.747  5140  5188 D GnssEngineMonitor_FLP: setNavigatingFromGlp, stopNavigating
+08-04 14:33:15.748  5140  5188 D GnssEngineMonitor_FLP: updateGnssEngineStatus, false / isFromAp=true
+08-04 14:33:15.748  5140  5188 D GpsSession_FLP: Gps Session is closed
+08-04 14:33:15.748  5140  5188 V RequestManager_FLP: noteStopGps, uid=10082
+08-04 14:33:15.749  4452  5239 D SensorService: removeConnection, index : 0, size : 2
+08-04 14:33:15.749  4452  5239 D SensorService: # removeConnection, index : 0, size : 1
+08-04 14:33:15.749  4452  5239 D SensorService: Calling activate off 8
+08-04 14:33:15.749  4072  4526 I nanohub : mergeDirectReportRequest - activate = 1 normal.rate = 250000000
+08-04 14:33:15.749  4072  4526 I Sensors : batch(3) - pressure_sensor try to batching with 250000000
+08-04 14:33:15.750  5140  5188 V ShadowRecoveryDetector_FLP: checkShadowRecovery of session 08-04.14:33:14.285
+08-04 14:33:15.750  5140  5188 V ShadowRecoveryDetector_FLP: No data connected at all, return
+08-04 14:33:15.751  5140  5188 V GpsSession_FLP: Total distance      : 0,00 km
+08-04 14:33:15.751  5140  5188 V GpsSession_FLP: Total duration      : 2 seconds
+08-04 14:33:15.751  5140  5188 V GpsSession_FLP: Total fix duration  : 2 seconds (SensorOnly=0 times)
+08-04 14:33:15.751  5140  5188 V GpsSession_FLP: Total lost duration : 0 seconds
+08-04 14:33:15.751  5140  5188 V GpsSession_FLP: Total lost sections : 1
+08-04 14:33:15.751  5140  5188 V GpsSession_FLP: Time To First Fix   : 0 seconds
+08-04 14:33:15.751  5140  5188 D LongTTFFDetector_FLP: isLongFirstFix, Data is not connected, status=0
+08-04 14:33:15.752  4452  6436 I LocationManagerService: remove ddcdcbc
+08-04 14:33:15.754  4452  6436 D LocationManagerService: provider request: passive ProviderRequest[ON interval=0]
+08-04 14:33:15.755  5166  7354 D SensorManager: unregisterListener ::   listener = com.google.android.location.fused.PressureProvider@cc93470
+08-04 14:33:15.761  4452  6391 D SemContextService: lock : unregisterCallback
+08-04 14:33:15.761  4452  6391 D SemContextService: Service.removeListenerLocked() : listener = com.samsung.android.hardware.context.SemContextService$Listener@e2874d6, service = Sensor Status Check, used = 0
+08-04 14:33:15.762  4452  6391 W CAE     : unregisterCallback(ContextAwareService.java:217) - [unregi 01] Mutex is locked for SENSOR_STATUS_CHECK_RUNNER
+08-04 14:33:15.763  4452  6391 V CAE     : stop(ContextProvider.java:155)
+08-04 14:33:15.763  4946  4946 D IndicatorGardener: PhoneStatusBarView is done to update (IndicatorGardenModel) lp:63, lc:824, cc:318, rc:790, rp:63, h:63, ctm:false, ctms:0, cbms:0
+08-04 14:33:15.764  4452  6391 V CAE     : clear(SensorStatusCheckRunner.java:192)
+08-04 14:33:15.764  4452  6391 V CAE     : disable(SensorStatusCheckRunner.java:181)
+08-04 14:33:15.764  4452  6391 I CAE     : sendCmdToSensorHub(SensorHubCommManager.java:158) - -78, 59, 0, 0,
+08-04 14:33:15.765  4452  4730 D SensorService: setSContextDataLocked ints length 2 , byte length 4
+08-04 14:33:15.766  4072  4072 D Sensors : poll_inject_sensor_data
+08-04 14:33:15.766  4072  4072 D Sensors : b2 3b 00 00  
+08-04 14:33:15.766  4072  4072 E Sensors : inject_scontext_data: New ssp_data_injection_fd(28)
+08-04 14:33:15.769  4072  4072 D Sensors : SContext Data Injection return 4
+08-04 14:33:15.771  4452  6391 D CAE     : getFaultDetectionResult(SensorStatusCheckRunner.java:206) - true
+08-04 14:33:15.773  4452  6391 I CAE     : notifyCmdProcessResultObserver(ContextProvider.java:627) - CheckResult = 0, Cause = Success
+08-04 14:33:15.774  4452  6391 D CAE     : doCommendProcess(ContextAwareService.java:452) - complete notify the operation result.
+08-04 14:33:15.775  4452  6391 I CAE     : displayUsedCountForService(ContextAwareService.java:544) - totalCnt = 0, serviceCount = 0, subCollectionCount = 0
+08-04 14:33:15.775  4452  6391 D CAE     : showListenerList(ContextAwareService.java:377) - ===== Context Aware Service List =====
+08-04 14:33:15.776  4452  6391 I CAE     : showListenerList(ContextAwareService.java:386) - Listener : com.samsung.android.contextaware.manager.ContextAwareService$Listener@8b2d6be, Service : AUTO_ROTATION(1)
+08-04 14:33:15.776  4452  6391 I CAE     : showListenerList(ContextAwareService.java:386) - Listener : com.samsung.android.contextaware.manager.ContextAwareService$Listener@7a1249a, Service : SLOCATION_AR_DISTANCE_RUNNER(1)
+08-04 14:33:15.776  4452  6391 I CAE     : showListenerList(ContextAwareService.java:386) - Listener : com.samsung.android.contextaware.manager.ContextAwareService$Listener@b5abce8, Service : ANY_MOTION_DETECTOR_RUNNER(1)
+08-04 14:33:15.782  4452  6391 W CAE     : unregisterCallback(ContextAwareService.java:252) - [unregi 02] Mutex is unlocked for SENSOR_STATUS_CHECK_RUNNER
+08-04 14:33:15.786  4452  6391 D SemContextService: 	.unregisterCallback : 4, client=b.b.a.a.a.b.m@ec04f2
+08-04 14:33:15.786  4452  6391 D SemContextService: unlock : unregisterCallback
+08-04 14:33:15.787  5140  5188 D SemContextManager:   .unregisterListener : listener = b.b.a.a.a.b.m@ec04f2, service=Service All
+08-04 14:33:15.787  5140  5188 D BadGnssDetector_FLP: stopMonitor is called
+08-04 14:33:15.788  5140  5188 W ListenerMonitor_FLP: No package information for listenerId, ddcdcbc
+08-04 14:33:15.789  5140  5188 E RequestManager_FLP: [LocationManager] Location remove ddcdcbc from com.google.android.gms.persistent
+08-04 14:33:15.789  5140  5188 W RequestManager_FLP: Not registered using location provider, ddcdcbc
+08-04 14:33:15.789  5140  5188 W ListenerMonitor_FLP: No package information for listenerId, 733b79a
+08-04 14:33:15.789  5140  5188 W IncomingHandler_FLP: GnssStatusListener is unregistered 733b79a , so not monitoring
+08-04 14:33:15.803  4452  6436 D SensorService: removeConnection, index : 2, size : 3
+08-04 14:33:15.803  4452  6436 D SensorService: # removeConnection, index : 2, size : 2
+08-04 14:33:15.803  4452  6436 D SensorService: Calling activate off 1
+08-04 14:33:15.803  4072  4072 I nanohub : mergeDirectReportRequest - enable = 0 activate = 1 direct.rate = 0 normal.rate = 20000000
+08-04 14:33:15.803  4072  4072 I nanohub : mergeDirectReportRequest - activate = 1 normal.rate = 20000000
+08-04 14:33:15.803  4072  4072 I Sensors : batch(0) - accelerometer_sensor try to batching with 20000000
+08-04 14:33:15.806  4452  6436 D SensorService: removeConnection, index : 0, size : 1
+08-04 14:33:15.806  4452  6436 D SensorService: # removeConnection, index : 0, size : 0
+08-04 14:33:15.806  4452  6436 D SensorService: Calling activate off 7
+08-04 14:33:15.807  4072  4072 I Sensors : UncalMagneticSensor old sensor_state 180789, new sensor_state : 180785 en : 0
+08-04 14:33:15.811  4452  6436 D SensorService: removeConnection, index : 1, size : 2
+08-04 14:33:15.811  4452  6436 D SensorService: # removeConnection, index : 1, size : 1
+08-04 14:33:15.811  4452  6436 D SensorService: Calling activate off 4
+08-04 14:33:15.811  4072  4072 I nanohub : mergeDirectReportRequest - enable = 0 activate = 1 direct.rate = 0 normal.rate = 20000000
+08-04 14:33:15.811  4072  4072 I nanohub : mergeDirectReportRequest - activate = 1 normal.rate = 20000000
+08-04 14:33:15.811  4072  4072 I Sensors : batch(12) - uncal_gyro_sensor try to batching with 20000000
+08-04 14:33:15.816  4452  6436 D SensorService: removeConnection, index : 1, size : 2
+08-04 14:33:15.816  4452  6436 D SensorService: # removeConnection, index : 1, size : 1
+08-04 14:33:15.816  4452  6436 D SensorService: Calling activate off 6
+08-04 14:33:15.816  4072  4072 I nanohub : mergeDirectReportRequest - enable = 0 activate = 1 direct.rate = 0 normal.rate = 20000000
+08-04 14:33:15.816  4072  4072 I nanohub : mergeDirectReportRequest - activate = 1 normal.rate = 20000000
+08-04 14:33:15.816  4072  4072 I Sensors : batch(1) - geomagnetic_sensor try to batching with 20000000
+08-04 14:33:15.841  4452  4985 D MdnieScenarioControlService:  packageName : com.magnus.launcher    className : com.magnus.launcher.MainActivity
+08-04 14:33:15.842  4452  4985 V MdnieScenarioControlService: setUIMode from UI function(3)
+08-04 14:33:15.850  4452  8683 D BatteryService: Sending ACTION_BATTERY_CHANGED. scale:100, info:{.chargerAcOnline = false, .chargerUsbOnline = true, .chargerWirelessOnline = false, .maxChargingCurrent = 0, .maxChargingVoltage = 0, .batteryStatus = CHARGING, .batteryHealth = GOOD, .batteryPresent = true, .batteryLevel = 81, .batteryVoltage = 4118, .batteryTemperature = 301, .batteryCurrent = 0, .batteryCycleCount = 0, .batteryFullCharge = 3000000, .batteryChargeCounter = 0, .batteryTechnology = Li-ion}
+08-04 14:33:15.850  4452  8683 D BatteryService: online:4, current avg:279, charge type:1, POGO powered:false, power sharing:false, high voltage charger:false, charger_type:0, capacity:280000, misc_event:65536, current_event:0, current_now:139
+08-04 14:33:15.852  4452  4616 D PowerManagerService: mDisplayReady: false
+08-04 14:33:15.852  4452  4616 D DisplayPowerController: animateScreenStateChange: target=2, targetInternal=2, dualScreenPolicy=-1
+08-04 14:33:15.852  4452  4616 D DisplayPowerController: getFinalBrightness : Summary is 118 -> 118
+08-04 14:33:15.852  4452  4616 D PowerManagerService: DisplayPowerCallbacks : onStateChanged()
+08-04 14:33:15.852  4452  4616 D PowerManagerService: mDisplayReady: true
+08-04 14:33:15.853  4946  4946 D KeyguardUpdateMonitor: received broadcast android.intent.action.BATTERY_CHANGED
+08-04 14:33:15.854  4946  4946 D KeyguardUpdateMonitor: handleBatteryUpdate
+08-04 14:33:15.854  4452  5182 D SLocation: SGeofenceManager - sgfm received : android.intent.action.BATTERY_CHANGED
+08-04 14:33:15.855  4905  4905 D BigDataInfoController: Intent : android.intent.action.BATTERY_CHANGED
+08-04 14:33:15.856  4946  4946 D KeyguardSecIndicationController: addIndicationTimeout() returned - unlocking
+08-04 14:33:15.856  4946  4946 D KeyguardSecIndicationController: addIndication() returned - unlocking
+08-04 14:33:15.856  4946  4946 D KeyguardSecIndicationController: onRefreshBatteryInfo() status = BatteryStatus{status=2,level=81,plugged=2,health=2,maxChargingWattage=-1,remaining=4001000ultraFastCharger=0}
+08-04 14:33:15.858  4946  4946 D SecBatteryMeterDrawable: onBatteryLevelChanged() isSomethingChanged!
+08-04 14:33:15.858  4946  4946 I chatty  : uid=10112(com.samsung.android.app.aodservice) com.android.systemui identical 1 line
+08-04 14:33:15.858  4946  4946 D SecBatteryMeterDrawable: onBatteryLevelChanged() isSomethingChanged!
+08-04 14:33:15.859  4946  4946 D PowerUI : priorPlugType = 2 mPlugType = 2 priorBatteryStatus = 2 mBatteryStatus = 2
+08-04 14:33:15.861  4452  4452 I MotionRecognitionService: Plugged
+08-04 14:33:15.861  4946  4946 D PowerUI.Notification: showChargingNotice oldChargingType : 1 currentChargingType : 1 oldChargingTime : 4023000 mChargingTime : 4001000
+08-04 14:33:15.861  4452  4452 D MotionRecognitionService:   mCableConnection= 1
+08-04 14:33:15.861  4946  4946 D PowerUI.Notification: showChargingNotification()
+08-04 14:33:15.861  4452  4452 D MotionRecognitionService: set cable connected : mGripEnabled = false
+08-04 14:33:15.862  4452  4452 D UsbDeviceManager: received ACTION_BATTERY_CHANGED
+08-04 14:33:15.863  4452  4563 D UsbDeviceManager: handleMessage -> MSG_UPDATE_CHARGING_STATE: mUsbCharging=true
+08-04 14:33:15.863  4452  4452 D GameManagerService: new battery level: 81
+08-04 14:33:15.870  4452  6391 D ApplicationPolicy: isStatusBarNotificationAllowedAsUser: packageName = com.android.systemui,userId = 0
+08-04 14:33:15.870  4452  6391 D API test: getContainerInfo: value is 
+08-04 14:33:15.874  4452  6391 D ApplicationPolicy: isStatusBarNotificationAllowedAsUser: packageName = com.android.systemui,userId = -1
+08-04 14:33:15.874  4452  6391 D API test: getContainerInfo: value is 
+08-04 14:33:15.874  4452  6391 D ApplicationPolicy: isStatusBarNotificationAllowedAsUser: converting userId from USER_ALLto 0
+08-04 14:33:15.874  4452  6391 D API test: getContainerInfo: value is 
+08-04 14:33:15.876  4946  4946 D PowerUI : Battery swelling mode - priorBatterySwellingMode = 0 mBatterySwellingMode = 0 mBatteryStatus = 2
+08-04 14:33:15.876  4946  4946 I PowerUI : misc_event = 65536
+08-04 14:33:15.877  4946  4946 D QSContainerImpl: getDisplayHeight portrait? true  displayHeight= 2220
+08-04 14:33:15.932  4452  4797 D SamsungAlarmManager: Cancel Alarm calling from uid:1000 pid :4452 / listener:android.app.AlarmManager$ListenerWrapper@a0f0862
+08-04 14:33:15.933  4452  4797 I SamsungAlarmManager: setLocked to kernel - T:2 / 20260804T143430, SetElapsed=19063224, nowELAPSED=18988584
+08-04 14:33:15.934  4452  4797 I SamsungAlarmManager: setLocked to kernel - T:3 / 20260804T143328, SetElapsed=19001222, nowELAPSED=18988585
+08-04 14:33:15.937  4452  4784 I IE_Extension:  ID Extension 35 is not implemented yet.
+08-04 14:33:15.937  4452  4784 I IE_Extension:  ID Extension 38 is not implemented yet.
+08-04 14:33:15.937  4452  4784 I IE_Extension:  ID Extension 35 is not implemented yet.
+08-04 14:33:15.937  4452  4784 I IE_Extension:  ID Extension 38 is not implemented yet.
+08-04 14:33:15.937  4452  4797 D SensorService: setSContextDataLocked ints length 2 , byte length 4
+08-04 14:33:15.938  4072  4072 D Sensors : poll_inject_sensor_data
+08-04 14:33:15.938  4452  4784 I IE_Extension:  ID Extension 35 is not implemented yet.
+08-04 14:33:15.938  4072  4072 D Sensors : c1 47 00 05  
+08-04 14:33:15.938  4072  4072 E Sensors : inject_scontext_data: New ssp_data_injection_fd(28)
+08-04 14:33:15.938  4452  4784 I IE_Extension:  ID Extension 38 is not implemented yet.
+08-04 14:33:15.938  4452  4784 I IE_Extension:  ID Extension 35 is not implemented yet.
+08-04 14:33:15.938  4452  4784 I IE_Extension:  ID Extension 38 is not implemented yet.
+08-04 14:33:15.938  4452  4595 D BatteryExternalStatsWorker: update stats
+08-04 14:33:15.938  4452  4595 D BatteryExternalStatsWorker: WifiActivityEnergyInfo was updated
+08-04 14:33:15.938  4452  4595 D BatteryExternalStatsWorker: BluetoothActivityEnergyInfo was updated
+08-04 14:33:15.938  4452  4595 D BatteryExternalStatsWorker: ModemActivityEnergyInfo was updated
+08-04 14:33:15.941  4072  4072 D Sensors : SContext Data Injection return 4
+08-04 14:33:15.942  9239 10148 D MobileWips: MWIPS wifi state changed 13
+08-04 14:33:15.945  4452  5970 V WifiProfileShare.Util: updateScanResult, scan:4 bssid:4 configKey:4
+08-04 14:33:15.952  4452  4595 D BatteryExternalStatsWorker: done updateExternalStatsLocked
+08-04 14:33:15.952  4452  4595 D KernelCpuUidUserSysTimeReader: Removing uids 99004-99004
+08-04 14:33:15.953  4452  4595 D KernelCpuUidUserSysTimeReader: Removing uids 99005-99005
+08-04 14:33:15.960  5166  9274 I FrewleTileCacheManagerV: (REDACTED) Fetched %d AP models from cache
+08-04 14:33:15.978  4452  4452 I EdgeLightingManager: isCallingUserSupported : callingUserId=-1, mUserId=0, isDualAppId=false
+08-04 14:33:15.984  5166  7354 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+08-04 14:33:15.988  5166  7708 I FontLog : (REDACTED) Received query %s, URI %s
+08-04 14:33:15.988  5166  7708 I FontLog : (REDACTED) Query [%s] resolved to %s
+08-04 14:33:15.991  5166  7708 I FontLog : (REDACTED) Fetch %s end status %s
+08-04 14:33:15.993  5166  7354 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+08-04 14:33:15.996  5140  5188 V GmsPassiveListener_FLP: Got the onLocationResult !!!!
+08-04 14:33:16.001  5166  7354 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+08-04 14:33:16.002  4452  5182 D SLocation: PositionManager - PassiveonLocationChanged fused 1785839595934
+08-04 14:33:16.002  4452  5182 W SLocation: PositionManager - do not refresh last location about fused location
+08-04 14:33:16.002  5140  5188 V PassiveListener_FLP: onLocationChanged, provider=fused / isMock=false
+08-04 14:33:16.003  5166  7354 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+08-04 14:33:16.010  5166  7708 I FontLog : (REDACTED) Pulling font file for id = %d, cache size = %d
+08-04 14:33:16.016  4452  5182 D SLocation: PositionManager - receive fused location
+08-04 14:33:16.027  5166  7708 I FontLog : (REDACTED) Pulling font file for id = %d, cache size = %d
+08-04 14:33:16.058  4452  5182 D SLocation: PositionManager - PassiveonLocationChanged network 1785839591412
+08-04 14:33:16.060  4452  4807 D GnssLocationProvider: injectLocation: 
+08-04 14:33:16.061  5140  5188 V PassiveListener_FLP: onLocationChanged, provider=network / isMock=false
+08-04 14:33:16.067  4452  5182 D SLocation: TrackingReceiverFilter - refreshCellInfo
+08-04 14:33:16.067  4452  5182 W Settings: Setting airplane_mode_on has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+08-04 14:33:16.067  4452  5182 D TelephonyManager: getAllCellInfo : Caller (PID / UID / TID): 4452 / 1000 / 5182
+08-04 14:33:16.080  4452  5182 D SLocation: TrackingReceiverFilter - registered Cell is not LTE
+08-04 14:33:16.083  5166  9277 I FrewleTileCacheManagerV: (REDACTED) Fetched %d AP models from cache
+08-04 14:33:16.106  5166  9274 I SemanticLocation: [InfMgr] No location reports after filtering [CONTEXT service_id=173 ]
+08-04 14:33:16.367  4452  4586 D CustomFrequencyManagerService: acquireDVFSLockLocked : type : DVFS_MIN_LIMIT  frequency : 2314000  uid : 1000  pid : 4452  pkgName : APP_LAUNCH@CPU_MIN@78
+08-04 14:33:16.371  4452  6391 I ActivityTaskManager: START u0 {flg=0x10000000 cmp=com.magnus.launcher/.MainActivity} from uid 2000
+08-04 14:33:16.373  4452  6391 D CustomFrequencyManagerService: acquireDVFSLockLocked : type : DVFS_MIN_LIMIT  frequency : 2314000  uid : 1000  pid : 4452  pkgName : AMS_ACT_START@CPU_MIN@21
+08-04 14:33:16.374  4452  6391 D ActivityManagerPerformance: AMP_acquire() ACT_START
+08-04 14:33:16.374  4452  6391 D ActivityTaskManager: MultiTaskingTaskLaunchParamsModifier:task=null display-id=0 display-windowing-mode=1
+08-04 14:33:16.374  4452  6391 D ActivityTaskManager: MultiTaskingTaskLaunchParamsModifier:tid=100 display-from-task=0 display-id=0 display-windowing-mode=1 non-freeform-display maximized-bounds
+08-04 14:33:16.374  4452  6391 D ActivityTaskManager: updateMinimizedState: unknown notifyReason=2
+08-04 14:33:16.376  8970  8970 I ViewRootImpl@2fbbf28[MainActivity]: stopped(false) old=false
+08-04 14:33:16.388  4452  6391 V WindowManager: Relayout Window{923388b u0 com.magnus.launcher/com.magnus.launcher.MainActivity}: viewVisibility=0 req=1080x2220
+08-04 14:33:16.390  4452  6391 V WindowManager: Relayout 8970: mAttrs={(0,0)(fillxfill) sim={adjust=pan forwardNavigation} ty=BASE_APPLICATION wanim=0x1030305
+08-04 14:33:16.390  4452  6391 V WindowManager:   fl=81810580
+08-04 14:33:16.390  4452  6391 V WindowManager:   pfl=10020000
+08-04 14:33:16.390  4452  6391 V WindowManager:   vsysui=10 naviIconColor=0}, display=0
+08-04 14:33:16.392  8970  8970 I ViewRootImpl@2fbbf28[MainActivity]: Relayout returned: old=(0,0,1080,2220) new=(0,0,1080,2220) req=(1080,2220)0 dur=3 res=0x1 s={true 479811670016} ch=false
+08-04 14:33:16.407  4452  8683 D SensorService: removeConnection, index : 1, size : 2
+08-04 14:33:16.407  4452  8683 D SensorService: # removeConnection, index : 1, size : 1
+08-04 14:33:16.407  4452  8683 D SensorService: Calling activate off 1
+08-04 14:33:16.407  4072  4526 I nanohub : mergeDirectReportRequest - enable = 0 activate = 1 direct.rate = 0 normal.rate = 180000000
+08-04 14:33:16.407  4072  4526 I nanohub : mergeDirectReportRequest - activate = 1 normal.rate = 180000000
+08-04 14:33:16.407  4072  4526 I Sensors : batch(0) - accelerometer_sensor try to batching with 180000000
+08-04 14:33:16.411  4452  8683 D SensorService: removeConnection, index : 0, size : 1
+08-04 14:33:16.411  4452  8683 D SensorService: # removeConnection, index : 0, size : 0
+08-04 14:33:16.411  4452  8683 D SensorService: Calling activate off 6
+08-04 14:33:16.411  4072  4526 I Sensors : GeoMagneticSensor old sensor_state 180785, new sensor_state : 180769 en : 0
+08-04 14:33:16.417  4452  8683 D SensorService: removeConnection, index : 0, size : 1
+08-04 14:33:16.417  4452  8683 D SensorService: # removeConnection, index : 0, size : 0
+08-04 14:33:16.417  4452  8683 D SensorService: Calling activate off 4
+08-04 14:33:16.417  4072  4072 I Sensors : UncalGyroSensor old sensor_state 180769, new sensor_state : 148001 en : 0
+08-04 14:33:16.421  4452  4620 D SensorService: removeConnection, index : 0, size : 1
+08-04 14:33:16.421  4452  4620 D SensorService: # removeConnection, index : 0, size : 0
+08-04 14:33:16.421  4452  4620 D SensorService: Calling activate off 8
+08-04 14:33:16.421  4072  4072 I Sensors : PressureSensor old sensor_state 148001, new sensor_state : 147969 en : 0
+08-04 14:33:16.424  4452  4620 D SensorService: removeConnection, index : 0, size : 1
+08-04 14:33:16.424  4452  4620 D SensorService: # removeConnection, index : 0, size : 0
+08-04 14:33:16.424  4452  4620 D SensorService: Calling activate off 2037412402
+08-04 14:33:16.424  4072  4072 I Sensors : RotationVector old sensor_state 147969, new sensor_state : 16897 en : 0
+08-04 14:33:16.495  5985  5985 I io_stats: !@   8,0 r 240699 11953752 w 59980 809564 d 5391 184556 f 6076 22653 iot 95376 78661 th 307200 0 0 pt 0 inp 0 0 18989.146
+08-04 14:33:16.835  4946  4946 D SecStatusBarWifiView: updateState: WifiIconState(resId=2131232734, visible=true, activityId=2131232740)
+08-04 14:33:16.835  4946  5146 D Tile.WifiTile: handleUpdateState isTransient=false transientEnabling =false cb.isTransient=false state.state = 2 mStateBeforeClick.value =false enabled =true
+08-04 14:33:17.371  4452  4452 D CustomFrequencyManagerService: releaseDVFSLockLocked : Getting Lock type frm List : DVFS_MIN_LIMIT  frequency : 2314000  uid : 1000  pid : 4452  tag : APP_LAUNCH@CPU_MIN@78
+08-04 14:33:17.379  4055  4055 I zygote  : Delayed USAP Pool refill. New USAPs: 1
+08-04 14:33:17.388  4055  4055 D Zygote  : Forked child process 9350
+08-04 14:33:17.457  4927  5085 D BtGatt.GattService: onScanResult to scannerId: 11- eventType=0x10, addressType=1, address=57:D, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-63, periodicAdvInt=0x0
+08-04 14:33:17.974  5166  9273 I NearbyMediums: Found Fast Ble Advertisements :
+08-04 14:33:17.974  5166  9273 I NearbyMediums: BleAdvertisement { version=2, socketVersion=2, isFast=true, serviceIdHash=null, data=[ 0x23 0x41 0x41 0x52 0x39 0x11 0x32 0x2b 0xfd 0x7b 0x54 0xd3 0x0f 0xb7 0xfc 0x49 0x40 0xc8 0xab 0x83 0xf1 0xf2 0x6f ], deviceToken=[ 0xdf 0xd6 ], rxAdvertisement=null } : 2 times.
+08-04 14:33:17.974  5166  9273 I NearbyMediums: Total 2 fast advertisements from 1 unique advertisers.
+08-04 14:33:17.974  5166  9273 I NearbyMediums: Current Tracked Scanning Clients are : {NearbyConnections.EnvironmentMonitor, NearbySharing}
+08-04 14:33:18.188  4090  4090 I SurfaceFlinger: SFWD update time=18990839399455
+08-04 14:33:18.376  4452  5486 D ActivityManagerPerformance: Received MSG_DISABLE_ACT_START, r: ActivityRecord{c80840d u0 com.magnus.launcher/.MainActivity t100}
+08-04 14:33:18.376  4452  5486 D CustomFrequencyManagerService: acquireDVFSLockLocked : type : DVFS_MIN_LIMIT  frequency : 1807000  uid : 1000  pid : 4452  pkgName : AMS_RESUME_TAIL@CPU_MIN@27
+08-04 14:33:18.376  4452  5486 D ActivityManagerPerformance: AMP_acquire() TAIL
+08-04 14:33:18.377  4452  5486 D CustomFrequencyManagerService: releaseDVFSLockLocked : Getting Lock type frm List : DVFS_MIN_LIMIT  frequency : 2314000  uid : 1000  pid : 4452  tag : AMS_ACT_START@CPU_MIN@21
+08-04 14:33:18.377  4452  5486 D ActivityManagerPerformance: AMP_release() ACT_START
+08-04 14:33:18.551  4946  4946 I UiThreadMonitor: setAwake 6314 3001 6
+08-04 14:33:18.677  4452  4452 D CustomFrequencyManagerService: releaseDVFSLockLocked : Getting Lock type frm List : DVFS_MIN_LIMIT  frequency : 1807000  uid : 1000  pid : 4452  tag : AMS_RESUME_TAIL@CPU_MIN@27
+08-04 14:33:19.455  4452  4829 D PkgPredictorService-NapPreloadController: preload pkg: [] type: ml
+08-04 14:33:19.456  4452  5237 D ActivityManager: [ML] packageName : com.magnus.launcher uid : 0 type : ml
+08-04 14:33:19.456  4452  4829 D PkgPredictorService-NapPreloadController: Sent pkg = com.magnus.launcher type: ml
+08-04 14:33:19.456  4452  5237 D ActivityManager: [ML] This Package is on the Memory 
+08-04 14:33:19.934  4946  4946 D SecStatusBarWifiView: updateState: WifiIconState(resId=2131232734, visible=true, activityId=2131232739)
+08-04 14:33:19.937  4946  5146 D Tile.WifiTile: handleUpdateState isTransient=false transientEnabling =false cb.isTransient=false state.state = 2 mStateBeforeClick.value =false enabled =true
+08-04 14:33:20.583  4927  5085 D BtGatt.GattService: onScanResult to scannerId: 11- eventType=0x10, addressType=1, address=57:D, primaryPhy=1, secondaryPhy=0, advertisingSid=0xff, txPower=127, rssi=-62, periodicAdvInt=0x0
+08-04 14:33:20.765  5140  5188 V GoogleActivityManager_FLP: handleRemove is called
+08-04 14:33:20.788  4452  6391 D SamsungAlarmManager: Cancel Alarm calling from uid:10082 pid :5166 / op:PendingIntent{9bb78e6: PendingIntentRecord{b8cbe27 com.google.android.gms startService}}
+08-04 14:33:20.788  4452  6391 I SamsungAlarmManager: setLocked to kernel - T:2 / 20260804T143430, SetElapsed=19063224, nowELAPSED=18993439
+08-04 14:33:20.788  4452  6391 I SamsungAlarmManager: setLocked to kernel - T:3 / 20260804T143328, SetElapsed=19001222, nowELAPSED=18993439
+08-04 14:33:20.790  5166  9274 I SystemMemoryMap: (REDACTED) [activityrecognition] serialization complete (extras/values=%.2f/%.2fkb)
+08-04 14:33:21.018  4452  5239 D SamsungAlarmManager: Cancel Alarm calling from uid:10082 pid :5166 / op:PendingIntent{60708d4: PendingIntentRecord{ea82597 com.google.android.gms broadcastIntent}}
+08-04 14:33:21.019  4452  5239 I SamsungAlarmManager: setLocked to kernel - T:2 / 20260804T143453, SetElapsed=19086001, nowELAPSED=18993670
+08-04 14:33:21.020  4452  5239 I SamsungAlarmManager: setLocked to kernel - T:3 / 20260804T143328, SetElapsed=19001222, nowELAPSED=18993671
+08-04 14:33:21.021  5166  9274 I AlarmManager: setExactAndAllowWhileIdle [name: GCM_HB_ALARM type: 2 triggerAtMillis: 20793672]
+08-04 14:33:21.028  4452  5239 D SamsungAlarmManager: setExact Intent (T:2/F:5/AC:false) 20260804T150321 - CU:10082/CP:5166
+08-04 14:33:21.029  4452  5239 I SamsungAlarmManager: setLocked to kernel - T:2 / 20260804T143453, SetElapsed=19086001, nowELAPSED=18993680
+08-04 14:33:21.029  4452  5239 I SamsungAlarmManager: setLocked to kernel - T:3 / 20260804T143328, SetElapsed=19001222, nowELAPSED=18993680
+08-04 14:33:21.032  4452  5239 D SamsungAlarmManager: Cancel Alarm calling from uid:10082 pid :5166 / op:PendingIntent{da78a7d: PendingIntentRecord{ea82597 com.google.android.gms broadcastIntent}}
+08-04 14:33:21.034  4452  5239 I SamsungAlarmManager: setLocked to kernel - T:2 / 20260804T143453, SetElapsed=19086001, nowELAPSED=18993685
+08-04 14:33:21.034  4452  5239 I SamsungAlarmManager: setLocked to kernel - T:3 / 20260804T143328, SetElapsed=19001222, nowELAPSED=18993685
+08-04 14:33:21.036  5166  9274 I AlarmManager: setExactAndAllowWhileIdle [name: GCM_HB_ALARM type: 2 triggerAtMillis: 20793687]
+08-04 14:33:21.046  4452  6391 I ActivityManager: Killing 7904:com.samsung.mlp/5004 (adj 999): empty #25
+08-04 14:33:21.060  4452  5239 D SamsungAlarmManager: setExact Intent (T:2/F:5/AC:false) 20260804T150321 - CU:10082/CP:5166
+08-04 14:33:21.061  4452  5239 I SamsungAlarmManager: setLocked to kernel - T:2 / 20260804T143453, SetElapsed=19086001, nowELAPSED=18993712
+08-04 14:33:21.061  4452  5239 I SamsungAlarmManager: setLocked to kernel - T:3 / 20260804T143328, SetElapsed=19001222, nowELAPSED=18993712
+08-04 14:33:21.072  4452  5239 D SamsungAlarmManager: Cancel Alarm calling from uid:10082 pid :5166 / op:PendingIntent{735de40: PendingIntentRecord{4ac9d9a com.google.android.gms broadcastIntent}}
+08-04 14:33:21.073  4452  5239 I SamsungAlarmManager: setLocked to kernel - T:2 / 20260804T143453, SetElapsed=19086001, nowELAPSED=18993724
+08-04 14:33:21.073  4452  5239 I SamsungAlarmManager: setLocked to kernel - T:3 / 20260804T143328, SetElapsed=19001222, nowELAPSED=18993724
+08-04 14:33:21.079  4452  5239 D SamsungAlarmManager: setInexact Intent (T:3/F:0/AC:false) 20260804T151750 - CU:10082/CP:5166
+08-04 14:33:21.079  4452  5239 I SamsungAlarmManager: setLocked to kernel - T:2 / 20260804T143453, SetElapsed=19086001, nowELAPSED=18993730
+08-04 14:33:21.079  4452  5239 I SamsungAlarmManager: setLocked to kernel - T:3 / 20260804T143328, SetElapsed=19001222, nowELAPSED=18993730
+08-04 14:33:21.087  4452  5239 D SamsungAlarmManager: Cancel Alarm calling from uid:10082 pid :5166 / op:PendingIntent{1275179: PendingIntentRecord{4ac9d9a com.google.android.gms broadcastIntent}}
+08-04 14:33:21.087  4452  5239 I SamsungAlarmManager: setLocked to kernel - T:2 / 20260804T143453, SetElapsed=19086001, nowELAPSED=18993738
+08-04 14:33:21.088  4452  5239 I SamsungAlarmManager: setLocked to kernel - T:3 / 20260804T143328, SetElapsed=19001222, nowELAPSED=18993739
+08-04 14:33:21.096  4452  5239 D SamsungAlarmManager: setInexact Intent (T:3/F:0/AC:false) 20260804T151750 - CU:10082/CP:5166
+08-04 14:33:21.096  4452  5239 I SamsungAlarmManager: setLocked to kernel - T:2 / 20260804T143453, SetElapsed=19086001, nowELAPSED=18993747
+08-04 14:33:21.096  4452  5239 I SamsungAlarmManager: setLocked to kernel - T:3 / 20260804T143328, SetElapsed=19001222, nowELAPSED=18993747
+08-04 14:33:21.115  8003  8003 I ServiceManager: [#CMH#] Disconnected to Service  com.samsung.mlp.platform.LPService
+08-04 14:33:21.116  4055  4055 I Zygote  : Process 7904 exited due to signal 9 (Killed)
+08-04 14:33:21.116  4452  4589 I libprocessgroup: Successfully killed process cgroup uid 5004 pid 7904 in 54ms
+08-04 14:33:21.116  4452  6431 W ActivityManager: Scheduling restart of crashed service com.samsung.mlp/.platform.LPService in 1000ms
+08-04 14:33:21.499  5985  5985 I io_stats: !@   8,0 r 240703 11953824 w 60000 809740 d 5391 184556 f 6076 22655 iot 95380 78665 th 307200 0 0 pt 0 inp 0 0 18994.149
+08-04 14:33:21.552  4946  4946 I UiThreadMonitor: setAwake 6315 3001 5
