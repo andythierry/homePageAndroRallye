@@ -1,4 +1,5 @@
 package com.magnus.launcher
+import android.view.WindowManager
 import android.content.Intent
 import android.content.IntentFilter
 import android.content.BroadcastReceiver
@@ -28,6 +29,11 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        // Garder l'écran allumé
+        window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
+
+        // Permettre l'ajustement de luminosité
+        window.attributes.screenBrightness = WindowManager.LayoutParams.BRIGHTNESS_OVERRIDE_NONE
         
         timeDisplay = findViewById(R.id.time_display)
         batteryDisplay = findViewById(R.id.battery_display)
@@ -51,13 +57,13 @@ class MainActivity : AppCompatActivity() {
     }
     
     private fun recordVideo() {
-        try {
-            val intent = Intent(MediaStore.ACTION_VIDEO_CAPTURE)
-            startActivity(intent)
-        } catch (e: Exception) {
-            Toast.makeText(this, "Erreur caméra", Toast.LENGTH_SHORT).show()
-        }
+    try {
+        val intent = Intent(MediaStore.ACTION_VIDEO_CAPTURE)
+        startActivity(intent)
+    } catch (e: Exception) {
+        Toast.makeText(this, "Erreur caméra: ${e.message}", Toast.LENGTH_LONG).show()
     }
+}
     
     private fun updateTime() {
         val sdf = SimpleDateFormat("HH:mm", Locale.getDefault())
