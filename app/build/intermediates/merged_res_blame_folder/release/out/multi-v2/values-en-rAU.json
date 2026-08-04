@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.magnus.launcher.app-mergeReleaseResources-18:/values-en-rAU/values-en-rAU.xml",
+            "outputFile": "com.magnus.launcher.app-mergeReleaseResources-20:/values-en-rAU/values-en-rAU.xml",
             "map": [
                 {
                     "source": "/home/linuxthi/.gradle/caches/transforms-3/d3f23ec1e4cfacc27ed23c54fe13da9c/transformed/core-1.12.0/res/values-en-rAU/values-en-rAU.xml",

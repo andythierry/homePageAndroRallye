@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.magnus.launcher.app-mergeDebugResources-18:/values-en-rCA/values-en-rCA.xml",
+            "outputFile": "com.magnus.launcher.app-mergeDebugResources-20:/values-en-rCA/values-en-rCA.xml",
             "map": [
                 {
                     "source": "/home/linuxthi/.gradle/caches/transforms-3/d3f23ec1e4cfacc27ed23c54fe13da9c/transformed/core-1.12.0/res/values-en-rCA/values-en-rCA.xml",

@@ -18,10 +18,10 @@ library {
   maven_library {
     groupId: "org.jetbrains"
     artifactId: "annotations"
-    version: "13.0"
+    version: "20.1.0"
   }
   digests {
-    sha256: "\254\342\241\r\310\342\325\3754\222^\312\300>I\210\262\300\370Qe\f\224\270\316\364\233\241\275\021\024x"
+    sha256: "\355\310\343\354\227\226\245\364\034\032\344K-1\205\a\356j\301!/\022\035\223\3236\231\263\320\257\3668"
   }
   repo_index {
     value: 1
@@ -539,6 +539,80 @@ library {
   repo_index {
   }
 }
+library {
+  maven_library {
+    groupId: "org.eclipse.paho"
+    artifactId: "org.eclipse.paho.client.mqttv3"
+    version: "1.2.5"
+  }
+  digests {
+    sha256: "Y\221B\207\255\254Pj(\325\350\027.\355&*\"`_=\364\324&\271\331/A\332\342D\201\205"
+  }
+  repo_index {
+    value: 1
+  }
+}
+library {
+  maven_library {
+    groupId: "com.google.android.gms"
+    artifactId: "play-services-location"
+    version: "21.0.1"
+  }
+  digests {
+    sha256: "\274\211\361\246\021\211e!kEC\236~\223`\246\362\005FT\344\2023Tv\216x\204\373;k\f"
+  }
+  repo_index {
+  }
+}
+library {
+  maven_library {
+    groupId: "com.google.android.gms"
+    artifactId: "play-services-base"
+    version: "18.1.0"
+  }
+  digests {
+    sha256: "N\312V\316\354\3242Z7l\330C\257V7~#v\316(M\fo\005\245\320\250/L\033\370\315"
+  }
+  repo_index {
+  }
+}
+library {
+  maven_library {
+    groupId: "com.google.android.gms"
+    artifactId: "play-services-basement"
+    version: "18.1.0"
+  }
+  digests {
+    sha256: "\003\272\025\363\206\317&\v\336r\374@\020\373\211\250 \304}Q\316c\274\t)~\253\346\314\340\233\335"
+  }
+  repo_index {
+  }
+}
+library {
+  maven_library {
+    groupId: "com.google.android.gms"
+    artifactId: "play-services-tasks"
+    version: "18.0.2"
+  }
+  digests {
+    sha256: "\003F\\\3656\200\332#\323\324\243\231\\\003)\267\367;!\0358y\036\3136\345\221\376\273\211fd"
+  }
+  repo_index {
+  }
+}
+library {
+  maven_library {
+    groupId: "com.jakewharton.timber"
+    artifactId: "timber"
+    version: "5.0.1"
+  }
+  digests {
+    sha256: "\306\355\335\374\310\357\364*\026\004\310W\177\317\244\264\377\331\362R\022,R\3526\317\347\226\177Q/q"
+  }
+  repo_index {
+    value: 1
+  }
+}
 library_dependencies {
   library_dep_index: 1
   library_dep_index: 2
@@ -812,11 +886,43 @@ library_dependencies {
   library_index: 44
   library_dep_index: 6
 }
+library_dependencies {
+  library_index: 46
+  library_dep_index: 47
+  library_dep_index: 48
+  library_dep_index: 49
+}
+library_dependencies {
+  library_index: 47
+  library_dep_index: 10
+  library_dep_index: 8
+  library_dep_index: 40
+  library_dep_index: 48
+  library_dep_index: 49
+}
+library_dependencies {
+  library_index: 48
+  library_dep_index: 10
+  library_dep_index: 8
+  library_dep_index: 40
+}
+library_dependencies {
+  library_index: 49
+  library_dep_index: 48
+}
+library_dependencies {
+  library_index: 50
+  library_dep_index: 0
+  library_dep_index: 1
+}
 module_dependencies {
   module_name: "base"
   dependency_index: 0
   dependency_index: 5
   dependency_index: 19
+  dependency_index: 45
+  dependency_index: 46
+  dependency_index: 50
 }
 repositories {
   maven_repo {

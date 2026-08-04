@@ -13,6 +13,58 @@
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
   <library
+      name="com.google.android.gms:play-services-location:21.0.1@aar"
+      jars="/home/linuxthi/.gradle/caches/transforms-3/fdbe767122150df8f24de05324f00cb5/transformed/jetified-play-services-location-21.0.1/jars/classes.jar"
+      resolved="com.google.android.gms:play-services-location:21.0.1"
+      folder="/home/linuxthi/.gradle/caches/transforms-3/fdbe767122150df8f24de05324f00cb5/transformed/jetified-play-services-location-21.0.1"
+      manifest="AndroidManifest.xml"
+      resFolder="res"
+      assetsFolder="assets"
+      lintJar="lint.jar"
+      publicResources="public.txt"
+      symbolFile="R.txt"
+      externalAnnotations="annotations.zip"
+      proguardRules="proguard.txt"/>
+  <library
+      name="com.google.android.gms:play-services-base:18.1.0@aar"
+      jars="/home/linuxthi/.gradle/caches/transforms-3/d7f4ad925b96d154c74b03bdc0a3bfe2/transformed/jetified-play-services-base-18.1.0/jars/classes.jar"
+      resolved="com.google.android.gms:play-services-base:18.1.0"
+      folder="/home/linuxthi/.gradle/caches/transforms-3/d7f4ad925b96d154c74b03bdc0a3bfe2/transformed/jetified-play-services-base-18.1.0"
+      manifest="AndroidManifest.xml"
+      resFolder="res"
+      assetsFolder="assets"
+      lintJar="lint.jar"
+      publicResources="public.txt"
+      symbolFile="R.txt"
+      externalAnnotations="annotations.zip"
+      proguardRules="proguard.txt"/>
+  <library
+      name="com.google.android.gms:play-services-tasks:18.0.2@aar"
+      jars="/home/linuxthi/.gradle/caches/transforms-3/32755f8ec4250618b0d4cb444d81a8f2/transformed/jetified-play-services-tasks-18.0.2/jars/classes.jar"
+      resolved="com.google.android.gms:play-services-tasks:18.0.2"
+      folder="/home/linuxthi/.gradle/caches/transforms-3/32755f8ec4250618b0d4cb444d81a8f2/transformed/jetified-play-services-tasks-18.0.2"
+      manifest="AndroidManifest.xml"
+      resFolder="res"
+      assetsFolder="assets"
+      lintJar="lint.jar"
+      publicResources="public.txt"
+      symbolFile="R.txt"
+      externalAnnotations="annotations.zip"
+      proguardRules="proguard.txt"/>
+  <library
+      name="com.google.android.gms:play-services-basement:18.1.0@aar"
+      jars="/home/linuxthi/.gradle/caches/transforms-3/fe00983e899ea1b1be67e8711264531a/transformed/jetified-play-services-basement-18.1.0/jars/classes.jar"
+      resolved="com.google.android.gms:play-services-basement:18.1.0"
+      folder="/home/linuxthi/.gradle/caches/transforms-3/fe00983e899ea1b1be67e8711264531a/transformed/jetified-play-services-basement-18.1.0"
+      manifest="AndroidManifest.xml"
+      resFolder="res"
+      assetsFolder="assets"
+      lintJar="lint.jar"
+      publicResources="public.txt"
+      symbolFile="R.txt"
+      externalAnnotations="annotations.zip"
+      proguardRules="proguard.txt"/>
+  <library
       name="androidx.fragment:fragment:1.3.6@aar"
       jars="/home/linuxthi/.gradle/caches/transforms-3/06f8933afb14d91c10523f97db4b242c/transformed/fragment-1.3.6/jars/classes.jar"
       resolved="androidx.fragment:fragment:1.3.6"
@@ -56,6 +108,19 @@
       jars="/home/linuxthi/.gradle/caches/transforms-3/49f107e45991de74d5f17f6244fde28a/transformed/jetified-core-ktx-1.12.0/jars/classes.jar"
       resolved="androidx.core:core-ktx:1.12.0"
       folder="/home/linuxthi/.gradle/caches/transforms-3/49f107e45991de74d5f17f6244fde28a/transformed/jetified-core-ktx-1.12.0"
+      manifest="AndroidManifest.xml"
+      resFolder="res"
+      assetsFolder="assets"
+      lintJar="lint.jar"
+      publicResources="public.txt"
+      symbolFile="R.txt"
+      externalAnnotations="annotations.zip"
+      proguardRules="proguard.txt"/>
+  <library
+      name="com.jakewharton.timber:timber:5.0.1@aar"
+      jars="/home/linuxthi/.gradle/caches/transforms-3/abfd13a63988be93c06914130bb2737a/transformed/jetified-timber-5.0.1/jars/classes.jar"
+      resolved="com.jakewharton.timber:timber:5.0.1"
+      folder="/home/linuxthi/.gradle/caches/transforms-3/abfd13a63988be93c06914130bb2737a/transformed/jetified-timber-5.0.1"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"
@@ -335,9 +400,13 @@
       jars="/home/linuxthi/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.9.21/17ee3e873d439566c7d8354403b5f3d9744c4c9c/kotlin-stdlib-1.9.21.jar"
       resolved="org.jetbrains.kotlin:kotlin-stdlib:1.9.21"/>
   <library
-      name="org.jetbrains:annotations:13.0@jar"
-      jars="/home/linuxthi/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/919f0dfe192fb4e063e7dacadee7f8bb9a2672a9/annotations-13.0.jar"
-      resolved="org.jetbrains:annotations:13.0"/>
+      name="org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.2.5@jar"
+      jars="/home/linuxthi/.gradle/caches/modules-2/files-2.1/org.eclipse.paho/org.eclipse.paho.client.mqttv3/1.2.5/1546cfc794449c39ad569853843a930104fdc297/org.eclipse.paho.client.mqttv3-1.2.5.jar"
+      resolved="org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.2.5"/>
+  <library
+      name="org.jetbrains:annotations:20.1.0@jar"
+      jars="/home/linuxthi/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/20.1.0/2fcd1f3225bca0c4a7bc931142076f8c1e80993f/annotations-20.1.0.jar"
+      resolved="org.jetbrains:annotations:20.1.0"/>
   <library
       name="androidx.emoji2:emoji2-views-helper:1.2.0@aar"
       jars="/home/linuxthi/.gradle/caches/transforms-3/5137da6458cf13163c1ecab9d8c19830/transformed/jetified-emoji2-views-helper-1.2.0/jars/classes.jar"

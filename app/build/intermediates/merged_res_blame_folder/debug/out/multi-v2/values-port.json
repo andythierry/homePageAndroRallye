@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.magnus.launcher.app-mergeDebugResources-18:/values-port/values-port.xml",
+            "outputFile": "com.magnus.launcher.app-mergeDebugResources-20:/values-port/values-port.xml",
             "map": [
                 {
                     "source": "/home/linuxthi/.gradle/caches/transforms-3/6f834913f496d3098042ed78a784c2ce/transformed/appcompat-1.6.1/res/values-port/values-port.xml",

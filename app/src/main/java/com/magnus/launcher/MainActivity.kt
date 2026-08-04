@@ -17,6 +17,7 @@ import java.text.SimpleDateFormat
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
+    private lateinit var mqttClient: MQTTClient
     private lateinit var timeDisplay: TextView
     private lateinit var batteryDisplay: TextView
     private val handler = Handler(Looper.getMainLooper())
@@ -29,6 +30,9 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        // Initialiser MQTT
+        mqttClient = MQTTClient(this)
+        mqttClient.connect()
         // Garder l'écran allumé
         window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
 
@@ -118,5 +122,6 @@ class MainActivity : AppCompatActivity() {
         super.onDestroy()
         unregisterReceiver(batteryReceiver)
         handler.removeCallbacksAndMessages(null)
+        mqttClient.disconnect()
     }
 }
