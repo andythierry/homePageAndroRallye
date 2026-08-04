@@ -1,0 +1,19 @@
+<lint-module
+    format="1"
+    dir="/home/linuxthi/magnus-launcher/homePageAndroRallye/app"
+    name=":app"
+    type="APP"
+    maven="homePageAndroRallye:app:"
+    agpVersion="8.1.4"
+    buildFolder="build"
+    bootClassPath="/home/linuxthi/Android/Sdk/platforms/android-34/android.jar:/home/linuxthi/Android/Sdk/build-tools/33.0.1/core-lambda-stubs.jar"
+    javaSourceLevel="1.8"
+    compileTarget="android-34"
+    neverShrinking="true">
+  <lintOptions
+      abortOnError="true"
+      absolutePaths="true"
+      checkReleaseBuilds="true"
+      explainIssues="true"/>
+  <variant name="release"/>
+</lint-module>

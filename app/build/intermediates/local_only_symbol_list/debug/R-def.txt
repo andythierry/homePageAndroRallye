@@ -3,10 +3,10 @@ local
 id battery_display
 id btn_ble
 id btn_gps
+id btn_rally_call
 id btn_reboot
 id btn_settings
 id btn_shutdown
-id btn_wifi
 id time_display
 layout activity_main
 string app_name

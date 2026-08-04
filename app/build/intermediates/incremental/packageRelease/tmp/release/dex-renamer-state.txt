@@ -1,0 +1,4 @@
+#Tue Aug 04 08:21:44 RET 2026
+base.0=/home/linuxthi/magnus-launcher/homePageAndroRallye/app/build/intermediates/dex/release/mergeDexRelease/classes.dex
+path.0=classes.dex
+renamed.0=classes.dex

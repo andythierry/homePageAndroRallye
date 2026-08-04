@@ -14,10 +14,10 @@ com.magnus.launcher.app-jetified-appcompat-resources-1.6.1-12 /home/linuxthi/.gr
 com.magnus.launcher.app-jetified-lifecycle-process-2.4.1-13 /home/linuxthi/.gradle/caches/transforms-3/cfb908de37549301727b870c7ee7feb1/transformed/jetified-lifecycle-process-2.4.1/res
 com.magnus.launcher.app-core-1.12.0-14 /home/linuxthi/.gradle/caches/transforms-3/d3f23ec1e4cfacc27ed23c54fe13da9c/transformed/core-1.12.0/res
 com.magnus.launcher.app-jetified-lifecycle-viewmodel-savedstate-2.5.1-15 /home/linuxthi/.gradle/caches/transforms-3/eca44c05241acc326e7aa39462947930/transformed/jetified-lifecycle-viewmodel-savedstate-2.5.1/res
-com.magnus.launcher.app-pngs-16 /home/linuxthi/launcher_magnus/app/build/generated/res/pngs/debug
-com.magnus.launcher.app-resValues-17 /home/linuxthi/launcher_magnus/app/build/generated/res/resValues/debug
-com.magnus.launcher.app-packageDebugResources-18 /home/linuxthi/launcher_magnus/app/build/intermediates/incremental/debug/packageDebugResources/merged.dir
-com.magnus.launcher.app-packageDebugResources-19 /home/linuxthi/launcher_magnus/app/build/intermediates/incremental/debug/packageDebugResources/stripped.dir
-com.magnus.launcher.app-merged_res-20 /home/linuxthi/launcher_magnus/app/build/intermediates/merged_res/debug
-com.magnus.launcher.app-debug-21 /home/linuxthi/launcher_magnus/app/src/debug/res
-com.magnus.launcher.app-main-22 /home/linuxthi/launcher_magnus/app/src/main/res
+com.magnus.launcher.app-pngs-16 /home/linuxthi/magnus-launcher/homePageAndroRallye/app/build/generated/res/pngs/debug
+com.magnus.launcher.app-resValues-17 /home/linuxthi/magnus-launcher/homePageAndroRallye/app/build/generated/res/resValues/debug
+com.magnus.launcher.app-packageDebugResources-18 /home/linuxthi/magnus-launcher/homePageAndroRallye/app/build/intermediates/incremental/debug/packageDebugResources/merged.dir
+com.magnus.launcher.app-packageDebugResources-19 /home/linuxthi/magnus-launcher/homePageAndroRallye/app/build/intermediates/incremental/debug/packageDebugResources/stripped.dir
+com.magnus.launcher.app-merged_res-20 /home/linuxthi/magnus-launcher/homePageAndroRallye/app/build/intermediates/merged_res/debug
+com.magnus.launcher.app-debug-21 /home/linuxthi/magnus-launcher/homePageAndroRallye/app/src/debug/res
+com.magnus.launcher.app-main-22 /home/linuxthi/magnus-launcher/homePageAndroRallye/app/src/main/res

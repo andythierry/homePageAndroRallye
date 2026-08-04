@@ -76,7 +76,7 @@
                     }
                 },
                 {
-                    "source": "/home/linuxthi/launcher_magnus/app/src/main/res/values/styles.xml",
+                    "source": "/home/linuxthi/magnus-launcher/homePageAndroRallye/app/src/main/res/values/styles.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -131,23 +131,6 @@
                     }
                 },
                 {
-                    "source": "/home/linuxthi/launcher_magnus/app/src/main/res/values/strings.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "56",
-                        "endOffsets": "107"
-                    },
-                    "to": {
-                        "startLines": "298",
-                        "startColumns": "4",
-                        "startOffsets": "19387",
-                        "endColumns": "56",
-                        "endOffsets": "19439"
-                    }
-                },
-                {
                     "source": "/home/linuxthi/.gradle/caches/transforms-3/ce2d8d2800130742476dbfbf19566150/transformed/jetified-appcompat-resources-1.6.1/res/values/values.xml",
                     "from": {
                         "startLines": "2,18,24,34,50",
@@ -181,6 +164,23 @@
                         "startOffsets": "17011",
                         "endColumns": "49",
                         "endOffsets": "17056"
+                    }
+                },
+                {
+                    "source": "/home/linuxthi/magnus-launcher/homePageAndroRallye/app/src/main/res/values/strings.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "56",
+                        "endOffsets": "107"
+                    },
+                    "to": {
+                        "startLines": "298",
+                        "startColumns": "4",
+                        "startOffsets": "19387",
+                        "endColumns": "56",
+                        "endOffsets": "19439"
                     }
                 },
                 {

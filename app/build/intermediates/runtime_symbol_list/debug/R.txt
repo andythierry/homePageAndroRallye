@@ -706,10 +706,10 @@ int id blocking 0x7f080040
 int id bottom 0x7f080041
 int id btn_ble 0x7f080042
 int id btn_gps 0x7f080043
-int id btn_reboot 0x7f080044
-int id btn_settings 0x7f080045
-int id btn_shutdown 0x7f080046
-int id btn_wifi 0x7f080047
+int id btn_rally_call 0x7f080044
+int id btn_reboot 0x7f080045
+int id btn_settings 0x7f080046
+int id btn_shutdown 0x7f080047
 int id buttonPanel 0x7f080048
 int id center_vertical 0x7f080049
 int id checkbox 0x7f08004a
