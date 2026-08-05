@@ -12,10 +12,10 @@
         android:layout_weight="1.2"
         android:orientation="horizontal"
         android:background="#000000"
-        android:gravity="center_vertical|center_horizontal"
+        android:gravity="center"
         android:padding="4dp">
 
-        <!-- Heure (gauche, réduit) -->
+        <!-- Heure (centre, réduit) -->
         <TextView
             android:id="@+id/tvTime"
             android:layout_width="0dp"
@@ -25,7 +25,7 @@
             android:textSize="52sp"
             android:textColor="#00FF00"
             android:textStyle="bold"
-            android:gravity="left|center_vertical" />
+            android:gravity="center" />
 
         <!-- Batterie (droite, icone + pourcentage vertical) -->
         <LinearLayout
@@ -35,7 +35,7 @@
             android:gravity="center"
             android:padding="2dp">
 
-            <!-- Icone batterie (réduit) -->
+            <!-- Icone batterie -->
             <TextView
                 android:id="@+id/ivBatteryIcon"
                 android:layout_width="match_parent"
@@ -45,7 +45,7 @@
                 android:textSize="64sp"
                 android:gravity="center" />
 
-            <!-- Pourcentage vertical (réduit) -->
+            <!-- Pourcentage vertical -->
             <TextView
                 android:id="@+id/tvBattery"
                 android:layout_width="match_parent"
@@ -73,7 +73,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="🏁\nRACE\nCHRONO"
-            android:textSize="48sp"
+            android:textSize="36sp"
             android:textColor="#00FF00"
             android:background="#1a3a1a"
             android:layout_margin="4dp"
@@ -85,7 +85,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="📝\nRALLY\nCALL"
-            android:textSize="48sp"
+            android:textSize="36sp"
             android:textColor="#00FF00"
             android:background="#003300"
             android:layout_margin="4dp"
