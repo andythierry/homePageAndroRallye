@@ -73,17 +73,14 @@ class MainActivity : Activity() {
             
             btnDataPause.setOnClickListener { toggleDataPause() }
 
-            // RaceChrono - correct activity
             findViewById<Button>(R.id.btnRaceChronoHeader).setOnClickListener {
                 launchApp("com.racechrono.app", "com.racechrono.app.ui.MainActivity")
             }
 
-            // Rally Call
             findViewById<Button>(R.id.btnRallyCallHeader).setOnClickListener {
                 launchApp("io.tiste.RallyCall", "io.tiste.RallyCall.MainActivity")
             }
 
-            // Camera
             findViewById<Button>(R.id.btnRecord).setOnClickListener {
                 try {
                     startActivity(Intent(MediaStore.ACTION_VIDEO_CAPTURE))
@@ -92,17 +89,14 @@ class MainActivity : Activity() {
                 }
             }
 
-            // Bluetooth
             findViewById<Button>(R.id.btnBluetooth).setOnClickListener {
                 startActivity(Intent(android.provider.Settings.ACTION_BLUETOOTH_SETTINGS))
             }
 
-            // Settings
             findViewById<Button>(R.id.btnSettings).setOnClickListener {
                 startActivity(Intent(android.provider.Settings.ACTION_SETTINGS))
             }
 
-            // Reboot
             findViewById<Button>(R.id.btnReboot).setOnClickListener {
                 Runtime.getRuntime().exec("su -c reboot")
             }
@@ -147,14 +141,6 @@ class MainActivity : Activity() {
                     isCharging = status == BatteryManager.BATTERY_STATUS_CHARGING
                     tvBattery.text = "$batteryPct%"
 
-                    val icon = when {
-                        batteryPct >= 80 -> "🔋"
-                        batteryPct >= 60 -> "🔋"
-                        batteryPct >= 40 -> "🪫"
-                        batteryPct >= 20 -> "🪫"
-                        else -> "🪫"
-                    }
-
                     val color = when {
                         batteryPct >= 75 -> Color.parseColor("#00FF00")
                         batteryPct >= 50 -> Color.parseColor("#FFFF00")
@@ -164,32 +150,48 @@ class MainActivity : Activity() {
                     tvBattery.setTextColor(color)
 
                     if (isCharging && !animationRunning) {
-                        startChargingAnimation(icon, color)
+                        startChargingAnimation(color)
                     } else if (!isCharging && animationRunning) {
                         animationRunning = false
-                        ivBatteryIcon.text = icon
+                        ivBatteryIcon.text = "🔋"
+                        ivBatteryIcon.setTextColor(color)
                     } else if (!isCharging) {
-                        ivBatteryIcon.text = icon
+                        ivBatteryIcon.text = "🔋"
+                        ivBatteryIcon.setTextColor(color)
                     }
                 }
             }
         }, filter)
     }
 
-    private fun startChargingAnimation(icon: String, color: Int) {
+    private fun startChargingAnimation(baseColor: Int) {
         animationRunning = true
-        val chargingIcons = arrayOf("🔋", "🔌", "⚡")
-        var index = 0
+        var opacity = 128
+        val direction = 1
 
         val animation = object : Runnable {
             override fun run() {
                 if (animationRunning) {
-                    ivBatteryIcon.text = chargingIcons[index % chargingIcons.size]
-                    ivBatteryIcon.setTextColor(color)
-                    index++
-                    handler.postDelayed(this, 500)
+                    // Pulse l'opacité de la batterie (remplissage simulé)
+                    val adjustedColor = Color.argb(
+                        opacity,
+                        Color.red(baseColor),
+                        Color.green(baseColor),
+                        Color.blue(baseColor)
+                    )
+                    
+                    ivBatteryIcon.text = "🔋"
+                    ivBatteryIcon.setTextColor(adjustedColor)
+                    
+                    opacity += (direction * 20)
+                    if (opacity >= 255 || opacity <= 128) {
+                        opacity = if (opacity >= 255) 128 else 255
+                    }
+                    
+                    handler.postDelayed(this, 300)
                 } else {
-                    ivBatteryIcon.text = icon
+                    ivBatteryIcon.text = "🔋"
+                    ivBatteryIcon.setTextColor(baseColor)
                 }
             }
         }
