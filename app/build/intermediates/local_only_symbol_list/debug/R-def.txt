@@ -1,13 +1,11 @@
 R_DEF: Internal format may change without notice
 local
-id battery_display
-id btn_ble
-id btn_gps
-id btn_rally_call
-id btn_reboot
-id btn_settings
-id btn_shutdown
-id time_display
+id btnDataPause
+id btnGPS
+id btnRallyCall
+id btnReboot
+id btnRecord
+id btnSettings
 layout activity_main
 mipmap ic_launcher
 string app_name

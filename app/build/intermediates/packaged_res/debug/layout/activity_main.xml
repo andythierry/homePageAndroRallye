@@ -3,146 +3,99 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#000000"
-    android:padding="16dp">
+    android:background="#1a1a1a">
 
-    <!-- Header: Heure + Batterie -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:gravity="center"
-        android:layout_marginBottom="24dp"
-        android:padding="16dp">
-
-        <TextView
-            android:id="@+id/time_display"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="09:41"
-            android:textSize="48sp"
-            android:textColor="#FFFFFF"
-            android:textStyle="bold"
-            android:fontFamily="monospace" />
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center"
-            android:layout_marginTop="12dp">
-
-            <TextView
-                android:id="@+id/battery_display"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="🔋 100%"
-                android:textSize="28sp"
-                android:textColor="#4CAF50"
-                android:textStyle="bold" />
-        </LinearLayout>
-    </LinearLayout>
-
-    <!-- Divider -->
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#333333"
-        android:layout_marginBottom="16dp" />
-
-    <!-- Row 1: GPS + Rally Call -->
+    <!-- Row 1: GPS | Rally Call -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:orientation="horizontal"
-        android:layout_marginBottom="8dp">
+        android:padding="8dp">
 
         <Button
-            android:id="@+id/btn_gps"
+            android:id="@+id/btnGPS"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="📍 GPS\nRaceChrono"
-            android:textSize="16sp"
-            android:textColor="#FFFFFF"
-            android:background="#1976D2"
-            android:layout_marginEnd="8dp"
-            android:textStyle="bold" />
+            android:text="📍 GPS"
+            android:textSize="24sp"
+            android:textColor="#00FF00"
+            android:background="#2a2a2a"
+            android:layout_margin="4dp" />
 
         <Button
-            android:id="@+id/btn_rally_call"
+            android:id="@+id/btnRallyCall"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="🎙️ Rally\nCall"
-            android:textSize="16sp"
-            android:textColor="#FFFFFF"
-            android:background="#FF6F00"
-            android:textStyle="bold" />
+            android:text="☎️ RALLY"
+            android:textSize="24sp"
+            android:textColor="#00FF00"
+            android:background="#2a2a2a"
+            android:layout_margin="4dp" />
     </LinearLayout>
 
-    <!-- Row 2: Bluetooth + Settings -->
+    <!-- Row 2: DATA PAUSE/RESUME | Settings -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:orientation="horizontal"
-        android:layout_marginBottom="8dp">
+        android:padding="8dp">
 
         <Button
-            android:id="@+id/btn_ble"
+            android:id="@+id/btnDataPause"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="📡 Bluetooth\nBridge"
-            android:textSize="16sp"
-            android:textColor="#FFFFFF"
-            android:background="#0097A7"
-            android:layout_marginEnd="8dp"
-            android:textStyle="bold" />
+            android:text="⏺️ REC"
+            android:textSize="20sp"
+            android:textColor="#00FF00"
+            android:background="#004400"
+            android:layout_margin="4dp" />
 
         <Button
-            android:id="@+id/btn_settings"
+            android:id="@+id/btnSettings"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="⚙️ Settings\nSystem"
-            android:textSize="16sp"
-            android:textColor="#FFFFFF"
-            android:background="#5E35B1"
-            android:textStyle="bold" />
+            android:text="⚙️ SET"
+            android:textSize="24sp"
+            android:textColor="#00FF00"
+            android:background="#2a2a2a"
+            android:layout_margin="4dp" />
     </LinearLayout>
 
-    <!-- Row 3: Record + Reboot -->
+    <!-- Row 3: Record | Reboot -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:padding="8dp">
 
         <Button
-            android:id="@+id/btn_shutdown"
+            android:id="@+id/btnRecord"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="📹 Record\nCaméra"
-            android:textSize="16sp"
-            android:textColor="#FFFFFF"
-            android:background="#D32F2F"
-            android:layout_marginEnd="8dp"
-            android:textStyle="bold" />
+            android:text="🎥 REC"
+            android:textSize="24sp"
+            android:textColor="#00FF00"
+            android:background="#2a2a2a"
+            android:layout_margin="4dp" />
 
         <Button
-            android:id="@+id/btn_reboot"
+            android:id="@+id/btnReboot"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="🔄 Reboot\nRestart"
-            android:textSize="16sp"
-            android:textColor="#FFFFFF"
-            android:background="#F57C00"
-            android:textStyle="bold" />
+            android:text="🔄 BOOT"
+            android:textSize="24sp"
+            android:textColor="#FF0000"
+            android:background="#440000"
+            android:layout_margin="4dp" />
     </LinearLayout>
 
 </LinearLayout>

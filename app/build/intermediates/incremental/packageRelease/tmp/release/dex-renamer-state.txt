@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-#Wed Aug 05 13:54:19 RET 2026
-=======
-#Tue Aug 04 15:35:12 RET 2026
->>>>>>> e44b91ead48b10493de54918e58062a69fdce32b
+#Wed Aug 05 16:56:48 RET 2026
 base.0=/home/linuxthi/magnus-launcher/homePageAndroRallye/app/build/intermediates/dex/release/mergeDexRelease/classes.dex
 path.0=classes.dex
 renamed.0=classes.dex
