@@ -25,10 +25,12 @@
     <application
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         android:debuggable="true"
-        android:extractNativeLibs="false" >
+        android:extractNativeLibs="false"
+        android:label="" >
         <activity
             android:name="com.magnus.launcher.MainActivity"
-            android:exported="true" >
+            android:exported="true"
+            android:label="" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
