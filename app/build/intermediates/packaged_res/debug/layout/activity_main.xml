@@ -5,69 +5,74 @@
     android:orientation="vertical"
     android:background="#1a1a1a">
 
-    <!-- Row 1: GPS | Rally Call -->
+    <!-- HEADER BAR -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_height="80dp"
         android:orientation="horizontal"
+        android:background="#000000"
+        android:gravity="center_vertical"
         android:padding="8dp">
 
         <Button
-            android:id="@+id/btnGPS"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:text="📍 GPS"
-            android:textSize="24sp"
-            android:textColor="#00FF00"
-            android:background="#2a2a2a"
+            android:id="@+id/btnRaceChronoHeader"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:text="🏁"
+            android:textSize="28sp"
+            android:background="#1a1a1a"
             android:layout_margin="4dp" />
 
-        <Button
-            android:id="@+id/btnRallyCall"
+        <TextView
+            android:id="@+id/tvTime"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="☎️ RALLY"
-            android:textSize="24sp"
+            android:text="00:00:00"
+            android:textSize="40sp"
             android:textColor="#00FF00"
-            android:background="#2a2a2a"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_margin="4dp" />
+
+        <TextView
+            android:id="@+id/tvBattery"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:text="100%"
+            android:textSize="16sp"
+            android:textColor="#00FF00"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:background="#1a1a1a"
             android:layout_margin="4dp" />
     </LinearLayout>
 
-    <!-- Row 2: DATA PAUSE/RESUME | Settings -->
-    <LinearLayout
+    <!-- Rally Call -->
+    <Button
+        android:id="@+id/btnRallyCallHeader"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="☎️ RALLY CALL"
+        android:textSize="18sp"
+        android:textColor="#00FF00"
+        android:background="#003300"
+        android:layout_margin="4dp" />
+
+    <!-- BIG REC BUTTON with GPS -->
+    <Button
+        android:id="@+id/btnDataPause"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        android:orientation="horizontal"
-        android:padding="8dp">
+        android:layout_weight="2"
+        android:text="⏺️ REC\n📍 --.------\n📍 --.------\n⚡ --.-- m/s"
+        android:textSize="18sp"
+        android:textColor="#00FF00"
+        android:background="#004400"
+        android:layout_margin="8dp"
+        android:gravity="center" />
 
-        <Button
-            android:id="@+id/btnDataPause"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:text="⏺️ REC"
-            android:textSize="20sp"
-            android:textColor="#00FF00"
-            android:background="#004400"
-            android:layout_margin="4dp" />
-
-        <Button
-            android:id="@+id/btnSettings"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:text="⚙️ SET"
-            android:textSize="24sp"
-            android:textColor="#00FF00"
-            android:background="#2a2a2a"
-            android:layout_margin="4dp" />
-    </LinearLayout>
-
-    <!-- Row 3: Record | Reboot -->
+    <!-- Row 1: Camera | Bluetooth -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -80,7 +85,38 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="🎥 REC"
+            android:text="📷 CAM"
+            android:textSize="24sp"
+            android:textColor="#00FF00"
+            android:background="#2a2a2a"
+            android:layout_margin="4dp" />
+
+        <Button
+            android:id="@+id/btnBluetooth"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="🔵 BLE"
+            android:textSize="24sp"
+            android:textColor="#00FF00"
+            android:background="#2a2a2a"
+            android:layout_margin="4dp" />
+    </LinearLayout>
+
+    <!-- Row 2: Settings | Reboot -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <Button
+            android:id="@+id/btnSettings"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="⚙️ SET"
             android:textSize="24sp"
             android:textColor="#00FF00"
             android:background="#2a2a2a"

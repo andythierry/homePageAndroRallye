@@ -745,9 +745,10 @@ id auto
 id beginning
 id blocking
 id bottom
+id btnBluetooth
 id btnDataPause
-id btnGPS
-id btnRallyCall
+id btnRaceChronoHeader
+id btnRallyCallHeader
 id btnReboot
 id btnRecord
 id btnSettings
@@ -858,6 +859,8 @@ id titleDividerNoCustom
 id title_template
 id top
 id topPanel
+id tvBattery
+id tvTime
 id unchecked
 id uniform
 id up
