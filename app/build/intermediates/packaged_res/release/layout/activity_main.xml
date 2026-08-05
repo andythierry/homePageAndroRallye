@@ -5,23 +5,14 @@
     android:orientation="vertical"
     android:background="#1a1a1a">
 
-    <!-- HEADER BAR -->
+    <!-- HEADER BAR (petit) -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="80dp"
+        android:layout_height="50dp"
         android:orientation="horizontal"
         android:background="#000000"
         android:gravity="center_vertical"
-        android:padding="8dp">
-
-        <Button
-            android:id="@+id/btnRaceChronoHeader"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:text="🏁"
-            android:textSize="28sp"
-            android:background="#1a1a1a"
-            android:layout_margin="4dp" />
+        android:padding="4dp">
 
         <TextView
             android:id="@+id/tvTime"
@@ -29,109 +20,114 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="00:00:00"
-            android:textSize="40sp"
+            android:textSize="20sp"
             android:textColor="#00FF00"
             android:textStyle="bold"
             android:gravity="center"
-            android:layout_margin="4dp" />
+            android:layout_margin="2dp" />
 
         <TextView
             android:id="@+id/tvBattery"
-            android:layout_width="60dp"
+            android:layout_width="50dp"
             android:layout_height="match_parent"
             android:text="100%"
-            android:textSize="16sp"
+            android:textSize="14sp"
             android:textColor="#00FF00"
             android:textStyle="bold"
             android:gravity="center"
             android:background="#1a1a1a"
-            android:layout_margin="4dp" />
+            android:layout_margin="2dp" />
     </LinearLayout>
 
-    <!-- Rally Call -->
+    <!-- RACECHRONO - TRÈS GROS -->
+    <Button
+        android:id="@+id/btnRaceChronoHeader"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:text="🏁\nRACE\nCHRONO"
+        android:textSize="48sp"
+        android:textColor="#00FF00"
+        android:background="#1a3a1a"
+        android:layout_margin="8dp"
+        android:gravity="center" />
+
+    <!-- RALLY CALL - GRAND -->
     <Button
         android:id="@+id/btnRallyCallHeader"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="0dp"
+        android:layout_weight="1.5"
         android:text="☎️ RALLY CALL"
-        android:textSize="18sp"
+        android:textSize="32sp"
         android:textColor="#00FF00"
         android:background="#003300"
-        android:layout_margin="4dp" />
+        android:layout_margin="8dp" />
 
-    <!-- BIG REC BUTTON with GPS -->
+    <!-- REC avec GPS (petit) -->
     <Button
         android:id="@+id/btnDataPause"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="2"
-        android:text="⏺️ REC\n📍 --.------\n📍 --.------\n⚡ --.-- m/s"
-        android:textSize="18sp"
+        android:layout_weight="1"
+        android:text="📍 REC\n--.------\n--.------\n--.-- m/s"
+        android:textSize="12sp"
         android:textColor="#00FF00"
         android:background="#004400"
-        android:layout_margin="8dp"
+        android:layout_margin="6dp"
         android:gravity="center" />
 
-    <!-- Row 1: Camera | Bluetooth -->
+    <!-- Row: Camera | Bluetooth | Settings -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_weight="0.8"
         android:orientation="horizontal"
-        android:padding="8dp">
+        android:padding="4dp">
 
         <Button
             android:id="@+id/btnRecord"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="📷 CAM"
-            android:textSize="24sp"
+            android:text="📷"
+            android:textSize="20sp"
             android:textColor="#00FF00"
             android:background="#2a2a2a"
-            android:layout_margin="4dp" />
+            android:layout_margin="2dp" />
 
         <Button
             android:id="@+id/btnBluetooth"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="🔵 BLE"
-            android:textSize="24sp"
+            android:text="🔵"
+            android:textSize="20sp"
             android:textColor="#00FF00"
             android:background="#2a2a2a"
-            android:layout_margin="4dp" />
-    </LinearLayout>
-
-    <!-- Row 2: Settings | Reboot -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:orientation="horizontal"
-        android:padding="8dp">
+            android:layout_margin="2dp" />
 
         <Button
             android:id="@+id/btnSettings"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="⚙️ SET"
-            android:textSize="24sp"
+            android:text="⚙️"
+            android:textSize="20sp"
             android:textColor="#00FF00"
             android:background="#2a2a2a"
-            android:layout_margin="4dp" />
+            android:layout_margin="2dp" />
 
         <Button
             android:id="@+id/btnReboot"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="🔄 BOOT"
-            android:textSize="24sp"
+            android:text="🔄"
+            android:textSize="20sp"
             android:textColor="#FF0000"
             android:background="#440000"
-            android:layout_margin="4dp" />
+            android:layout_margin="2dp" />
     </LinearLayout>
 
 </LinearLayout>
