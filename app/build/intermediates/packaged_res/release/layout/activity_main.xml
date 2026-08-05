@@ -5,7 +5,7 @@
     android:orientation="vertical"
     android:background="#1a1a1a">
 
-    <!-- HEADER: Heure (gros) + Batterie (icone dynamique) -->
+    <!-- HEADER: Heure (gros) + Batterie (icone + pourcentage vertical) -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -27,33 +27,36 @@
             android:textStyle="bold"
             android:gravity="left|center_vertical" />
 
-        <!-- Batterie (droite, icone grande + pourcentage petit) -->
+        <!-- Batterie (droite, icone + pourcentage vertical) -->
         <LinearLayout
-            android:layout_width="100dp"
+            android:layout_width="120dp"
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:gravity="center"
             android:padding="4dp">
 
+            <!-- Icone batterie (énorme) -->
             <TextView
                 android:id="@+id/ivBatteryIcon"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="2"
                 android:text="🔋"
-                android:textSize="64sp"
+                android:textSize="80sp"
                 android:gravity="center" />
 
+            <!-- Pourcentage vertical (géant) -->
             <TextView
                 android:id="@+id/tvBattery"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:text="100%"
-                android:textSize="16sp"
+                android:textSize="32sp"
                 android:textColor="#00FF00"
                 android:textStyle="bold"
-                android:gravity="center" />
+                android:gravity="center"
+                android:letterSpacing="0.5" />
         </LinearLayout>
     </LinearLayout>
 
