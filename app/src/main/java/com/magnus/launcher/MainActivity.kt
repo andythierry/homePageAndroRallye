@@ -23,14 +23,17 @@ class MainActivity : Activity() {
     private lateinit var btnDataPause: Button
     private lateinit var tvTime: TextView
     private lateinit var tvBattery: TextView
+    private lateinit var ivBatteryIcon: TextView
     private var isRecording = true
     private val TAG = "MainActivity"
     private val handler = Handler(Looper.getMainLooper())
+    private var isCharging = false
+    private var animationRunning = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         
-        // Fullscreen - enlever status bar
+        // Fullscreen
         window.decorView.systemUiVisibility = (
             View.SYSTEM_UI_FLAG_FULLSCREEN or
             View.SYSTEM_UI_FLAG_HIDE_NAVIGATION or
@@ -47,6 +50,7 @@ class MainActivity : Activity() {
             // Init header elements
             tvTime = findViewById(R.id.tvTime)
             tvBattery = findViewById(R.id.tvBattery)
+            ivBatteryIcon = findViewById(R.id.ivBatteryIcon)
 
             // Start time update
             startTimeUpdate()
@@ -54,7 +58,7 @@ class MainActivity : Activity() {
             // Register battery receiver
             registerBatteryReceiver()
 
-            // Data Pause Button - affiche GPS en temps réel
+            // Data Pause Button
             btnDataPause = findViewById(R.id.btnDataPause)
             btnDataPause.setBackgroundColor(Color.parseColor("#004400"))
             btnDataPause.setTextColor(Color.parseColor("#00FF00"))
@@ -78,17 +82,17 @@ class MainActivity : Activity() {
                 toggleDataPause()
             }
 
-            // RaceChrono Header
+            // RaceChrono
             findViewById<Button>(R.id.btnRaceChronoHeader).setOnClickListener {
                 startActivity(Intent("com.racechrono.app"))
             }
 
-            // Rally Call Header
+            // Rally Call
             findViewById<Button>(R.id.btnRallyCallHeader).setOnClickListener {
                 startActivity(Intent("io.tiste.RallyCall"))
             }
 
-            // Camera Button
+            // Camera
             findViewById<Button>(R.id.btnRecord).setOnClickListener {
                 try {
                     startActivity(Intent(MediaStore.ACTION_VIDEO_CAPTURE))
@@ -97,17 +101,17 @@ class MainActivity : Activity() {
                 }
             }
 
-            // Bluetooth Button
+            // Bluetooth
             findViewById<Button>(R.id.btnBluetooth).setOnClickListener {
                 startActivity(Intent(android.provider.Settings.ACTION_BLUETOOTH_SETTINGS))
             }
 
-            // Settings Button
+            // Settings
             findViewById<Button>(R.id.btnSettings).setOnClickListener {
                 startActivity(Intent(android.provider.Settings.ACTION_SETTINGS))
             }
 
-            // Reboot Button
+            // Reboot
             findViewById<Button>(R.id.btnReboot).setOnClickListener {
                 Runtime.getRuntime().exec("su -c reboot")
             }
@@ -135,20 +139,63 @@ class MainActivity : Activity() {
                 if (intent != null) {
                     val level = intent.getIntExtra(BatteryManager.EXTRA_LEVEL, 0)
                     val scale = intent.getIntExtra(BatteryManager.EXTRA_SCALE, 100)
+                    val status = intent.getIntExtra(BatteryManager.EXTRA_STATUS, -1)
                     val batteryPct = (level * 100) / scale
+                    
+                    isCharging = status == BatteryManager.BATTERY_STATUS_CHARGING
 
                     tvBattery.text = "$batteryPct%"
 
+                    // Icône batterie selon niveau
+                    val icon = when {
+                        batteryPct >= 80 -> "🔋"  // Pleine
+                        batteryPct >= 60 -> "🔋"
+                        batteryPct >= 40 -> "🪫"  // Moitié
+                        batteryPct >= 20 -> "🪫"
+                        else -> "🪫"              // Critique
+                    }
+
+                    // Couleur selon niveau
                     val color = when {
-                        batteryPct >= 75 -> Color.parseColor("#00FF00")
-                        batteryPct >= 50 -> Color.parseColor("#FFFF00")
-                        batteryPct >= 25 -> Color.parseColor("#FF8800")
-                        else -> Color.parseColor("#FF0000")
+                        batteryPct >= 75 -> Color.parseColor("#00FF00")  // Vert
+                        batteryPct >= 50 -> Color.parseColor("#FFFF00")  // Jaune
+                        batteryPct >= 25 -> Color.parseColor("#FF8800")  // Orange
+                        else -> Color.parseColor("#FF0000")              // Rouge
                     }
                     tvBattery.setTextColor(color)
+
+                    // Animation si en charge
+                    if (isCharging && !animationRunning) {
+                        startChargingAnimation(icon, color)
+                    } else if (!isCharging && animationRunning) {
+                        animationRunning = false
+                        ivBatteryIcon.text = icon
+                    } else if (!isCharging) {
+                        ivBatteryIcon.text = icon
+                    }
                 }
             }
         }, filter)
+    }
+
+    private fun startChargingAnimation(icon: String, color: Int) {
+        animationRunning = true
+        val chargingIcons = arrayOf("🔋", "🔌", "⚡")
+        var index = 0
+
+        val animation = object : Runnable {
+            override fun run() {
+                if (animationRunning) {
+                    ivBatteryIcon.text = chargingIcons[index % chargingIcons.size]
+                    ivBatteryIcon.setTextColor(color)
+                    index++
+                    handler.postDelayed(this, 500)
+                } else {
+                    ivBatteryIcon.text = icon
+                }
+            }
+        }
+        handler.post(animation)
     }
 
     private fun toggleDataPause() {

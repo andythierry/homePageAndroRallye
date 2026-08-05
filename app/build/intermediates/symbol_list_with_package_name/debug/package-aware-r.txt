@@ -785,6 +785,7 @@ id ifRoom
 id image
 id info
 id italic
+id ivBatteryIcon
 id light
 id line1
 id line3
