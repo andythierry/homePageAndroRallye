@@ -29,90 +29,93 @@
 17    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 17-->/home/linuxthi/magnus-launcher/homePageAndroRallye/app/src/main/AndroidManifest.xml:10:5-81
 17-->/home/linuxthi/magnus-launcher/homePageAndroRallye/app/src/main/AndroidManifest.xml:10:22-78
-18
-19    <permission
-19-->[androidx.core:core:1.12.0] /home/linuxthi/.gradle/caches/transforms-3/d3f23ec1e4cfacc27ed23c54fe13da9c/transformed/core-1.12.0/AndroidManifest.xml:22:5-24:47
-20        android:name="com.magnus.launcher.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-20-->[androidx.core:core:1.12.0] /home/linuxthi/.gradle/caches/transforms-3/d3f23ec1e4cfacc27ed23c54fe13da9c/transformed/core-1.12.0/AndroidManifest.xml:23:9-81
-21        android:protectionLevel="signature" />
-21-->[androidx.core:core:1.12.0] /home/linuxthi/.gradle/caches/transforms-3/d3f23ec1e4cfacc27ed23c54fe13da9c/transformed/core-1.12.0/AndroidManifest.xml:24:9-44
-22
-23    <uses-permission android:name="com.magnus.launcher.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
-23-->[androidx.core:core:1.12.0] /home/linuxthi/.gradle/caches/transforms-3/d3f23ec1e4cfacc27ed23c54fe13da9c/transformed/core-1.12.0/AndroidManifest.xml:26:5-97
-23-->[androidx.core:core:1.12.0] /home/linuxthi/.gradle/caches/transforms-3/d3f23ec1e4cfacc27ed23c54fe13da9c/transformed/core-1.12.0/AndroidManifest.xml:26:22-94
-24
-25    <application
-25-->/home/linuxthi/magnus-launcher/homePageAndroRallye/app/src/main/AndroidManifest.xml:12:5-27:19
-26        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-26-->[androidx.core:core:1.12.0] /home/linuxthi/.gradle/caches/transforms-3/d3f23ec1e4cfacc27ed23c54fe13da9c/transformed/core-1.12.0/AndroidManifest.xml:28:18-86
-27        android:debuggable="true"
-28        android:extractNativeLibs="false"
-29        android:label="" >
-29-->/home/linuxthi/magnus-launcher/homePageAndroRallye/app/src/main/AndroidManifest.xml:13:9-25
-30        <activity
-30-->/home/linuxthi/magnus-launcher/homePageAndroRallye/app/src/main/AndroidManifest.xml:15:9-26:20
-31            android:name="com.magnus.launcher.MainActivity"
-31-->/home/linuxthi/magnus-launcher/homePageAndroRallye/app/src/main/AndroidManifest.xml:16:13-60
-32            android:exported="true"
-32-->/home/linuxthi/magnus-launcher/homePageAndroRallye/app/src/main/AndroidManifest.xml:19:13-36
-33            android:label=""
-33-->/home/linuxthi/magnus-launcher/homePageAndroRallye/app/src/main/AndroidManifest.xml:17:13-29
-34            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" >
-34-->/home/linuxthi/magnus-launcher/homePageAndroRallye/app/src/main/AndroidManifest.xml:18:13-77
-35            <intent-filter>
-35-->/home/linuxthi/magnus-launcher/homePageAndroRallye/app/src/main/AndroidManifest.xml:20:13-25:29
-36                <action android:name="android.intent.action.MAIN" />
-36-->/home/linuxthi/magnus-launcher/homePageAndroRallye/app/src/main/AndroidManifest.xml:21:17-69
-36-->/home/linuxthi/magnus-launcher/homePageAndroRallye/app/src/main/AndroidManifest.xml:21:25-66
-37
-38                <category android:name="android.intent.category.LAUNCHER" />
-38-->/home/linuxthi/magnus-launcher/homePageAndroRallye/app/src/main/AndroidManifest.xml:22:17-77
-38-->/home/linuxthi/magnus-launcher/homePageAndroRallye/app/src/main/AndroidManifest.xml:22:27-74
-39                <category android:name="android.intent.category.HOME" />
-39-->/home/linuxthi/magnus-launcher/homePageAndroRallye/app/src/main/AndroidManifest.xml:23:17-73
-39-->/home/linuxthi/magnus-launcher/homePageAndroRallye/app/src/main/AndroidManifest.xml:23:27-70
-40                <category android:name="android.intent.category.DEFAULT" />
-40-->/home/linuxthi/magnus-launcher/homePageAndroRallye/app/src/main/AndroidManifest.xml:24:17-76
-40-->/home/linuxthi/magnus-launcher/homePageAndroRallye/app/src/main/AndroidManifest.xml:24:27-73
-41            </intent-filter>
-42        </activity>
-43        <activity
-43-->[com.google.android.gms:play-services-base:18.1.0] /home/linuxthi/.gradle/caches/transforms-3/d7f4ad925b96d154c74b03bdc0a3bfe2/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:20:9-22:45
-44            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-44-->[com.google.android.gms:play-services-base:18.1.0] /home/linuxthi/.gradle/caches/transforms-3/d7f4ad925b96d154c74b03bdc0a3bfe2/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:20:19-85
-45            android:exported="false"
-45-->[com.google.android.gms:play-services-base:18.1.0] /home/linuxthi/.gradle/caches/transforms-3/d7f4ad925b96d154c74b03bdc0a3bfe2/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:22:19-43
-46            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-46-->[com.google.android.gms:play-services-base:18.1.0] /home/linuxthi/.gradle/caches/transforms-3/d7f4ad925b96d154c74b03bdc0a3bfe2/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:21:19-78
-47
-48        <meta-data
-48-->[com.google.android.gms:play-services-basement:18.1.0] /home/linuxthi/.gradle/caches/transforms-3/fe00983e899ea1b1be67e8711264531a/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:21:9-23:69
-49            android:name="com.google.android.gms.version"
-49-->[com.google.android.gms:play-services-basement:18.1.0] /home/linuxthi/.gradle/caches/transforms-3/fe00983e899ea1b1be67e8711264531a/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:22:13-58
-50            android:value="@integer/google_play_services_version" />
-50-->[com.google.android.gms:play-services-basement:18.1.0] /home/linuxthi/.gradle/caches/transforms-3/fe00983e899ea1b1be67e8711264531a/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:23:13-66
-51
-52        <provider
-52-->[androidx.emoji2:emoji2:1.2.0] /home/linuxthi/.gradle/caches/transforms-3/7de28b95e50d4a563dc417bdd9461f35/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
-53            android:name="androidx.startup.InitializationProvider"
-53-->[androidx.emoji2:emoji2:1.2.0] /home/linuxthi/.gradle/caches/transforms-3/7de28b95e50d4a563dc417bdd9461f35/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:25:13-67
-54            android:authorities="com.magnus.launcher.androidx-startup"
-54-->[androidx.emoji2:emoji2:1.2.0] /home/linuxthi/.gradle/caches/transforms-3/7de28b95e50d4a563dc417bdd9461f35/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:26:13-68
-55            android:exported="false" >
-55-->[androidx.emoji2:emoji2:1.2.0] /home/linuxthi/.gradle/caches/transforms-3/7de28b95e50d4a563dc417bdd9461f35/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:27:13-37
-56            <meta-data
-56-->[androidx.emoji2:emoji2:1.2.0] /home/linuxthi/.gradle/caches/transforms-3/7de28b95e50d4a563dc417bdd9461f35/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
-57                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-57-->[androidx.emoji2:emoji2:1.2.0] /home/linuxthi/.gradle/caches/transforms-3/7de28b95e50d4a563dc417bdd9461f35/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:30:17-75
-58                android:value="androidx.startup" />
-58-->[androidx.emoji2:emoji2:1.2.0] /home/linuxthi/.gradle/caches/transforms-3/7de28b95e50d4a563dc417bdd9461f35/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:31:17-49
-59            <meta-data
-59-->[androidx.lifecycle:lifecycle-process:2.4.1] /home/linuxthi/.gradle/caches/transforms-3/cfb908de37549301727b870c7ee7feb1/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:31:13-33:52
-60                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-60-->[androidx.lifecycle:lifecycle-process:2.4.1] /home/linuxthi/.gradle/caches/transforms-3/cfb908de37549301727b870c7ee7feb1/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:32:17-78
-61                android:value="androidx.startup" />
-61-->[androidx.lifecycle:lifecycle-process:2.4.1] /home/linuxthi/.gradle/caches/transforms-3/cfb908de37549301727b870c7ee7feb1/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:33:17-49
-62        </provider>
-63    </application>
-64
-65</manifest>
+18    <uses-permission android:name="android.permission.WAKE_LOCK" />
+18-->/home/linuxthi/magnus-launcher/homePageAndroRallye/app/src/main/AndroidManifest.xml:11:5-68
+18-->/home/linuxthi/magnus-launcher/homePageAndroRallye/app/src/main/AndroidManifest.xml:11:22-65
+19
+20    <permission
+20-->[androidx.core:core:1.12.0] /home/linuxthi/.gradle/caches/transforms-3/d3f23ec1e4cfacc27ed23c54fe13da9c/transformed/core-1.12.0/AndroidManifest.xml:22:5-24:47
+21        android:name="com.magnus.launcher.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+21-->[androidx.core:core:1.12.0] /home/linuxthi/.gradle/caches/transforms-3/d3f23ec1e4cfacc27ed23c54fe13da9c/transformed/core-1.12.0/AndroidManifest.xml:23:9-81
+22        android:protectionLevel="signature" />
+22-->[androidx.core:core:1.12.0] /home/linuxthi/.gradle/caches/transforms-3/d3f23ec1e4cfacc27ed23c54fe13da9c/transformed/core-1.12.0/AndroidManifest.xml:24:9-44
+23
+24    <uses-permission android:name="com.magnus.launcher.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+24-->[androidx.core:core:1.12.0] /home/linuxthi/.gradle/caches/transforms-3/d3f23ec1e4cfacc27ed23c54fe13da9c/transformed/core-1.12.0/AndroidManifest.xml:26:5-97
+24-->[androidx.core:core:1.12.0] /home/linuxthi/.gradle/caches/transforms-3/d3f23ec1e4cfacc27ed23c54fe13da9c/transformed/core-1.12.0/AndroidManifest.xml:26:22-94
+25
+26    <application
+26-->/home/linuxthi/magnus-launcher/homePageAndroRallye/app/src/main/AndroidManifest.xml:13:5-28:19
+27        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+27-->[androidx.core:core:1.12.0] /home/linuxthi/.gradle/caches/transforms-3/d3f23ec1e4cfacc27ed23c54fe13da9c/transformed/core-1.12.0/AndroidManifest.xml:28:18-86
+28        android:debuggable="true"
+29        android:extractNativeLibs="false"
+30        android:label="" >
+30-->/home/linuxthi/magnus-launcher/homePageAndroRallye/app/src/main/AndroidManifest.xml:14:9-25
+31        <activity
+31-->/home/linuxthi/magnus-launcher/homePageAndroRallye/app/src/main/AndroidManifest.xml:16:9-27:20
+32            android:name="com.magnus.launcher.MainActivity"
+32-->/home/linuxthi/magnus-launcher/homePageAndroRallye/app/src/main/AndroidManifest.xml:17:13-60
+33            android:exported="true"
+33-->/home/linuxthi/magnus-launcher/homePageAndroRallye/app/src/main/AndroidManifest.xml:20:13-36
+34            android:label=""
+34-->/home/linuxthi/magnus-launcher/homePageAndroRallye/app/src/main/AndroidManifest.xml:18:13-29
+35            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" >
+35-->/home/linuxthi/magnus-launcher/homePageAndroRallye/app/src/main/AndroidManifest.xml:19:13-77
+36            <intent-filter>
+36-->/home/linuxthi/magnus-launcher/homePageAndroRallye/app/src/main/AndroidManifest.xml:21:13-26:29
+37                <action android:name="android.intent.action.MAIN" />
+37-->/home/linuxthi/magnus-launcher/homePageAndroRallye/app/src/main/AndroidManifest.xml:22:17-69
+37-->/home/linuxthi/magnus-launcher/homePageAndroRallye/app/src/main/AndroidManifest.xml:22:25-66
+38
+39                <category android:name="android.intent.category.LAUNCHER" />
+39-->/home/linuxthi/magnus-launcher/homePageAndroRallye/app/src/main/AndroidManifest.xml:23:17-77
+39-->/home/linuxthi/magnus-launcher/homePageAndroRallye/app/src/main/AndroidManifest.xml:23:27-74
+40                <category android:name="android.intent.category.HOME" />
+40-->/home/linuxthi/magnus-launcher/homePageAndroRallye/app/src/main/AndroidManifest.xml:24:17-73
+40-->/home/linuxthi/magnus-launcher/homePageAndroRallye/app/src/main/AndroidManifest.xml:24:27-70
+41                <category android:name="android.intent.category.DEFAULT" />
+41-->/home/linuxthi/magnus-launcher/homePageAndroRallye/app/src/main/AndroidManifest.xml:25:17-76
+41-->/home/linuxthi/magnus-launcher/homePageAndroRallye/app/src/main/AndroidManifest.xml:25:27-73
+42            </intent-filter>
+43        </activity>
+44        <activity
+44-->[com.google.android.gms:play-services-base:18.1.0] /home/linuxthi/.gradle/caches/transforms-3/d7f4ad925b96d154c74b03bdc0a3bfe2/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:20:9-22:45
+45            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+45-->[com.google.android.gms:play-services-base:18.1.0] /home/linuxthi/.gradle/caches/transforms-3/d7f4ad925b96d154c74b03bdc0a3bfe2/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:20:19-85
+46            android:exported="false"
+46-->[com.google.android.gms:play-services-base:18.1.0] /home/linuxthi/.gradle/caches/transforms-3/d7f4ad925b96d154c74b03bdc0a3bfe2/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:22:19-43
+47            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+47-->[com.google.android.gms:play-services-base:18.1.0] /home/linuxthi/.gradle/caches/transforms-3/d7f4ad925b96d154c74b03bdc0a3bfe2/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:21:19-78
+48
+49        <meta-data
+49-->[com.google.android.gms:play-services-basement:18.1.0] /home/linuxthi/.gradle/caches/transforms-3/fe00983e899ea1b1be67e8711264531a/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:21:9-23:69
+50            android:name="com.google.android.gms.version"
+50-->[com.google.android.gms:play-services-basement:18.1.0] /home/linuxthi/.gradle/caches/transforms-3/fe00983e899ea1b1be67e8711264531a/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:22:13-58
+51            android:value="@integer/google_play_services_version" />
+51-->[com.google.android.gms:play-services-basement:18.1.0] /home/linuxthi/.gradle/caches/transforms-3/fe00983e899ea1b1be67e8711264531a/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:23:13-66
+52
+53        <provider
+53-->[androidx.emoji2:emoji2:1.2.0] /home/linuxthi/.gradle/caches/transforms-3/7de28b95e50d4a563dc417bdd9461f35/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
+54            android:name="androidx.startup.InitializationProvider"
+54-->[androidx.emoji2:emoji2:1.2.0] /home/linuxthi/.gradle/caches/transforms-3/7de28b95e50d4a563dc417bdd9461f35/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:25:13-67
+55            android:authorities="com.magnus.launcher.androidx-startup"
+55-->[androidx.emoji2:emoji2:1.2.0] /home/linuxthi/.gradle/caches/transforms-3/7de28b95e50d4a563dc417bdd9461f35/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:26:13-68
+56            android:exported="false" >
+56-->[androidx.emoji2:emoji2:1.2.0] /home/linuxthi/.gradle/caches/transforms-3/7de28b95e50d4a563dc417bdd9461f35/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:27:13-37
+57            <meta-data
+57-->[androidx.emoji2:emoji2:1.2.0] /home/linuxthi/.gradle/caches/transforms-3/7de28b95e50d4a563dc417bdd9461f35/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
+58                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+58-->[androidx.emoji2:emoji2:1.2.0] /home/linuxthi/.gradle/caches/transforms-3/7de28b95e50d4a563dc417bdd9461f35/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:30:17-75
+59                android:value="androidx.startup" />
+59-->[androidx.emoji2:emoji2:1.2.0] /home/linuxthi/.gradle/caches/transforms-3/7de28b95e50d4a563dc417bdd9461f35/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:31:17-49
+60            <meta-data
+60-->[androidx.lifecycle:lifecycle-process:2.4.1] /home/linuxthi/.gradle/caches/transforms-3/cfb908de37549301727b870c7ee7feb1/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:31:13-33:52
+61                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+61-->[androidx.lifecycle:lifecycle-process:2.4.1] /home/linuxthi/.gradle/caches/transforms-3/cfb908de37549301727b870c7ee7feb1/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:32:17-78
+62                android:value="androidx.startup" />
+62-->[androidx.lifecycle:lifecycle-process:2.4.1] /home/linuxthi/.gradle/caches/transforms-3/cfb908de37549301727b870c7ee7feb1/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:33:17-49
+63        </provider>
+64    </application>
+65
+66</manifest>

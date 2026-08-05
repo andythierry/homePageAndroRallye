@@ -11,6 +11,7 @@ import android.os.BatteryManager
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import android.os.PowerManager
 import android.provider.MediaStore
 import android.view.View
 import android.widget.Button
@@ -30,6 +31,8 @@ class MainActivity : Activity() {
     private val handler = Handler(Looper.getMainLooper())
     private var isCharging = false
     private var animationRunning = false
+    private var wakeLock: PowerManager.WakeLock? = null
+    private var wakeLockActive = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -73,6 +76,11 @@ class MainActivity : Activity() {
             
             btnDataPause.setOnClickListener { toggleDataPause() }
 
+            // Appui sur heure = empêche mise en veille
+            tvTime.setOnClickListener {
+                toggleWakeLock()
+            }
+
             findViewById<Button>(R.id.btnRaceChronoHeader).setOnClickListener {
                 launchApp("com.racechrono.app", "com.racechrono.app.ui.MainActivity")
             }
@@ -103,6 +111,27 @@ class MainActivity : Activity() {
 
         } catch (e: Exception) {
             Log.e(TAG, "onCreate error: ${e.message}", e)
+        }
+    }
+
+    private fun toggleWakeLock() {
+        val pm = getSystemService(Context.POWER_SERVICE) as PowerManager
+        
+        if (wakeLockActive) {
+            // Désactiver WakeLock
+            if (wakeLock != null && wakeLock!!.isHeld) {
+                wakeLock!!.release()
+                wakeLockActive = false
+                tvTime.setTextColor(Color.parseColor("#00FF00"))
+                Log.d(TAG, "WakeLock released - sleep allowed")
+            }
+        } else {
+            // Activer WakeLock
+            wakeLock = pm.newWakeLock(PowerManager.SCREEN_DIM_WAKE_LOCK, "magnus:wakelock")
+            wakeLock?.acquire()
+            wakeLockActive = true
+            tvTime.setTextColor(Color.parseColor("#FF00FF"))  // Magenta = wake lock actif
+            Log.d(TAG, "WakeLock acquired - no sleep")
         }
     }
 
@@ -141,21 +170,19 @@ class MainActivity : Activity() {
                     isCharging = status == BatteryManager.BATTERY_STATUS_CHARGING
                     tvBattery.text = "$batteryPct%"
 
-                    // Icône batterie selon niveau
                     val icon = when {
-                        batteryPct >= 80 -> "🔋"   // Pleine
-                        batteryPct >= 60 -> "🔋"   // 3/4
-                        batteryPct >= 40 -> "🪫"   // 1/2
-                        batteryPct >= 20 -> "🪫"   // 1/4
-                        else -> "🪫"               // Critique
+                        batteryPct >= 80 -> "🔋"
+                        batteryPct >= 60 -> "🔋"
+                        batteryPct >= 40 -> "🪫"
+                        batteryPct >= 20 -> "🪫"
+                        else -> "🪫"
                     }
 
-                    // Couleur selon niveau
                     val color = when {
-                        batteryPct >= 75 -> Color.parseColor("#00FF00")  // Vert
-                        batteryPct >= 50 -> Color.parseColor("#FFFF00")  // Jaune
-                        batteryPct >= 25 -> Color.parseColor("#FF8800")  // Orange
-                        else -> Color.parseColor("#FF0000")              // Rouge CRITIQUE
+                        batteryPct >= 75 -> Color.parseColor("#00FF00")
+                        batteryPct >= 50 -> Color.parseColor("#FFFF00")
+                        batteryPct >= 25 -> Color.parseColor("#FF8800")
+                        else -> Color.parseColor("#FF0000")
                     }
                     
                     if (isCharging && !animationRunning) {
@@ -222,5 +249,8 @@ class MainActivity : Activity() {
         super.onDestroy()
         mqttClient.disconnect()
         handler.removeCallbacksAndMessages(null)
+        if (wakeLock != null && wakeLock!!.isHeld) {
+            wakeLock!!.release()
+        }
     }
 }
