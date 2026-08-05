@@ -7,8 +7,6 @@ id btnRallyCallHeader
 id btnReboot
 id btnRecord
 id btnSettings
-id tvBattery
-id tvTime
 layout activity_main
 mipmap ic_launcher
 string app_name
