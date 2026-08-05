@@ -6,7 +6,6 @@ import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
-import android.content.pm.PackageManager
 import android.graphics.Color
 import android.os.BatteryManager
 import android.os.Bundle
@@ -35,7 +34,6 @@ class MainActivity : Activity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         
-        // Fullscreen
         window.decorView.systemUiVisibility = (
             View.SYSTEM_UI_FLAG_FULLSCREEN or
             View.SYSTEM_UI_FLAG_HIDE_NAVIGATION or
@@ -45,22 +43,16 @@ class MainActivity : Activity() {
         setContentView(R.layout.activity_main)
 
         try {
-            // Init MQTT
             mqttClient = MQTTClient(this)
             mqttClient.connect()
 
-            // Init header elements
             tvTime = findViewById(R.id.tvTime)
             tvBattery = findViewById(R.id.tvBattery)
             ivBatteryIcon = findViewById(R.id.ivBatteryIcon)
 
-            // Start time update
             startTimeUpdate()
-
-            // Register battery receiver
             registerBatteryReceiver()
 
-            // Data Pause Button
             btnDataPause = findViewById(R.id.btnDataPause)
             btnDataPause.setBackgroundColor(Color.parseColor("#004400"))
             btnDataPause.setTextColor(Color.parseColor("#00FF00"))
@@ -79,16 +71,14 @@ class MainActivity : Activity() {
             }
             handler.post(updateGpsDisplay)
             
-            btnDataPause.setOnClickListener {
-                toggleDataPause()
-            }
+            btnDataPause.setOnClickListener { toggleDataPause() }
 
-            // RaceChrono - avec ComponentName
+            // RaceChrono - correct activity
             findViewById<Button>(R.id.btnRaceChronoHeader).setOnClickListener {
-                launchApp("com.racechrono.app", "com.racechrono.app.MainActivity")
+                launchApp("com.racechrono.app", "com.racechrono.app.ui.MainActivity")
             }
 
-            // Rally Call - avec ComponentName
+            // Rally Call
             findViewById<Button>(R.id.btnRallyCallHeader).setOnClickListener {
                 launchApp("io.tiste.RallyCall", "io.tiste.RallyCall.MainActivity")
             }
@@ -127,16 +117,9 @@ class MainActivity : Activity() {
             val intent = Intent()
             intent.component = ComponentName(packageName, activityName)
             startActivity(intent)
+            Log.d(TAG, "Launched $packageName/$activityName")
         } catch (e: Exception) {
-            Log.e(TAG, "Launch app error: ${e.message}")
-            // Si activité pas trouvée, essayer avec MAIN
-            try {
-                val intent = Intent(Intent.ACTION_MAIN)
-                intent.setPackage(packageName)
-                startActivity(intent)
-            } catch (e2: Exception) {
-                Log.e(TAG, "Launch fallback failed: ${e2.message}")
-            }
+            Log.e(TAG, "Launch error: ${e.message}")
         }
     }
 
@@ -162,7 +145,6 @@ class MainActivity : Activity() {
                     val batteryPct = (level * 100) / scale
                     
                     isCharging = status == BatteryManager.BATTERY_STATUS_CHARGING
-
                     tvBattery.text = "$batteryPct%"
 
                     val icon = when {
