@@ -1,2 +1,7 @@
 build/
 .gradle/
+# Configuration locale - JAMAIS commiter
+config.properties
+*.key
+*.secrets
+local.properties

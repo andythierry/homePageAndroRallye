@@ -1,0 +1,18 @@
+# Configuration MAGNUS 974 - à remplir avant utilisation
+
+# MQTT Broker
+mqtt.broker.host=161.97.83.80
+mqtt.broker.port=1883
+mqtt.broker.username=Thierry974andy
+mqtt.broker.password=mosquitto
+
+# InfluxDB (optionnel pour phase 5)
+influx.host=161.97.83.80
+influx.port=8086
+influx.database=magnus
+influx.username=admin
+influx.password=magnus974
+
+# Appareil
+device.name=S8_Tracker
+device.location=Reunion974
