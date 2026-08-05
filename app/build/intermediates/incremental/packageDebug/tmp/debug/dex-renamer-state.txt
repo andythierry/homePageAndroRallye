@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 #Wed Aug 05 13:54:16 RET 2026
+=======
+#Tue Aug 04 15:35:07 RET 2026
+>>>>>>> e44b91ead48b10493de54918e58062a69fdce32b
 base.0=/home/linuxthi/magnus-launcher/homePageAndroRallye/app/build/intermediates/dex/debug/mergeExtDexDebug/classes.dex
 base.1=/home/linuxthi/magnus-launcher/homePageAndroRallye/app/build/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex
 base.2=/home/linuxthi/magnus-launcher/homePageAndroRallye/app/build/intermediates/dex/debug/mergeProjectDexDebug/9/classes.dex
