@@ -10,7 +10,7 @@ class MQTTClient(private val context: Context) {
     
     // Config Contabo
     private val BROKER_URL = "tcp://161.97.83.80:1883"
-    private val USERNAME = "Thierry974andy*"
+    private val USERNAME = "Thierry974andy"
     private val PASSWORD = "mosquitto"
     private val CLIENT_ID = "S8_Tracker_${System.currentTimeMillis()}"
     

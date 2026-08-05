@@ -9,5 +9,6 @@ id btn_settings
 id btn_shutdown
 id time_display
 layout activity_main
+mipmap ic_launcher
 string app_name
 style AppTheme

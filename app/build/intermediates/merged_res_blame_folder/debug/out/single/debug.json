@@ -1,5 +1,13 @@
 [
     {
+        "merged": "com.magnus.launcher.app-merged_res-22:/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "com.magnus.launcher.app-main-24:/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.magnus.launcher.app-merged_res-22:/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "com.magnus.launcher.app-main-24:/mipmap-hdpi/ic_launcher.png"
+    },
+    {
         "merged": "com.magnus.launcher.app-merged_res-22:/layout_activity_main.xml.flat",
         "source": "com.magnus.launcher.app-main-24:/layout/activity_main.xml"
     }
