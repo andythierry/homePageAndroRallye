@@ -141,57 +141,64 @@ class MainActivity : Activity() {
                     isCharging = status == BatteryManager.BATTERY_STATUS_CHARGING
                     tvBattery.text = "$batteryPct%"
 
-                    val color = when {
-                        batteryPct >= 75 -> Color.parseColor("#00FF00")
-                        batteryPct >= 50 -> Color.parseColor("#FFFF00")
-                        batteryPct >= 25 -> Color.parseColor("#FF8800")
-                        else -> Color.parseColor("#FF0000")
+                    // Icône batterie selon niveau
+                    val icon = when {
+                        batteryPct >= 80 -> "🔋"   // Pleine
+                        batteryPct >= 60 -> "🔋"   // 3/4
+                        batteryPct >= 40 -> "🪫"   // 1/2
+                        batteryPct >= 20 -> "🪫"   // 1/4
+                        else -> "🪫"               // Critique
                     }
-                    tvBattery.setTextColor(color)
 
+                    // Couleur selon niveau
+                    val color = when {
+                        batteryPct >= 75 -> Color.parseColor("#00FF00")  // Vert
+                        batteryPct >= 50 -> Color.parseColor("#FFFF00")  // Jaune
+                        batteryPct >= 25 -> Color.parseColor("#FF8800")  // Orange
+                        else -> Color.parseColor("#FF0000")              // Rouge CRITIQUE
+                    }
+                    
                     if (isCharging && !animationRunning) {
-                        startChargingAnimation(color)
+                        startChargingAnimation(icon, color)
                     } else if (!isCharging && animationRunning) {
                         animationRunning = false
-                        ivBatteryIcon.text = "🔋"
+                        ivBatteryIcon.text = icon
                         ivBatteryIcon.setTextColor(color)
                     } else if (!isCharging) {
-                        ivBatteryIcon.text = "🔋"
+                        ivBatteryIcon.text = icon
                         ivBatteryIcon.setTextColor(color)
                     }
+                    
+                    tvBattery.setTextColor(color)
                 }
             }
         }, filter)
     }
 
-    private fun startChargingAnimation(baseColor: Int) {
+    private fun startChargingAnimation(icon: String, color: Int) {
         animationRunning = true
         var opacity = 128
-        val direction = 1
 
         val animation = object : Runnable {
             override fun run() {
                 if (animationRunning) {
-                    // Pulse l'opacité de la batterie (remplissage simulé)
                     val adjustedColor = Color.argb(
                         opacity,
-                        Color.red(baseColor),
-                        Color.green(baseColor),
-                        Color.blue(baseColor)
+                        Color.red(color),
+                        Color.green(color),
+                        Color.blue(color)
                     )
                     
-                    ivBatteryIcon.text = "🔋"
+                    ivBatteryIcon.text = icon
                     ivBatteryIcon.setTextColor(adjustedColor)
                     
-                    opacity += (direction * 20)
-                    if (opacity >= 255 || opacity <= 128) {
-                        opacity = if (opacity >= 255) 128 else 255
-                    }
+                    opacity += 20
+                    if (opacity > 255) opacity = 128
                     
                     handler.postDelayed(this, 300)
                 } else {
-                    ivBatteryIcon.text = "🔋"
-                    ivBatteryIcon.setTextColor(baseColor)
+                    ivBatteryIcon.text = icon
+                    ivBatteryIcon.setTextColor(color)
                 }
             }
         }
