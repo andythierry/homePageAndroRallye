@@ -859,6 +859,8 @@ id titleDividerNoCustom
 id title_template
 id top
 id topPanel
+id tvBattery
+id tvTime
 id unchecked
 id uniform
 id up
