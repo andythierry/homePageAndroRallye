@@ -12,4 +12,4 @@ id tvTime
 layout activity_main
 mipmap ic_launcher
 string app_name
-style AppTheme
+style Theme.HomePageAndroRallye
