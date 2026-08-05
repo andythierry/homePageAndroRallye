@@ -2,9 +2,11 @@ package com.magnus.launcher
 
 import android.app.Activity
 import android.content.BroadcastReceiver
+import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
+import android.content.pm.PackageManager
 import android.graphics.Color
 import android.os.BatteryManager
 import android.os.Bundle
@@ -63,7 +65,6 @@ class MainActivity : Activity() {
             btnDataPause.setBackgroundColor(Color.parseColor("#004400"))
             btnDataPause.setTextColor(Color.parseColor("#00FF00"))
             
-            // Update GPS display every 500ms
             val updateGpsDisplay = object : Runnable {
                 override fun run() {
                     val gpsData = mqttClient.getGpsData()
@@ -82,14 +83,14 @@ class MainActivity : Activity() {
                 toggleDataPause()
             }
 
-            // RaceChrono
+            // RaceChrono - avec ComponentName
             findViewById<Button>(R.id.btnRaceChronoHeader).setOnClickListener {
-                startActivity(Intent("com.racechrono.app"))
+                launchApp("com.racechrono.app", "com.racechrono.app.MainActivity")
             }
 
-            // Rally Call
+            // Rally Call - avec ComponentName
             findViewById<Button>(R.id.btnRallyCallHeader).setOnClickListener {
-                startActivity(Intent("io.tiste.RallyCall"))
+                launchApp("io.tiste.RallyCall", "io.tiste.RallyCall.MainActivity")
             }
 
             // Camera
@@ -121,6 +122,24 @@ class MainActivity : Activity() {
         }
     }
 
+    private fun launchApp(packageName: String, activityName: String) {
+        try {
+            val intent = Intent()
+            intent.component = ComponentName(packageName, activityName)
+            startActivity(intent)
+        } catch (e: Exception) {
+            Log.e(TAG, "Launch app error: ${e.message}")
+            // Si activité pas trouvée, essayer avec MAIN
+            try {
+                val intent = Intent(Intent.ACTION_MAIN)
+                intent.setPackage(packageName)
+                startActivity(intent)
+            } catch (e2: Exception) {
+                Log.e(TAG, "Launch fallback failed: ${e2.message}")
+            }
+        }
+    }
+
     private fun startTimeUpdate() {
         val timeFormat = SimpleDateFormat("HH:mm:ss", Locale.getDefault())
         val updateTime = object : Runnable {
@@ -146,25 +165,22 @@ class MainActivity : Activity() {
 
                     tvBattery.text = "$batteryPct%"
 
-                    // Icône batterie selon niveau
                     val icon = when {
-                        batteryPct >= 80 -> "🔋"  // Pleine
+                        batteryPct >= 80 -> "🔋"
                         batteryPct >= 60 -> "🔋"
-                        batteryPct >= 40 -> "🪫"  // Moitié
+                        batteryPct >= 40 -> "🪫"
                         batteryPct >= 20 -> "🪫"
-                        else -> "🪫"              // Critique
+                        else -> "🪫"
                     }
 
-                    // Couleur selon niveau
                     val color = when {
-                        batteryPct >= 75 -> Color.parseColor("#00FF00")  // Vert
-                        batteryPct >= 50 -> Color.parseColor("#FFFF00")  // Jaune
-                        batteryPct >= 25 -> Color.parseColor("#FF8800")  // Orange
-                        else -> Color.parseColor("#FF0000")              // Rouge
+                        batteryPct >= 75 -> Color.parseColor("#00FF00")
+                        batteryPct >= 50 -> Color.parseColor("#FFFF00")
+                        batteryPct >= 25 -> Color.parseColor("#FF8800")
+                        else -> Color.parseColor("#FF0000")
                     }
                     tvBattery.setTextColor(color)
 
-                    // Animation si en charge
                     if (isCharging && !animationRunning) {
                         startChargingAnimation(icon, color)
                     } else if (!isCharging && animationRunning) {
