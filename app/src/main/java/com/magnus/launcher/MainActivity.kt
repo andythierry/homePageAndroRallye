@@ -1,5 +1,4 @@
 package com.magnus.launcher
-
 import android.app.Activity
 import android.content.BroadcastReceiver
 import android.content.ComponentName
@@ -18,6 +17,9 @@ import android.view.View
 import android.widget.Button
 import android.widget.TextView
 import android.util.Log
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
+import android.content.pm.PackageManager
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -34,12 +36,10 @@ class MainActivity : Activity() {
     private var animationRunning = false
     private var wakeLock: PowerManager.WakeLock? = null
     private var wakeLockActive = false
-
+    private val PERMISSION_REQUEST_CODE = 100
+    
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        
-        // Masquer le titre
-        // Masquer le titre
         
         window.decorView.systemUiVisibility = (
             View.SYSTEM_UI_FLAG_FULLSCREEN or
@@ -49,18 +49,22 @@ class MainActivity : Activity() {
         
         window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
         setContentView(R.layout.activity_main)
-
+        
+        // ✅ Demander les permissions au démarrage
+        if (ContextCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION)
+            != PackageManager.PERMISSION_GRANTED) {
+            Log.d(TAG, "Requesting location permission...")
+            ActivityCompat.requestPermissions(this, arrayOf(android.Manifest.permission.ACCESS_FINE_LOCATION), PERMISSION_REQUEST_CODE)
+        }
+        
         try {
             mqttClient = MQTTClient(this)
             mqttClient.connect()
-
             tvTime = findViewById(R.id.tvTime)
             tvBattery = findViewById(R.id.tvBattery)
             ivBatteryIcon = findViewById(R.id.ivBatteryIcon)
-
             startTimeUpdate()
             registerBatteryReceiver()
-
             btnDataPause = findViewById(R.id.btnDataPause)
             btnDataPause.setBackgroundColor(Color.parseColor("#004400"))
             btnDataPause.setTextColor(Color.parseColor("#00FF00"))
@@ -80,20 +84,15 @@ class MainActivity : Activity() {
             handler.post(updateGpsDisplay)
             
             btnDataPause.setOnClickListener { toggleDataPause() }
-
-            // Appui sur heure = empêche mise en veille
             tvTime.setOnClickListener {
                 toggleWakeLock()
             }
-
             findViewById<Button>(R.id.btnRaceChronoHeader).setOnClickListener {
                 launchApp("com.racechrono.app", "com.racechrono.app.ui.MainActivity")
             }
-
             findViewById<Button>(R.id.btnRallyCallHeader).setOnClickListener {
                 launchApp("io.tiste.RallyCall", "io.tiste.RallyCall.MainActivity")
             }
-
             findViewById<Button>(R.id.btnRecord).setOnClickListener {
                 try {
                     startActivity(Intent(MediaStore.ACTION_VIDEO_CAPTURE))
@@ -101,29 +100,37 @@ class MainActivity : Activity() {
                     Log.e(TAG, "Camera error: ${e.message}")
                 }
             }
-
             findViewById<Button>(R.id.btnBluetooth).setOnClickListener {
                 startActivity(Intent(android.provider.Settings.ACTION_BLUETOOTH_SETTINGS))
             }
-
             findViewById<Button>(R.id.btnSettings).setOnClickListener {
                 startActivity(Intent(this, SettingsActivity::class.java))
             }
-
             findViewById<Button>(R.id.btnReboot).setOnClickListener {
                 Runtime.getRuntime().exec("su -c reboot")
             }
-
         } catch (e: Exception) {
             Log.e(TAG, "onCreate error: ${e.message}", e)
         }
     }
-
+    
+    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+        when (requestCode) {
+            PERMISSION_REQUEST_CODE -> {
+                if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    Log.d(TAG, "✅ Location permission granted!")
+                } else {
+                    Log.e(TAG, "🚨 Location permission denied!")
+                }
+            }
+        }
+    }
+    
     private fun toggleWakeLock() {
         val pm = getSystemService(Context.POWER_SERVICE) as PowerManager
         
         if (wakeLockActive) {
-            // Désactiver WakeLock
             if (wakeLock != null && wakeLock!!.isHeld) {
                 wakeLock!!.release()
                 wakeLockActive = false
@@ -131,15 +138,14 @@ class MainActivity : Activity() {
                 Log.d(TAG, "WakeLock released - sleep allowed")
             }
         } else {
-            // Activer WakeLock
             wakeLock = pm.newWakeLock(PowerManager.SCREEN_DIM_WAKE_LOCK, "magnus:wakelock")
             wakeLock?.acquire()
             wakeLockActive = true
-            tvTime.setTextColor(Color.parseColor("#FF00FF"))  // Magenta = wake lock actif
+            tvTime.setTextColor(Color.parseColor("#FF00FF"))
             Log.d(TAG, "WakeLock acquired - no sleep")
         }
     }
-
+    
     private fun launchApp(packageName: String, activityName: String) {
         try {
             val intent = Intent()
@@ -150,7 +156,7 @@ class MainActivity : Activity() {
             Log.e(TAG, "Launch error: ${e.message}")
         }
     }
-
+    
     private fun startTimeUpdate() {
         val timeFormat = SimpleDateFormat("HH:mm:ss", Locale.getDefault())
         val updateTime = object : Runnable {
@@ -161,7 +167,7 @@ class MainActivity : Activity() {
         }
         handler.post(updateTime)
     }
-
+    
     private fun registerBatteryReceiver() {
         val filter = IntentFilter(Intent.ACTION_BATTERY_CHANGED)
         registerReceiver(object : BroadcastReceiver() {
@@ -174,7 +180,6 @@ class MainActivity : Activity() {
                     
                     isCharging = status == BatteryManager.BATTERY_STATUS_CHARGING
                     tvBattery.text = "$batteryPct%"
-
                     val icon = when {
                         batteryPct >= 80 -> "🔋"
                         batteryPct >= 60 -> "🔋"
@@ -182,7 +187,6 @@ class MainActivity : Activity() {
                         batteryPct >= 20 -> "🪫"
                         else -> "🪫"
                     }
-
                     val color = when {
                         batteryPct >= 75 -> Color.parseColor("#00FF00")
                         batteryPct >= 50 -> Color.parseColor("#FFFF00")
@@ -206,11 +210,10 @@ class MainActivity : Activity() {
             }
         }, filter)
     }
-
+    
     private fun startChargingAnimation(icon: String, color: Int) {
         animationRunning = true
         var opacity = 128
-
         val animation = object : Runnable {
             override fun run() {
                 if (animationRunning) {
@@ -236,7 +239,7 @@ class MainActivity : Activity() {
         }
         handler.post(animation)
     }
-
+    
     private fun toggleDataPause() {
         isRecording = !isRecording
         if (isRecording) {
@@ -249,7 +252,7 @@ class MainActivity : Activity() {
             mqttClient.setPaused(true)
         }
     }
-
+    
     override fun onDestroy() {
         super.onDestroy()
         mqttClient.disconnect()

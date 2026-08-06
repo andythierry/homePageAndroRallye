@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="app_name">MAGNUS Launcher</string>
-    <style name="Theme.HomePageAndroRallye" parent="android:Theme.Black.NoTitleBar.Fullscreen"/>
-</resources>

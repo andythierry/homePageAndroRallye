@@ -3,6 +3,7 @@ package com.magnus.launcher
 import android.content.Context
 import android.os.Looper
 import android.util.Log
+import androidx.core.content.ContextCompat
 import com.google.android.gms.location.*
 import org.eclipse.paho.client.mqttv3.*
 
@@ -44,6 +45,19 @@ class MQTTClient(private val context: Context) {
     
     private fun startLocationUpdates() {
         try {
+            // ✅ Vérifier les permissions d'abord
+            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.M) {
+                val hasPermission = ContextCompat.checkSelfPermission(
+                    context,
+                    android.Manifest.permission.ACCESS_FINE_LOCATION
+                ) == android.content.pm.PackageManager.PERMISSION_GRANTED
+                
+                if (!hasPermission) {
+                    Log.e(TAG, "🚨 Location permission NOT granted!")
+                    return
+                }
+            }
+            
             fusedLocationClient = LocationServices.getFusedLocationProviderClient(context)
             val locationRequest = LocationRequest.Builder(1000L).setPriority(Priority.PRIORITY_HIGH_ACCURACY).build()
             
@@ -63,16 +77,18 @@ class MQTTClient(private val context: Context) {
                             mqttClient?.publish("rally/s8/gps/latitude", lat.toByteArray(), 1, true)
                             mqttClient?.publish("rally/s8/gps/longitude", lon.toByteArray(), 1, true)
                             mqttClient?.publish("rally/s8/gps/speed", speed.toByteArray(), 1, true)
-                            Log.d(TAG, "GPS: $lat, $lon, $speed m/s")
+                            Log.d(TAG, "✅ GPS PUBLISHED: $lat, $lon, $speed m/s")
                         } catch (e: Exception) {
-                            Log.e(TAG, "Publish: ${e.message}")
+                            Log.e(TAG, "Publish error: ${e.message}")
                         }
                     }
                 }
             }
             
             fusedLocationClient?.requestLocationUpdates(locationRequest, locationCallback!!, Looper.getMainLooper())
-            Log.d(TAG, "Location updates started")
+            Log.d(TAG, "Location updates started ✅")
+        } catch (e: SecurityException) {
+            Log.e(TAG, "🚨 SecurityException - Permissions denied: ${e.message}")
         } catch (e: Exception) {
             Log.e(TAG, "Location error: ${e.message}")
         }
