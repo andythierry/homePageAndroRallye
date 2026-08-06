@@ -752,6 +752,8 @@ id btnRallyCallHeader
 id btnReboot
 id btnRecord
 id btnSettings
+id btn_apply
+id btn_back
 id buttonPanel
 id center_vertical
 id checkbox
@@ -806,6 +808,11 @@ id parentPanel
 id progress_circular
 id progress_horizontal
 id radio
+id radio_alarm_manager
+id radio_disable_sleep
+id radio_foreground_service
+id radio_group_solutions
+id radio_wakelock
 id right_icon
 id right_side
 id screen
@@ -834,6 +841,11 @@ id src_atop
 id src_in
 id src_over
 id standard
+id status_battery
+id status_bluetooth
+id status_gps
+id status_network
+id status_solution
 id submenuarrow
 id submit_area
 id tabMode
@@ -916,6 +928,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_main
+layout activity_settings
 layout custom_dialog
 layout ime_base_split_test_activity
 layout ime_secondary_split_test_activity

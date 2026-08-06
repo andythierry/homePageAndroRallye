@@ -264,7 +264,7 @@ class GPSForegroundService : Service() {
         val notification = androidx.core.app.NotificationCompat.Builder(this, CHANNEL_ID)
             .setContentTitle("🗺️ Trackeur Rallye")
             .setContentText("📍 GPS en suivi continu")
-            .setSmallIcon(R.drawable.ic_launcher_foreground)
+            .setSmallIcon(android.R.drawable.ic_dialog_info)
             .setPriority(androidx.core.app.NotificationCompat.PRIORITY_LOW)
             .build()
 
