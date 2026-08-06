@@ -1,5 +1,5 @@
 package com.magnus.launcher.settings
-
+import androidx.appcompat.app.AppCompatActivity
 import android.Manifest
 import android.app.AlarmManager
 import android.app.PendingIntent
@@ -18,7 +18,6 @@ import android.os.Handler
 import android.os.Looper
 import android.os.PowerManager
 import android.os.SystemClock
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.RadioButton
 import android.widget.RadioGroup
@@ -28,7 +27,6 @@ import androidx.core.content.ContextCompat
 import com.magnus.launcher.R
 
 class SettingsActivity : AppCompatActivity() {
-
     private lateinit var statusBluetooth: TextView
     private lateinit var statusBattery: TextView
     private lateinit var statusNetwork: TextView
@@ -37,6 +35,7 @@ class SettingsActivity : AppCompatActivity() {
     
     private lateinit var radioGroup: RadioGroup
     private lateinit var btnApply: Button
+    private lateinit var btnBack: Button
     
     private var currentSolution = 0
     private var wakeLock: PowerManager.WakeLock? = null
@@ -52,6 +51,14 @@ class SettingsActivity : AppCompatActivity() {
         setupRadioGroup()
         setupUpdateStatus()
         registerBatteryReceiver()
+        setupBackButton()
+    }
+
+    private fun setupBackButton() {
+        btnBack = findViewById(R.id.btn_back)
+        btnBack.setOnClickListener {
+            finish()
+        }
     }
 
     private fun initViews() {
@@ -156,14 +163,12 @@ class SettingsActivity : AppCompatActivity() {
     private fun applySolution() {
         val prefs = getSharedPreferences("magnus_settings", Context.MODE_PRIVATE)
         prefs.edit().putInt("gps_wake_solution", currentSolution).apply()
-
         when (currentSolution) {
             1 -> disableSleep()
             2 -> enableWakeLock()
             3 -> startForegroundService()
             4 -> startAlarmManager()
         }
-
         showToast("Solution appliquée : $currentSolution")
     }
 
@@ -178,11 +183,9 @@ class SettingsActivity : AppCompatActivity() {
             showToast("Permission WAKE_LOCK requise")
             return
         }
-
         val powerManager = getSystemService(Context.POWER_SERVICE) as PowerManager
         wakeLock = powerManager.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK, "magnus:GPSWakeLock")
         wakeLock?.acquire(60 * 60 * 1000L)
-
         showToast("✅ WakeLock activé (garde GPS + réseau actifs)")
     }
 
@@ -214,9 +217,7 @@ class SettingsActivity : AppCompatActivity() {
         val alarmManager = getSystemService(Context.ALARM_SERVICE) as AlarmManager
         val intent = Intent(this, GPSAlarmReceiver::class.java)
         val pending = PendingIntent.getBroadcast(this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE)
-
         alarmManager.setAndAllowWhileIdle(AlarmManager.ELAPSED_REALTIME_WAKEUP, SystemClock.elapsedRealtime() + 30000, pending)
-
         showToast("✅ AlarmManager activé (réveille tous les 30s)")
     }
 
@@ -241,11 +242,6 @@ class SettingsActivity : AppCompatActivity() {
         super.onDestroy()
         handler.removeCallbacksAndMessages(null)
     }
-
-    override fun onBackPressed() {
-        super.onBackPressed()
-        finish()
-    }
 }
 
 class GPSForegroundService : Service() {
@@ -260,16 +256,13 @@ class GPSForegroundService : Service() {
             val manager = getSystemService(android.app.NotificationManager::class.java)
             manager.createNotificationChannel(channel)
         }
-
         val notification = androidx.core.app.NotificationCompat.Builder(this, CHANNEL_ID)
             .setContentTitle("🗺️ Trackeur Rallye")
             .setContentText("📍 GPS en suivi continu")
             .setSmallIcon(android.R.drawable.ic_dialog_info)
             .setPriority(androidx.core.app.NotificationCompat.PRIORITY_LOW)
             .build()
-
         startForeground(NOTIFICATION_ID, notification)
-
         return START_STICKY
     }
 
@@ -281,7 +274,6 @@ class GPSAlarmReceiver : BroadcastReceiver() {
         val alarmManager = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
         val nextIntent = Intent(context, GPSAlarmReceiver::class.java)
         val pending = PendingIntent.getBroadcast(context, 0, nextIntent, PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE)
-
         alarmManager.setAndAllowWhileIdle(AlarmManager.ELAPSED_REALTIME_WAKEUP, SystemClock.elapsedRealtime() + 30000, pending)
     }
 }
