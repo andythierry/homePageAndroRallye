@@ -3,6 +3,7 @@ package com.magnus.launcher
 import android.app.Activity
 import android.content.BroadcastReceiver
 import android.content.ComponentName
+import com.magnus.launcher.settings.SettingsActivity
 import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
@@ -102,7 +103,7 @@ class MainActivity : Activity() {
             }
 
             findViewById<Button>(R.id.btnSettings).setOnClickListener {
-                startActivity(Intent(android.provider.Settings.ACTION_SETTINGS))
+                startActivity(Intent(this, SettingsActivity::class.java))
             }
 
             findViewById<Button>(R.id.btnReboot).setOnClickListener {
