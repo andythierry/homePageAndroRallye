@@ -71,14 +71,18 @@ class MainActivity : Activity() {
             
             val updateGpsDisplay = object : Runnable {
                 override fun run() {
-                    val gpsData = mqttClient.getGpsData()
-                    val displayText = if (isRecording) {
-                        "📍 REC\n$gpsData"
-                    } else {
-                        "⏸️ PAUSE\n$gpsData"
+                    try {
+                        val gpsData = mqttClient.getGpsData()
+                        val displayText = if (isRecording) {
+                            "📍 REC\n$gpsData"
+                        } else {
+                            "⏸️ PAUSE\n$gpsData"
+                        }
+                        btnDataPause.text = displayText
+                    } catch (e: Exception) {
+                        Log.e(TAG, "Update error: ${e.message}")
                     }
-                    btnDataPause.text = displayText
-                    handler.postDelayed(this, 500)
+                    handler.postDelayed(this, 2000)
                 }
             }
             handler.post(updateGpsDisplay)
