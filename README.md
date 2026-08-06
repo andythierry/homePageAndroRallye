@@ -1,20 +1,76 @@
-cat > README.md << 'EOF'
-# 🗺️ MAGNUS 974 - Launcher Android
+## 🚀 Compilation et déploiement
 
-Lanceur GPS personnalisé pour le suivi en temps réel de rallyés automobiles en Réunion.
+### Prérequis
+- Android Studio ou Gradle 8.4+
+- OpenJDK 21
+- ADB configuré
 
-## 🎯 Fonctionnalités
+### Build
+```bash
+./gradlew clean build
+./gradlew installDebug
+```
 
-- **Interface épurée en paysage** : boutons tactiles larges (GPS, RaceChrono, Bluetooth, WiFi, Settings, Camera, Reboot)
-- **Settings avancés** : 4 solutions de veille GPS (WakeLock, AlarmManager, Foreground Service, Sleep Disabled)
-- **Indicateurs temps réel** : horloge, batterie en couleur (vert/orange/rouge), Bluetooth, réseau
-- **RaceChrono intégré** : bouton direct vers l'app de chronométrage
-- **Reboot/Shutdown** : avec confirmations
+### Lancer l'app
+```bash
+adb shell am start -n com.magnus.launcher/.MainActivity
+```
 
-## 📱 Plateforme cible
+## ⚙️ Configuration GPS
 
-- **Téléphone** : Samsung Galaxy S8 SM-G950F
-- **OS** : LineageOS 18.1 (Android 11)
-- **Package** : `com.magnus.launcher`
+La classe `SettingsActivity` propose 4 solutions de veille GPS :
 
-## 📂 Structure
+1. **🚫 Désactiver la veille** → Paramètres affichage (simple, consomme batterie)
+2. **⚡ WakeLock (Partiel)** → Garde GPS + réseau actifs (DEFAULT, bon compromis)
+3. **📲 Service au premier plan** → Notification persistante (le plus fiable)
+4. **⏰ AlarmManager** → Réveille toutes les 30s (très fiable, bonne batterie)
+
+## 🎨 Thèmes
+
+- **Couleurs** : Fond noir (#000000), texte blanc, accents vert (#00FF00), orange (#FFAA00)
+- **Orientation** : Portrait (Settings), Paysage (Main)
+- **Typo** : Sans titre (NoTitleBar)
+
+## 📊 Permissions requises
+
+```xml
+<uses-permission android:name="android.permission.INTERNET" />
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+<uses-permission android:name="android.permission.WAKE_LOCK" />
+<uses-permission android:name="android.permission.BLUETOOTH" />
+<uses-permission android:name="android.permission.CAMERA" />
+<uses-permission android:name="android.permission.RECORD_AUDIO" />
+```
+
+## ⚠️ État actuel
+
+✅ **Complété**
+- MainActivity en paysage sans bandeau
+- SettingsActivity en portrait avec back button
+- 4 solutions GPS opérationnelles
+- Indicateurs temps réel (Batterie, Bluetooth, Réseau, GPS)
+
+🔄 **En cours**
+- Tests complets des solutions GPS
+- Enregistrement vidéo arrière-plan (bloqué LineageOS)
+
+❌ **Connu**
+- Enregistrement vidéo avant caméra échoue (caméra occupée par RaceChrono ou permissions)
+
+## 🔗 Repo GitHub
+
+https://github.com/andythierry/homePageAndroRallye
+
+## 📝 Notes de développement
+
+- Build: Gradle Kotlin DSL
+- Cibles : API 21+ (Android 5+)
+- Deprecated : `Camera` API, `systemUiVisibility`, `activeNetworkInfo` (utiliser alternatives modernes)
+
+## 🤝 Contributeur
+
+Thierry - La Réunion (974)
+
+EOF
+
+cat README.md
