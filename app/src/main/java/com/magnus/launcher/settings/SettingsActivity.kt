@@ -96,8 +96,16 @@ class SettingsActivity : AppCompatActivity() {
         }
     }
 
+    private var lastCheckedId = R.id.radio_wakelock
+    
     private fun setupRadioGroup() {
         radioGroup.setOnCheckedChangeListener { _, checkedId ->
+            if (checkedId == -1) {
+                // Empêche le déchage
+                radioGroup.check(lastCheckedId)
+                return@setOnCheckedChangeListener
+            }
+            lastCheckedId = checkedId
             currentSolution = when (checkedId) {
                 R.id.radio_disable_sleep -> 1
                 R.id.radio_wakelock -> 2

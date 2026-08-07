@@ -1,0 +1,19 @@
+    private var lastCheckedId = R.id.radio_wakelock
+    
+    private fun setupRadioGroup() {
+        radioGroup.setOnCheckedChangeListener { _, checkedId ->
+            if (checkedId == -1) {
+                // Évite le déchage en cliquant à nouveau
+                radioGroup.check(lastCheckedId)
+                return@setOnCheckedChangeListener
+            }
+            lastCheckedId = checkedId
+            currentSolution = when (checkedId) {
+                R.id.radio_disable_sleep -> 1
+                R.id.radio_wakelock -> 2
+                R.id.radio_foreground_service -> 3
+                R.id.radio_alarm_manager -> 4
+                else -> 0
+            }
+        }
+    }
